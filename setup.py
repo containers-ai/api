@@ -21,6 +21,9 @@ with open('LICENSE', 'r') as f:
 
 INSTALL_REQUIRES = (
     'protobuf>=3.6.0',
+    'grpcio>=1.6.0',
+    'grpcio-tools>=1.6.0',
+    'googleapis-common-protos>=1.5.3',
 )
 
 setup(
@@ -35,8 +38,8 @@ setup(
     license=license,
     packages=['alameda_ai', 'alameda_operator'],
     package_dir={
-        'alameda_ai': 'aiservice/v1alpha1',
-        'alameda_operator': 'operator/v1alpha1'
+        'ai_service.v1alpha1': 'aiservice/v1alpha1',
+        'operator.v1alpha1': 'operator/v1alpha1'
     },
     install_requires=INSTALL_REQUIRES,
     zip_safe=False
