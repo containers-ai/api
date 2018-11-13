@@ -1,7 +1,4 @@
-#import os
-#import sys
-
-from setuptools import setup, find_packages
+from setuptools import setup
 
 # Ensure we're in the proper directory whether or not we're being used by pip.
 #os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -14,10 +11,6 @@ with open('README.md', 'r') as f:
 
 with open('LICENSE', 'r') as f:
     license = f.read()
-
-#PACKAGE_DIRECTORIES = {
-#    '': './aiservice/',
-#}
 
 INSTALL_REQUIRES = (
     'protobuf>=3.6.0',
