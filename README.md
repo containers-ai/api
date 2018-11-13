@@ -25,8 +25,8 @@ The generated code will be located in the same folder as the .proto files.
 
 Add the following import declarations in your .go files when using the Alameda API gRPC calls.
 ```
-import "github.com/containers-ai/api/alameda_api/v1alpha1"
-import "github.com/containers-ai/api/alameda_api/v1alpha1"
+import "github.com/containers-ai/api/alameda_api/v1alpha1/ai_service"
+import "github.com/containers-ai/api/alameda_api/v1alpha1/operator"
 ```
 
 ## Coding with python
@@ -37,7 +37,7 @@ Install alameda-api packages by
     ```
 Then you can use Alameda API gRPC calls in your .py files by
 ```
-from alameda_api.v1alpha1 import ai_service_pb2, ai_service_pb2_grpc
-from alameda_api.v1alpha1 import server_pb2, server_pb2_grpc
+from alameda_api.v1alpha1.ai_service import ai_service_pb2, ai_service_pb2_grpc
+from alameda_api.v1alpha1.operator import server_pb2, server_pb2_grpc
 
 ```
