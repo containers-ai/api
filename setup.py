@@ -36,9 +36,10 @@ setup(
     author_email='support@prophetstor.com',
     urls='https://github.com/containers-ai/api',
     license=license,
-    packages=['alameda_api.v1alpha1'],
+    packages=['alameda_api.v1alpha1.ai_service', 'alameda_api.v1alpha1.operator'],
     package_dir={
-        'alameda_api.v1alpha1': 'alameda_api/v1alpha1',
+        'alameda_api.v1alpha1.ai_service': 'alameda_api/v1alpha1/ai_service',
+        'alameda_api.v1alpha1.operator': 'alameda_api/v1alpha1/operator',
     },
     install_requires=INSTALL_REQUIRES,
     zip_safe=False
