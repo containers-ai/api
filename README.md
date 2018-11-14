@@ -33,7 +33,7 @@ import "github.com/containers-ai/api/alameda_api/v1alpha1/operator"
 
 Install alameda-api packages by
     ```bash
-        pip install git+https://github.com/containers-ai/api.git
+    pip install git+https://github.com/containers-ai/api.git
     ```
 Then you can use Alameda API gRPC calls in your .py files by
 ```
