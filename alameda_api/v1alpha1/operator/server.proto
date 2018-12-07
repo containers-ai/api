@@ -9,6 +9,8 @@ service OperatorService {
         returns (ListMetricsResponse) {}
     rpc ListMetricsSum(ListMetricsSumRequest)
         returns (ListMetricsSumResponse) {}
+    rpc ListMetricsAvg(ListMetricsAvgRequest)
+        returns (ListMetricsAvgResponse) {}
     rpc CreatePredictResult(CreatePredictResultRequest)
         returns (CreatePredictResultResponse) {}
 }
@@ -75,6 +77,23 @@ message ListMetricsSumRequest {
 }
 
 message ListMetricsSumResponse {
+    repeated MetricResult metrics = 1;
+    google.rpc.Status status = 2;
+}
+
+message ListMetricsAvgRequest {
+    MetricType metric_type = 1;
+    oneof time_selector {
+        google.protobuf.Timestamp time = 2;
+        google.protobuf.Duration duration = 3;
+        TimeRange time_range = 4;
+    }
+    repeated LabelSelector conditions = 5;
+    // This field is effective when null or specific timestamp is assigned to "time_selector" field.  
+    repeated string avg_by = 6;
+}
+
+message ListMetricsAvgResponse {
     repeated MetricResult metrics = 1;
     google.rpc.Status status = 2;
 }

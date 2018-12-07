@@ -24,6 +24,11 @@ class OperatorServiceStub(object):
         request_serializer=alameda__api_dot_v1alpha1_dot_operator_dot_server__pb2.ListMetricsSumRequest.SerializeToString,
         response_deserializer=alameda__api_dot_v1alpha1_dot_operator_dot_server__pb2.ListMetricsSumResponse.FromString,
         )
+    self.ListMetricsAvg = channel.unary_unary(
+        '/OperatorService/ListMetricsAvg',
+        request_serializer=alameda__api_dot_v1alpha1_dot_operator_dot_server__pb2.ListMetricsAvgRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_operator_dot_server__pb2.ListMetricsAvgResponse.FromString,
+        )
     self.CreatePredictResult = channel.unary_unary(
         '/OperatorService/CreatePredictResult',
         request_serializer=alameda__api_dot_v1alpha1_dot_operator_dot_server__pb2.CreatePredictResultRequest.SerializeToString,
@@ -49,6 +54,13 @@ class OperatorServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def ListMetricsAvg(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def CreatePredictResult(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -68,6 +80,11 @@ def add_OperatorServiceServicer_to_server(servicer, server):
           servicer.ListMetricsSum,
           request_deserializer=alameda__api_dot_v1alpha1_dot_operator_dot_server__pb2.ListMetricsSumRequest.FromString,
           response_serializer=alameda__api_dot_v1alpha1_dot_operator_dot_server__pb2.ListMetricsSumResponse.SerializeToString,
+      ),
+      'ListMetricsAvg': grpc.unary_unary_rpc_method_handler(
+          servicer.ListMetricsAvg,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_operator_dot_server__pb2.ListMetricsAvgRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_operator_dot_server__pb2.ListMetricsAvgResponse.SerializeToString,
       ),
       'CreatePredictResult': grpc.unary_unary_rpc_method_handler(
           servicer.CreatePredictResult,
