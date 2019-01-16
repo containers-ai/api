@@ -51,11 +51,6 @@ class DatahubServiceStub(object):
         request_serializer=datahub_dot_v1alpha2_dot_datahub__pb2.ListPodRecommendationsRequest.SerializeToString,
         response_deserializer=datahub_dot_v1alpha2_dot_datahub__pb2.ListPodRecommendationsResponse.FromString,
         )
-    self.ListPodsByNodeName = channel.unary_unary(
-        '/containersai.datahub.v1alpha2.DatahubService/ListPodsByNodeName',
-        request_serializer=datahub_dot_v1alpha2_dot_datahub__pb2.ListPodsByNodeNamesRequest.SerializeToString,
-        response_deserializer=datahub_dot_v1alpha2_dot_datahub__pb2.ListPodsResponse.FromString,
-        )
     self.ListSimulatedSchedulingScores = channel.unary_unary(
         '/containersai.datahub.v1alpha2.DatahubService/ListSimulatedSchedulingScores',
         request_serializer=datahub_dot_v1alpha2_dot_datahub__pb2.ListSimulatedSchedulingScoresRequest.SerializeToString,
@@ -162,13 +157,6 @@ class DatahubServiceServicer(object):
 
   def ListPodRecommendations(self, request, context):
     """/ Used to list pod recommenations
-    """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def ListPodsByNodeName(self, request, context):
-    """/ Used to list pods by a node name
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -288,11 +276,6 @@ def add_DatahubServiceServicer_to_server(servicer, server):
           servicer.ListPodRecommendations,
           request_deserializer=datahub_dot_v1alpha2_dot_datahub__pb2.ListPodRecommendationsRequest.FromString,
           response_serializer=datahub_dot_v1alpha2_dot_datahub__pb2.ListPodRecommendationsResponse.SerializeToString,
-      ),
-      'ListPodsByNodeName': grpc.unary_unary_rpc_method_handler(
-          servicer.ListPodsByNodeName,
-          request_deserializer=datahub_dot_v1alpha2_dot_datahub__pb2.ListPodsByNodeNamesRequest.FromString,
-          response_serializer=datahub_dot_v1alpha2_dot_datahub__pb2.ListPodsResponse.SerializeToString,
       ),
       'ListSimulatedSchedulingScores': grpc.unary_unary_rpc_method_handler(
           servicer.ListSimulatedSchedulingScores,
