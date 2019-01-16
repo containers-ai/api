@@ -15,11 +15,11 @@ import "datahub/metric/v1alpha2/metric.proto";
  *
  */
 message ContainerRecommendation {
-    string name = 1;    
-    repeated containersai.datahub.metric.v1alpha2.MetricData limit_recommendations = 2;
-    repeated containersai.datahub.metric.v1alpha2.MetricData request_recommendations = 3;
-    repeated containersai.datahub.metric.v1alpha2.MetricData initial_limit_recommendations = 4;
-    repeated containersai.datahub.metric.v1alpha2.MetricData initial_request_recommendations = 5;
+    string name = 1;
+    map<string, containersai.datahub.metric.v1alpha2.MetricData> limit_recommendations = 2;
+    map<string, containersai.datahub.metric.v1alpha2.MetricData> request_recommendations = 3;
+    map<string, containersai.datahub.metric.v1alpha2.MetricData> initial_limit_recommendations = 4;
+    map<string, containersai.datahub.metric.v1alpha2.MetricData> initial_request_recommendations = 5;
 }
 
 /**

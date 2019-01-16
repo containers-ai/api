@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.datahub.metric.v1alpha2',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n$datahub/metric/v1alpha2/metric.proto\x12$containersai.datahub.metric.v1alpha2\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x31\x64\x61tahub/resource/metadata/v1alpha2/metadata.proto\"f\n\x0f\x43ontainerMetric\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x45\n\x0bmetric_data\x18\x02 \x03(\x0b\x32\x30.containersai.datahub.metric.v1alpha2.MetricData\"\xb7\x01\n\tPodMetric\x12X\n\x0fnamespaced_name\x18\x01 \x01(\x0b\x32?.containersai.datahub.resource.metadata.v1alpha2.NamespacedName\x12P\n\x11\x63ontainer_metrics\x18\x02 \x03(\x0b\x32\x35.containersai.datahub.metric.v1alpha2.ContainerMetric\"a\n\nNodeMetric\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x45\n\x0bmetric_data\x18\x02 \x03(\x0b\x32\x30.containersai.datahub.metric.v1alpha2.MetricData\"E\n\x06Sample\x12(\n\x04time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tnum_value\x18\x02 \x01(\t\"\x92\x01\n\tTimeRange\x12.\n\nstart_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\'\n\x04step\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\"\x8f\x01\n\nMetricData\x12\x45\n\x0bmetric_type\x18\x01 \x01(\x0e\x32\x30.containersai.datahub.metric.v1alpha2.MetricType\x12:\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32,.containersai.datahub.metric.v1alpha2.Sample*U\n\nMetricType\x12\r\n\tUNDEFINED\x10\x00\x12 \n\x1c\x43PU_USAGE_SECONDS_PERCENTAGE\x10\x01\x12\x16\n\x12MEMORY_USAGE_BYTES\x10\x02\x62\x06proto3')
+  serialized_pb=_b('\n$datahub/metric/v1alpha2/metric.proto\x12$containersai.datahub.metric.v1alpha2\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x31\x64\x61tahub/resource/metadata/v1alpha2/metadata.proto\"\xe0\x01\n\x0f\x43ontainerMetric\x12\x0c\n\x04name\x18\x01 \x01(\t\x12Z\n\x0bmetric_data\x18\x02 \x03(\x0b\x32\x45.containersai.datahub.metric.v1alpha2.ContainerMetric.MetricDataEntry\x1a\x63\n\x0fMetricDataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12?\n\x05value\x18\x02 \x01(\x0b\x32\x30.containersai.datahub.metric.v1alpha2.MetricData:\x02\x38\x01\"\xb7\x01\n\tPodMetric\x12X\n\x0fnamespaced_name\x18\x01 \x01(\x0b\x32?.containersai.datahub.resource.metadata.v1alpha2.NamespacedName\x12P\n\x11\x63ontainer_metrics\x18\x02 \x03(\x0b\x32\x35.containersai.datahub.metric.v1alpha2.ContainerMetric\"\xd6\x01\n\nNodeMetric\x12\x0c\n\x04name\x18\x01 \x01(\t\x12U\n\x0bmetric_data\x18\x02 \x03(\x0b\x32@.containersai.datahub.metric.v1alpha2.NodeMetric.MetricDataEntry\x1a\x63\n\x0fMetricDataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12?\n\x05value\x18\x02 \x01(\x0b\x32\x30.containersai.datahub.metric.v1alpha2.MetricData:\x02\x38\x01\"E\n\x06Sample\x12(\n\x04time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tnum_value\x18\x02 \x01(\t\"\x92\x01\n\tTimeRange\x12.\n\nstart_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\'\n\x04step\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\"\x8f\x01\n\nMetricData\x12\x45\n\x0bmetric_type\x18\x01 \x01(\x0e\x32\x30.containersai.datahub.metric.v1alpha2.MetricType\x12:\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32,.containersai.datahub.metric.v1alpha2.Sample*U\n\nMetricType\x12\r\n\tUNDEFINED\x10\x00\x12 \n\x1c\x43PU_USAGE_SECONDS_PERCENTAGE\x10\x01\x12\x16\n\x12MEMORY_USAGE_BYTES\x10\x02\x62\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_duration__pb2.DESCRIPTOR,datahub_dot_resource_dot_metadata_dot_v1alpha2_dot_metadata__pb2.DESCRIPTOR,])
 
@@ -48,8 +48,8 @@ _METRICTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=949,
-  serialized_end=1034,
+  serialized_start=1190,
+  serialized_end=1275,
 )
 _sym_db.RegisterEnumDescriptor(_METRICTYPE)
 
@@ -59,6 +59,43 @@ CPU_USAGE_SECONDS_PERCENTAGE = 1
 MEMORY_USAGE_BYTES = 2
 
 
+
+_CONTAINERMETRIC_METRICDATAENTRY = _descriptor.Descriptor(
+  name='MetricDataEntry',
+  full_name='containersai.datahub.metric.v1alpha2.ContainerMetric.MetricDataEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='containersai.datahub.metric.v1alpha2.ContainerMetric.MetricDataEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='containersai.datahub.metric.v1alpha2.ContainerMetric.MetricDataEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=320,
+  serialized_end=419,
+)
 
 _CONTAINERMETRIC = _descriptor.Descriptor(
   name='ContainerMetric',
@@ -84,7 +121,7 @@ _CONTAINERMETRIC = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_CONTAINERMETRIC_METRICDATAENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -93,8 +130,8 @@ _CONTAINERMETRIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=194,
-  serialized_end=296,
+  serialized_start=195,
+  serialized_end=419,
 )
 
 
@@ -131,10 +168,47 @@ _PODMETRIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=299,
-  serialized_end=482,
+  serialized_start=422,
+  serialized_end=605,
 )
 
+
+_NODEMETRIC_METRICDATAENTRY = _descriptor.Descriptor(
+  name='MetricDataEntry',
+  full_name='containersai.datahub.metric.v1alpha2.NodeMetric.MetricDataEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='containersai.datahub.metric.v1alpha2.NodeMetric.MetricDataEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='containersai.datahub.metric.v1alpha2.NodeMetric.MetricDataEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=320,
+  serialized_end=419,
+)
 
 _NODEMETRIC = _descriptor.Descriptor(
   name='NodeMetric',
@@ -160,7 +234,7 @@ _NODEMETRIC = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_NODEMETRIC_METRICDATAENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -169,8 +243,8 @@ _NODEMETRIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=484,
-  serialized_end=581,
+  serialized_start=608,
+  serialized_end=822,
 )
 
 
@@ -207,8 +281,8 @@ _SAMPLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=583,
-  serialized_end=652,
+  serialized_start=824,
+  serialized_end=893,
 )
 
 
@@ -252,8 +326,8 @@ _TIMERANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=655,
-  serialized_end=801,
+  serialized_start=896,
+  serialized_end=1042,
 )
 
 
@@ -290,14 +364,18 @@ _METRICDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=804,
-  serialized_end=947,
+  serialized_start=1045,
+  serialized_end=1188,
 )
 
-_CONTAINERMETRIC.fields_by_name['metric_data'].message_type = _METRICDATA
+_CONTAINERMETRIC_METRICDATAENTRY.fields_by_name['value'].message_type = _METRICDATA
+_CONTAINERMETRIC_METRICDATAENTRY.containing_type = _CONTAINERMETRIC
+_CONTAINERMETRIC.fields_by_name['metric_data'].message_type = _CONTAINERMETRIC_METRICDATAENTRY
 _PODMETRIC.fields_by_name['namespaced_name'].message_type = datahub_dot_resource_dot_metadata_dot_v1alpha2_dot_metadata__pb2._NAMESPACEDNAME
 _PODMETRIC.fields_by_name['container_metrics'].message_type = _CONTAINERMETRIC
-_NODEMETRIC.fields_by_name['metric_data'].message_type = _METRICDATA
+_NODEMETRIC_METRICDATAENTRY.fields_by_name['value'].message_type = _METRICDATA
+_NODEMETRIC_METRICDATAENTRY.containing_type = _NODEMETRIC
+_NODEMETRIC.fields_by_name['metric_data'].message_type = _NODEMETRIC_METRICDATAENTRY
 _SAMPLE.fields_by_name['time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _TIMERANGE.fields_by_name['start_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _TIMERANGE.fields_by_name['end_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -314,11 +392,19 @@ DESCRIPTOR.enum_types_by_name['MetricType'] = _METRICTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ContainerMetric = _reflection.GeneratedProtocolMessageType('ContainerMetric', (_message.Message,), dict(
+
+  MetricDataEntry = _reflection.GeneratedProtocolMessageType('MetricDataEntry', (_message.Message,), dict(
+    DESCRIPTOR = _CONTAINERMETRIC_METRICDATAENTRY,
+    __module__ = 'datahub.metric.v1alpha2.metric_pb2'
+    # @@protoc_insertion_point(class_scope:containersai.datahub.metric.v1alpha2.ContainerMetric.MetricDataEntry)
+    ))
+  ,
   DESCRIPTOR = _CONTAINERMETRIC,
   __module__ = 'datahub.metric.v1alpha2.metric_pb2'
   # @@protoc_insertion_point(class_scope:containersai.datahub.metric.v1alpha2.ContainerMetric)
   ))
 _sym_db.RegisterMessage(ContainerMetric)
+_sym_db.RegisterMessage(ContainerMetric.MetricDataEntry)
 
 PodMetric = _reflection.GeneratedProtocolMessageType('PodMetric', (_message.Message,), dict(
   DESCRIPTOR = _PODMETRIC,
@@ -328,11 +414,19 @@ PodMetric = _reflection.GeneratedProtocolMessageType('PodMetric', (_message.Mess
 _sym_db.RegisterMessage(PodMetric)
 
 NodeMetric = _reflection.GeneratedProtocolMessageType('NodeMetric', (_message.Message,), dict(
+
+  MetricDataEntry = _reflection.GeneratedProtocolMessageType('MetricDataEntry', (_message.Message,), dict(
+    DESCRIPTOR = _NODEMETRIC_METRICDATAENTRY,
+    __module__ = 'datahub.metric.v1alpha2.metric_pb2'
+    # @@protoc_insertion_point(class_scope:containersai.datahub.metric.v1alpha2.NodeMetric.MetricDataEntry)
+    ))
+  ,
   DESCRIPTOR = _NODEMETRIC,
   __module__ = 'datahub.metric.v1alpha2.metric_pb2'
   # @@protoc_insertion_point(class_scope:containersai.datahub.metric.v1alpha2.NodeMetric)
   ))
 _sym_db.RegisterMessage(NodeMetric)
+_sym_db.RegisterMessage(NodeMetric.MetricDataEntry)
 
 Sample = _reflection.GeneratedProtocolMessageType('Sample', (_message.Message,), dict(
   DESCRIPTOR = _SAMPLE,
@@ -356,4 +450,6 @@ MetricData = _reflection.GeneratedProtocolMessageType('MetricData', (_message.Me
 _sym_db.RegisterMessage(MetricData)
 
 
+_CONTAINERMETRIC_METRICDATAENTRY._options = None
+_NODEMETRIC_METRICDATAENTRY._options = None
 # @@protoc_insertion_point(module_scope)

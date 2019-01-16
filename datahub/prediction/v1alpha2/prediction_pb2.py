@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.datahub.prediction.v1alpha2',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n,datahub/prediction/v1alpha2/prediction.proto\x12(containersai.datahub.prediction.v1alpha2\x1a\x31\x64\x61tahub/resource/metadata/v1alpha2/metadata.proto\x1a$datahub/metric/v1alpha2/metric.proto\"q\n\x13\x43ontainerPrediction\x12\x0c\n\x04name\x18\x01 \x01(\t\x12L\n\x12predicted_raw_data\x18\x02 \x03(\x0b\x32\x30.containersai.datahub.metric.v1alpha2.MetricData\"\xc7\x01\n\rPodPrediction\x12X\n\x0fnamespaced_name\x18\x01 \x01(\x0b\x32?.containersai.datahub.resource.metadata.v1alpha2.NamespacedName\x12\\\n\x15\x63ontainer_predictions\x18\x02 \x03(\x0b\x32=.containersai.datahub.prediction.v1alpha2.ContainerPrediction\"\x82\x01\n\x0eNodePrediction\x12\x0c\n\x04name\x18\x01 \x01(\t\x12L\n\x12predicted_raw_data\x18\x02 \x03(\x0b\x32\x30.containersai.datahub.metric.v1alpha2.MetricData\x12\x14\n\x0cis_scheduled\x18\x03 \x01(\x08*S\n\x14RecommendationPolicy\x12\"\n\x1eRECOMMENDATIONPOLICY_UNDEFINED\x10\x00\x12\n\n\x06STABLE\x10\x01\x12\x0b\n\x07\x43OMPACT\x10\x02\x62\x06proto3')
+  serialized_pb=_b('\n,datahub/prediction/v1alpha2/prediction.proto\x12(containersai.datahub.prediction.v1alpha2\x1a\x31\x64\x61tahub/resource/metadata/v1alpha2/metadata.proto\x1a$datahub/metric/v1alpha2/metric.proto\"\xff\x01\n\x13\x43ontainerPrediction\x12\x0c\n\x04name\x18\x01 \x01(\t\x12o\n\x12predicted_raw_data\x18\x02 \x03(\x0b\x32S.containersai.datahub.prediction.v1alpha2.ContainerPrediction.PredictedRawDataEntry\x1ai\n\x15PredictedRawDataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12?\n\x05value\x18\x02 \x01(\x0b\x32\x30.containersai.datahub.metric.v1alpha2.MetricData:\x02\x38\x01\"\xc7\x01\n\rPodPrediction\x12X\n\x0fnamespaced_name\x18\x01 \x01(\x0b\x32?.containersai.datahub.resource.metadata.v1alpha2.NamespacedName\x12\\\n\x15\x63ontainer_predictions\x18\x02 \x03(\x0b\x32=.containersai.datahub.prediction.v1alpha2.ContainerPrediction\"\x8b\x02\n\x0eNodePrediction\x12\x0c\n\x04name\x18\x01 \x01(\t\x12j\n\x12predicted_raw_data\x18\x02 \x03(\x0b\x32N.containersai.datahub.prediction.v1alpha2.NodePrediction.PredictedRawDataEntry\x12\x14\n\x0cis_scheduled\x18\x03 \x01(\x08\x1ai\n\x15PredictedRawDataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12?\n\x05value\x18\x02 \x01(\x0b\x32\x30.containersai.datahub.metric.v1alpha2.MetricData:\x02\x38\x01*S\n\x14RecommendationPolicy\x12\"\n\x1eRECOMMENDATIONPOLICY_UNDEFINED\x10\x00\x12\n\n\x06STABLE\x10\x01\x12\x0b\n\x07\x43OMPACT\x10\x02\x62\x06proto3')
   ,
   dependencies=[datahub_dot_resource_dot_metadata_dot_v1alpha2_dot_metadata__pb2.DESCRIPTOR,datahub_dot_metric_dot_v1alpha2_dot_metric__pb2.DESCRIPTOR,])
 
@@ -47,8 +47,8 @@ _RECOMMENDATIONPOLICY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=629,
-  serialized_end=712,
+  serialized_start=909,
+  serialized_end=992,
 )
 _sym_db.RegisterEnumDescriptor(_RECOMMENDATIONPOLICY)
 
@@ -58,6 +58,43 @@ STABLE = 1
 COMPACT = 2
 
 
+
+_CONTAINERPREDICTION_PREDICTEDRAWDATAENTRY = _descriptor.Descriptor(
+  name='PredictedRawDataEntry',
+  full_name='containersai.datahub.prediction.v1alpha2.ContainerPrediction.PredictedRawDataEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='containersai.datahub.prediction.v1alpha2.ContainerPrediction.PredictedRawDataEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='containersai.datahub.prediction.v1alpha2.ContainerPrediction.PredictedRawDataEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=330,
+  serialized_end=435,
+)
 
 _CONTAINERPREDICTION = _descriptor.Descriptor(
   name='ContainerPrediction',
@@ -83,7 +120,7 @@ _CONTAINERPREDICTION = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_CONTAINERPREDICTION_PREDICTEDRAWDATAENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -92,8 +129,8 @@ _CONTAINERPREDICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=179,
-  serialized_end=292,
+  serialized_start=180,
+  serialized_end=435,
 )
 
 
@@ -130,10 +167,47 @@ _PODPREDICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=295,
-  serialized_end=494,
+  serialized_start=438,
+  serialized_end=637,
 )
 
+
+_NODEPREDICTION_PREDICTEDRAWDATAENTRY = _descriptor.Descriptor(
+  name='PredictedRawDataEntry',
+  full_name='containersai.datahub.prediction.v1alpha2.NodePrediction.PredictedRawDataEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='containersai.datahub.prediction.v1alpha2.NodePrediction.PredictedRawDataEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='containersai.datahub.prediction.v1alpha2.NodePrediction.PredictedRawDataEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=330,
+  serialized_end=435,
+)
 
 _NODEPREDICTION = _descriptor.Descriptor(
   name='NodePrediction',
@@ -166,7 +240,7 @@ _NODEPREDICTION = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_NODEPREDICTION_PREDICTEDRAWDATAENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -175,14 +249,18 @@ _NODEPREDICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=497,
-  serialized_end=627,
+  serialized_start=640,
+  serialized_end=907,
 )
 
-_CONTAINERPREDICTION.fields_by_name['predicted_raw_data'].message_type = datahub_dot_metric_dot_v1alpha2_dot_metric__pb2._METRICDATA
+_CONTAINERPREDICTION_PREDICTEDRAWDATAENTRY.fields_by_name['value'].message_type = datahub_dot_metric_dot_v1alpha2_dot_metric__pb2._METRICDATA
+_CONTAINERPREDICTION_PREDICTEDRAWDATAENTRY.containing_type = _CONTAINERPREDICTION
+_CONTAINERPREDICTION.fields_by_name['predicted_raw_data'].message_type = _CONTAINERPREDICTION_PREDICTEDRAWDATAENTRY
 _PODPREDICTION.fields_by_name['namespaced_name'].message_type = datahub_dot_resource_dot_metadata_dot_v1alpha2_dot_metadata__pb2._NAMESPACEDNAME
 _PODPREDICTION.fields_by_name['container_predictions'].message_type = _CONTAINERPREDICTION
-_NODEPREDICTION.fields_by_name['predicted_raw_data'].message_type = datahub_dot_metric_dot_v1alpha2_dot_metric__pb2._METRICDATA
+_NODEPREDICTION_PREDICTEDRAWDATAENTRY.fields_by_name['value'].message_type = datahub_dot_metric_dot_v1alpha2_dot_metric__pb2._METRICDATA
+_NODEPREDICTION_PREDICTEDRAWDATAENTRY.containing_type = _NODEPREDICTION
+_NODEPREDICTION.fields_by_name['predicted_raw_data'].message_type = _NODEPREDICTION_PREDICTEDRAWDATAENTRY
 DESCRIPTOR.message_types_by_name['ContainerPrediction'] = _CONTAINERPREDICTION
 DESCRIPTOR.message_types_by_name['PodPrediction'] = _PODPREDICTION
 DESCRIPTOR.message_types_by_name['NodePrediction'] = _NODEPREDICTION
@@ -190,11 +268,19 @@ DESCRIPTOR.enum_types_by_name['RecommendationPolicy'] = _RECOMMENDATIONPOLICY
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ContainerPrediction = _reflection.GeneratedProtocolMessageType('ContainerPrediction', (_message.Message,), dict(
+
+  PredictedRawDataEntry = _reflection.GeneratedProtocolMessageType('PredictedRawDataEntry', (_message.Message,), dict(
+    DESCRIPTOR = _CONTAINERPREDICTION_PREDICTEDRAWDATAENTRY,
+    __module__ = 'datahub.prediction.v1alpha2.prediction_pb2'
+    # @@protoc_insertion_point(class_scope:containersai.datahub.prediction.v1alpha2.ContainerPrediction.PredictedRawDataEntry)
+    ))
+  ,
   DESCRIPTOR = _CONTAINERPREDICTION,
   __module__ = 'datahub.prediction.v1alpha2.prediction_pb2'
   # @@protoc_insertion_point(class_scope:containersai.datahub.prediction.v1alpha2.ContainerPrediction)
   ))
 _sym_db.RegisterMessage(ContainerPrediction)
+_sym_db.RegisterMessage(ContainerPrediction.PredictedRawDataEntry)
 
 PodPrediction = _reflection.GeneratedProtocolMessageType('PodPrediction', (_message.Message,), dict(
   DESCRIPTOR = _PODPREDICTION,
@@ -204,11 +290,21 @@ PodPrediction = _reflection.GeneratedProtocolMessageType('PodPrediction', (_mess
 _sym_db.RegisterMessage(PodPrediction)
 
 NodePrediction = _reflection.GeneratedProtocolMessageType('NodePrediction', (_message.Message,), dict(
+
+  PredictedRawDataEntry = _reflection.GeneratedProtocolMessageType('PredictedRawDataEntry', (_message.Message,), dict(
+    DESCRIPTOR = _NODEPREDICTION_PREDICTEDRAWDATAENTRY,
+    __module__ = 'datahub.prediction.v1alpha2.prediction_pb2'
+    # @@protoc_insertion_point(class_scope:containersai.datahub.prediction.v1alpha2.NodePrediction.PredictedRawDataEntry)
+    ))
+  ,
   DESCRIPTOR = _NODEPREDICTION,
   __module__ = 'datahub.prediction.v1alpha2.prediction_pb2'
   # @@protoc_insertion_point(class_scope:containersai.datahub.prediction.v1alpha2.NodePrediction)
   ))
 _sym_db.RegisterMessage(NodePrediction)
+_sym_db.RegisterMessage(NodePrediction.PredictedRawDataEntry)
 
 
+_CONTAINERPREDICTION_PREDICTEDRAWDATAENTRY._options = None
+_NODEPREDICTION_PREDICTEDRAWDATAENTRY._options = None
 # @@protoc_insertion_point(module_scope)
