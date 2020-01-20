@@ -13,6 +13,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from alameda_api.v1alpha1.datahub.common import metrics_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_metrics__pb2
 from alameda_api.v1alpha1.datahub.common import queries_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2
 from alameda_api.v1alpha1.datahub.predictions import predictions_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2
 from alameda_api.v1alpha1.datahub.resources import metadata_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2
@@ -24,9 +25,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.alameda.v1alpha1.datahub.predictions',
   syntax='proto3',
   serialized_options=_b('ZEgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/predictions'),
-  serialized_pb=_b('\n7alameda_api/v1alpha1/datahub/predictions/services.proto\x12\x31\x63ontainersai.alameda.v1alpha1.datahub.predictions\x1a\x31\x61lameda_api/v1alpha1/datahub/common/queries.proto\x1a:alameda_api/v1alpha1/datahub/predictions/predictions.proto\x1a\x35\x61lameda_api/v1alpha1/datahub/resources/metadata.proto\x1a\x17google/rpc/status.proto\"x\n\x1b\x43reatePodPredictionsRequest\x12Y\n\x0fpod_predictions\x18\x01 \x03(\x0b\x32@.containersai.alameda.v1alpha1.datahub.predictions.PodPrediction\"\x8d\x01\n\"CreateControllerPredictionsRequest\x12g\n\x16\x63ontroller_predictions\x18\x01 \x03(\x0b\x32G.containersai.alameda.v1alpha1.datahub.predictions.ControllerPrediction\"\x90\x01\n#CreateApplicationPredictionsRequest\x12i\n\x17\x61pplication_predictions\x18\x01 \x03(\x0b\x32H.containersai.alameda.v1alpha1.datahub.predictions.ApplicationPrediction\"\x8a\x01\n!CreateNamespacePredictionsRequest\x12\x65\n\x15namespace_predictions\x18\x01 \x03(\x0b\x32\x46.containersai.alameda.v1alpha1.datahub.predictions.NamespacePrediction\"{\n\x1c\x43reateNodePredictionsRequest\x12[\n\x10node_predictions\x18\x01 \x03(\x0b\x32\x41.containersai.alameda.v1alpha1.datahub.predictions.NodePrediction\"\x84\x01\n\x1f\x43reateClusterPredictionsRequest\x12\x61\n\x13\x63luster_predictions\x18\x01 \x03(\x0b\x32\x44.containersai.alameda.v1alpha1.datahub.predictions.ClusterPrediction\"\x95\x02\n\x19ListPodPredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12\x13\n\x0bgranularity\x18\x03 \x01(\x03\x12\x11\n\tfill_days\x18\x04 \x01(\x03\x12\x10\n\x08model_id\x18\x05 \x01(\t\x12\x15\n\rprediction_id\x18\x06 \x01(\t\"\x9b\x01\n\x1aListPodPredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12Y\n\x0fpod_predictions\x18\x02 \x03(\x0b\x32@.containersai.alameda.v1alpha1.datahub.predictions.PodPrediction\"\xce\x02\n ListControllerPredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12\x43\n\x04kind\x18\x03 \x01(\x0e\x32\x35.containersai.alameda.v1alpha1.datahub.resources.Kind\x12\x13\n\x0bgranularity\x18\x04 \x01(\x03\x12\x10\n\x08model_id\x18\x05 \x01(\t\x12\x15\n\rprediction_id\x18\x06 \x01(\t\"\xb0\x01\n!ListControllerPredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12g\n\x16\x63ontroller_predictions\x18\x02 \x03(\x0b\x32G.containersai.alameda.v1alpha1.datahub.predictions.ControllerPrediction\"\x8a\x02\n!ListApplicationPredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12\x13\n\x0bgranularity\x18\x03 \x01(\x03\x12\x10\n\x08model_id\x18\x04 \x01(\t\x12\x15\n\rprediction_id\x18\x05 \x01(\t\"\xb3\x01\n\"ListApplicationPredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12i\n\x17\x61pplication_predictions\x18\x02 \x03(\x0b\x32H.containersai.alameda.v1alpha1.datahub.predictions.ApplicationPrediction\"\x88\x02\n\x1fListNamespacePredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12\x13\n\x0bgranularity\x18\x03 \x01(\x03\x12\x10\n\x08model_id\x18\x04 \x01(\t\x12\x15\n\rprediction_id\x18\x05 \x01(\t\"\xad\x01\n ListNamespacePredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12\x65\n\x15namespace_predictions\x18\x02 \x03(\x0b\x32\x46.containersai.alameda.v1alpha1.datahub.predictions.NamespacePrediction\"\x83\x02\n\x1aListNodePredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12\x13\n\x0bgranularity\x18\x03 \x01(\x03\x12\x10\n\x08model_id\x18\x04 \x01(\t\x12\x15\n\rprediction_id\x18\x05 \x01(\t\"\x9e\x01\n\x1bListNodePredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12[\n\x10node_predictions\x18\x02 \x03(\x0b\x32\x41.containersai.alameda.v1alpha1.datahub.predictions.NodePrediction\"\x86\x02\n\x1dListClusterPredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12\x13\n\x0bgranularity\x18\x03 \x01(\x03\x12\x10\n\x08model_id\x18\x04 \x01(\t\x12\x15\n\rprediction_id\x18\x05 \x01(\t\"\xa7\x01\n\x1eListClusterPredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12\x61\n\x13\x63luster_predictions\x18\x02 \x03(\x0b\x32\x44.containersai.alameda.v1alpha1.datahub.predictions.ClusterPredictionBGZEgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/predictionsb\x06proto3')
+  serialized_pb=_b('\n7alameda_api/v1alpha1/datahub/predictions/services.proto\x12\x31\x63ontainersai.alameda.v1alpha1.datahub.predictions\x1a\x31\x61lameda_api/v1alpha1/datahub/common/metrics.proto\x1a\x31\x61lameda_api/v1alpha1/datahub/common/queries.proto\x1a:alameda_api/v1alpha1/datahub/predictions/predictions.proto\x1a\x35\x61lameda_api/v1alpha1/datahub/resources/metadata.proto\x1a\x17google/rpc/status.proto\"x\n\x1b\x43reatePodPredictionsRequest\x12Y\n\x0fpod_predictions\x18\x01 \x03(\x0b\x32@.containersai.alameda.v1alpha1.datahub.predictions.PodPrediction\"\x8d\x01\n\"CreateControllerPredictionsRequest\x12g\n\x16\x63ontroller_predictions\x18\x01 \x03(\x0b\x32G.containersai.alameda.v1alpha1.datahub.predictions.ControllerPrediction\"\x90\x01\n#CreateApplicationPredictionsRequest\x12i\n\x17\x61pplication_predictions\x18\x01 \x03(\x0b\x32H.containersai.alameda.v1alpha1.datahub.predictions.ApplicationPrediction\"\x8a\x01\n!CreateNamespacePredictionsRequest\x12\x65\n\x15namespace_predictions\x18\x01 \x03(\x0b\x32\x46.containersai.alameda.v1alpha1.datahub.predictions.NamespacePrediction\"{\n\x1c\x43reateNodePredictionsRequest\x12[\n\x10node_predictions\x18\x01 \x03(\x0b\x32\x41.containersai.alameda.v1alpha1.datahub.predictions.NodePrediction\"\x84\x01\n\x1f\x43reateClusterPredictionsRequest\x12\x61\n\x13\x63luster_predictions\x18\x01 \x03(\x0b\x32\x44.containersai.alameda.v1alpha1.datahub.predictions.ClusterPrediction\"\xe5\x02\n\x19ListPodPredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12N\n\x0cmetric_types\x18\x03 \x03(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x13\n\x0bgranularity\x18\x04 \x01(\x03\x12\x11\n\tfill_days\x18\x05 \x01(\x03\x12\x10\n\x08model_id\x18\x06 \x01(\t\x12\x15\n\rprediction_id\x18\x07 \x01(\t\"\x9b\x01\n\x1aListPodPredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12Y\n\x0fpod_predictions\x18\x02 \x03(\x0b\x32@.containersai.alameda.v1alpha1.datahub.predictions.PodPrediction\"\x9e\x03\n ListControllerPredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12N\n\x0cmetric_types\x18\x03 \x03(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x43\n\x04kind\x18\x04 \x01(\x0e\x32\x35.containersai.alameda.v1alpha1.datahub.resources.Kind\x12\x13\n\x0bgranularity\x18\x05 \x01(\x03\x12\x10\n\x08model_id\x18\x06 \x01(\t\x12\x15\n\rprediction_id\x18\x07 \x01(\t\"\xb0\x01\n!ListControllerPredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12g\n\x16\x63ontroller_predictions\x18\x02 \x03(\x0b\x32G.containersai.alameda.v1alpha1.datahub.predictions.ControllerPrediction\"\xda\x02\n!ListApplicationPredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12N\n\x0cmetric_types\x18\x03 \x03(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x13\n\x0bgranularity\x18\x04 \x01(\x03\x12\x10\n\x08model_id\x18\x05 \x01(\t\x12\x15\n\rprediction_id\x18\x06 \x01(\t\"\xb3\x01\n\"ListApplicationPredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12i\n\x17\x61pplication_predictions\x18\x02 \x03(\x0b\x32H.containersai.alameda.v1alpha1.datahub.predictions.ApplicationPrediction\"\xd8\x02\n\x1fListNamespacePredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12N\n\x0cmetric_types\x18\x03 \x03(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x13\n\x0bgranularity\x18\x04 \x01(\x03\x12\x10\n\x08model_id\x18\x05 \x01(\t\x12\x15\n\rprediction_id\x18\x06 \x01(\t\"\xad\x01\n ListNamespacePredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12\x65\n\x15namespace_predictions\x18\x02 \x03(\x0b\x32\x46.containersai.alameda.v1alpha1.datahub.predictions.NamespacePrediction\"\xd3\x02\n\x1aListNodePredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12N\n\x0cmetric_types\x18\x03 \x03(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x13\n\x0bgranularity\x18\x04 \x01(\x03\x12\x10\n\x08model_id\x18\x05 \x01(\t\x12\x15\n\rprediction_id\x18\x06 \x01(\t\"\x9e\x01\n\x1bListNodePredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12[\n\x10node_predictions\x18\x02 \x03(\x0b\x32\x41.containersai.alameda.v1alpha1.datahub.predictions.NodePrediction\"\xd6\x02\n\x1dListClusterPredictionsRequest\x12U\n\x0fquery_condition\x18\x01 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.QueryCondition\x12P\n\x0bobject_meta\x18\x02 \x03(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12N\n\x0cmetric_types\x18\x03 \x03(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x13\n\x0bgranularity\x18\x04 \x01(\x03\x12\x10\n\x08model_id\x18\x05 \x01(\t\x12\x15\n\rprediction_id\x18\x06 \x01(\t\"\xa7\x01\n\x1eListClusterPredictionsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12\x61\n\x13\x63luster_predictions\x18\x02 \x03(\x0b\x32\x44.containersai.alameda.v1alpha1.datahub.predictions.ClusterPredictionBGZEgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/predictionsb\x06proto3')
   ,
-  dependencies=[alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2.DESCRIPTOR,google_dot_rpc_dot_status__pb2.DESCRIPTOR,])
+  dependencies=[alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_metrics__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2.DESCRIPTOR,google_dot_rpc_dot_status__pb2.DESCRIPTOR,])
 
 
 
@@ -57,8 +58,8 @@ _CREATEPODPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=301,
-  serialized_end=421,
+  serialized_start=352,
+  serialized_end=472,
 )
 
 
@@ -88,8 +89,8 @@ _CREATECONTROLLERPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=424,
-  serialized_end=565,
+  serialized_start=475,
+  serialized_end=616,
 )
 
 
@@ -119,8 +120,8 @@ _CREATEAPPLICATIONPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=568,
-  serialized_end=712,
+  serialized_start=619,
+  serialized_end=763,
 )
 
 
@@ -150,8 +151,8 @@ _CREATENAMESPACEPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=715,
-  serialized_end=853,
+  serialized_start=766,
+  serialized_end=904,
 )
 
 
@@ -181,8 +182,8 @@ _CREATENODEPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=855,
-  serialized_end=978,
+  serialized_start=906,
+  serialized_end=1029,
 )
 
 
@@ -212,8 +213,8 @@ _CREATECLUSTERPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=981,
-  serialized_end=1113,
+  serialized_start=1032,
+  serialized_end=1164,
 )
 
 
@@ -239,29 +240,36 @@ _LISTPODPREDICTIONSREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest.granularity', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      name='metric_types', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest.metric_types', index=2,
+      number=3, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='fill_days', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest.fill_days', index=3,
+      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest.granularity', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest.model_id', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      name='fill_days', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest.fill_days', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest.model_id', index=5,
+      number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest.prediction_id', index=5,
-      number=6, type=9, cpp_type=9, label=1,
+      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest.prediction_id', index=6,
+      number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -278,8 +286,8 @@ _LISTPODPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1116,
-  serialized_end=1393,
+  serialized_start=1167,
+  serialized_end=1524,
 )
 
 
@@ -316,8 +324,8 @@ _LISTPODPREDICTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1396,
-  serialized_end=1551,
+  serialized_start=1527,
+  serialized_end=1682,
 )
 
 
@@ -343,29 +351,36 @@ _LISTCONTROLLERPREDICTIONSREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='kind', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest.kind', index=2,
-      number=3, type=14, cpp_type=8, label=1,
+      name='metric_types', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest.metric_types', index=2,
+      number=3, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='kind', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest.kind', index=3,
+      number=4, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest.granularity', index=3,
-      number=4, type=3, cpp_type=2, label=1,
+      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest.granularity', index=4,
+      number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest.model_id', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest.model_id', index=5,
+      number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest.prediction_id', index=5,
-      number=6, type=9, cpp_type=9, label=1,
+      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest.prediction_id', index=6,
+      number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -382,8 +397,8 @@ _LISTCONTROLLERPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1554,
-  serialized_end=1888,
+  serialized_start=1685,
+  serialized_end=2099,
 )
 
 
@@ -420,8 +435,8 @@ _LISTCONTROLLERPREDICTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1891,
-  serialized_end=2067,
+  serialized_start=2102,
+  serialized_end=2278,
 )
 
 
@@ -447,22 +462,29 @@ _LISTAPPLICATIONPREDICTIONSREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsRequest.granularity', index=2,
-      number=3, type=3, cpp_type=2, label=1,
+      name='metric_types', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsRequest.metric_types', index=2,
+      number=3, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsRequest.granularity', index=3,
+      number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsRequest.model_id', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsRequest.model_id', index=4,
+      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsRequest.prediction_id', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsRequest.prediction_id', index=5,
+      number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -479,8 +501,8 @@ _LISTAPPLICATIONPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2070,
-  serialized_end=2336,
+  serialized_start=2281,
+  serialized_end=2627,
 )
 
 
@@ -517,8 +539,8 @@ _LISTAPPLICATIONPREDICTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2339,
-  serialized_end=2518,
+  serialized_start=2630,
+  serialized_end=2809,
 )
 
 
@@ -544,22 +566,29 @@ _LISTNAMESPACEPREDICTIONSREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsRequest.granularity', index=2,
-      number=3, type=3, cpp_type=2, label=1,
+      name='metric_types', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsRequest.metric_types', index=2,
+      number=3, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsRequest.granularity', index=3,
+      number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsRequest.model_id', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsRequest.model_id', index=4,
+      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsRequest.prediction_id', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsRequest.prediction_id', index=5,
+      number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -576,8 +605,8 @@ _LISTNAMESPACEPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2521,
-  serialized_end=2785,
+  serialized_start=2812,
+  serialized_end=3156,
 )
 
 
@@ -614,8 +643,8 @@ _LISTNAMESPACEPREDICTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2788,
-  serialized_end=2961,
+  serialized_start=3159,
+  serialized_end=3332,
 )
 
 
@@ -641,22 +670,29 @@ _LISTNODEPREDICTIONSREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsRequest.granularity', index=2,
-      number=3, type=3, cpp_type=2, label=1,
+      name='metric_types', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsRequest.metric_types', index=2,
+      number=3, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsRequest.granularity', index=3,
+      number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsRequest.model_id', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsRequest.model_id', index=4,
+      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsRequest.prediction_id', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsRequest.prediction_id', index=5,
+      number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -673,8 +709,8 @@ _LISTNODEPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2964,
-  serialized_end=3223,
+  serialized_start=3335,
+  serialized_end=3674,
 )
 
 
@@ -711,8 +747,8 @@ _LISTNODEPREDICTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3226,
-  serialized_end=3384,
+  serialized_start=3677,
+  serialized_end=3835,
 )
 
 
@@ -738,22 +774,29 @@ _LISTCLUSTERPREDICTIONSREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsRequest.granularity', index=2,
-      number=3, type=3, cpp_type=2, label=1,
+      name='metric_types', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsRequest.metric_types', index=2,
+      number=3, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='granularity', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsRequest.granularity', index=3,
+      number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsRequest.model_id', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      name='model_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsRequest.model_id', index=4,
+      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsRequest.prediction_id', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      name='prediction_id', full_name='containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsRequest.prediction_id', index=5,
+      number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -770,8 +813,8 @@ _LISTCLUSTERPREDICTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3387,
-  serialized_end=3649,
+  serialized_start=3838,
+  serialized_end=4180,
 )
 
 
@@ -808,8 +851,8 @@ _LISTCLUSTERPREDICTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3652,
-  serialized_end=3819,
+  serialized_start=4183,
+  serialized_end=4350,
 )
 
 _CREATEPODPREDICTIONSREQUEST.fields_by_name['pod_predictions'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2._PODPREDICTION
@@ -820,27 +863,33 @@ _CREATENODEPREDICTIONSREQUEST.fields_by_name['node_predictions'].message_type = 
 _CREATECLUSTERPREDICTIONSREQUEST.fields_by_name['cluster_predictions'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2._CLUSTERPREDICTION
 _LISTPODPREDICTIONSREQUEST.fields_by_name['query_condition'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._QUERYCONDITION
 _LISTPODPREDICTIONSREQUEST.fields_by_name['object_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._OBJECTMETA
+_LISTPODPREDICTIONSREQUEST.fields_by_name['metric_types'].enum_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_metrics__pb2._METRICTYPE
 _LISTPODPREDICTIONSRESPONSE.fields_by_name['status'].message_type = google_dot_rpc_dot_status__pb2._STATUS
 _LISTPODPREDICTIONSRESPONSE.fields_by_name['pod_predictions'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2._PODPREDICTION
 _LISTCONTROLLERPREDICTIONSREQUEST.fields_by_name['query_condition'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._QUERYCONDITION
 _LISTCONTROLLERPREDICTIONSREQUEST.fields_by_name['object_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._OBJECTMETA
+_LISTCONTROLLERPREDICTIONSREQUEST.fields_by_name['metric_types'].enum_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_metrics__pb2._METRICTYPE
 _LISTCONTROLLERPREDICTIONSREQUEST.fields_by_name['kind'].enum_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._KIND
 _LISTCONTROLLERPREDICTIONSRESPONSE.fields_by_name['status'].message_type = google_dot_rpc_dot_status__pb2._STATUS
 _LISTCONTROLLERPREDICTIONSRESPONSE.fields_by_name['controller_predictions'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2._CONTROLLERPREDICTION
 _LISTAPPLICATIONPREDICTIONSREQUEST.fields_by_name['query_condition'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._QUERYCONDITION
 _LISTAPPLICATIONPREDICTIONSREQUEST.fields_by_name['object_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._OBJECTMETA
+_LISTAPPLICATIONPREDICTIONSREQUEST.fields_by_name['metric_types'].enum_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_metrics__pb2._METRICTYPE
 _LISTAPPLICATIONPREDICTIONSRESPONSE.fields_by_name['status'].message_type = google_dot_rpc_dot_status__pb2._STATUS
 _LISTAPPLICATIONPREDICTIONSRESPONSE.fields_by_name['application_predictions'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2._APPLICATIONPREDICTION
 _LISTNAMESPACEPREDICTIONSREQUEST.fields_by_name['query_condition'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._QUERYCONDITION
 _LISTNAMESPACEPREDICTIONSREQUEST.fields_by_name['object_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._OBJECTMETA
+_LISTNAMESPACEPREDICTIONSREQUEST.fields_by_name['metric_types'].enum_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_metrics__pb2._METRICTYPE
 _LISTNAMESPACEPREDICTIONSRESPONSE.fields_by_name['status'].message_type = google_dot_rpc_dot_status__pb2._STATUS
 _LISTNAMESPACEPREDICTIONSRESPONSE.fields_by_name['namespace_predictions'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2._NAMESPACEPREDICTION
 _LISTNODEPREDICTIONSREQUEST.fields_by_name['query_condition'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._QUERYCONDITION
 _LISTNODEPREDICTIONSREQUEST.fields_by_name['object_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._OBJECTMETA
+_LISTNODEPREDICTIONSREQUEST.fields_by_name['metric_types'].enum_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_metrics__pb2._METRICTYPE
 _LISTNODEPREDICTIONSRESPONSE.fields_by_name['status'].message_type = google_dot_rpc_dot_status__pb2._STATUS
 _LISTNODEPREDICTIONSRESPONSE.fields_by_name['node_predictions'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2._NODEPREDICTION
 _LISTCLUSTERPREDICTIONSREQUEST.fields_by_name['query_condition'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._QUERYCONDITION
 _LISTCLUSTERPREDICTIONSREQUEST.fields_by_name['object_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._OBJECTMETA
+_LISTCLUSTERPREDICTIONSREQUEST.fields_by_name['metric_types'].enum_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_metrics__pb2._METRICTYPE
 _LISTCLUSTERPREDICTIONSRESPONSE.fields_by_name['status'].message_type = google_dot_rpc_dot_status__pb2._STATUS
 _LISTCLUSTERPREDICTIONSRESPONSE.fields_by_name['cluster_predictions'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_predictions_dot_predictions__pb2._CLUSTERPREDICTION
 DESCRIPTOR.message_types_by_name['CreatePodPredictionsRequest'] = _CREATEPODPREDICTIONSREQUEST
