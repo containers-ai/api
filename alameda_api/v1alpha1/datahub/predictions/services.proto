@@ -4,6 +4,7 @@ syntax = "proto3";
 
 package containersai.alameda.v1alpha1.datahub.predictions;
 
+import "alameda_api/v1alpha1/datahub/common/metrics.proto";
 import "alameda_api/v1alpha1/datahub/common/queries.proto";
 import "alameda_api/v1alpha1/datahub/predictions/predictions.proto";
 import "alameda_api/v1alpha1/datahub/resources/metadata.proto";
@@ -41,10 +42,11 @@ message CreateClusterPredictionsRequest {
 message ListPodPredictionsRequest {
     common.QueryCondition         query_condition = 1;
     repeated resources.ObjectMeta object_meta     = 2;
-    int64                         granularity     = 3;
-    int64                         fill_days       = 4;
-    string                        model_id        = 5;
-    string                        prediction_id   = 6;
+    repeated common.MetricType    metric_types    = 3;
+    int64                         granularity     = 4;
+    int64                         fill_days       = 5;
+    string                        model_id        = 6;
+    string                        prediction_id   = 7;
 }
 
 // Represents a response for a listing predictions of pods request
@@ -56,10 +58,11 @@ message ListPodPredictionsResponse {
 message ListControllerPredictionsRequest {
     common.QueryCondition         query_condition = 1;
     repeated resources.ObjectMeta object_meta     = 2;
-    resources.Kind                kind            = 3;
-    int64                         granularity     = 4;
-    string                        model_id        = 5;
-    string                        prediction_id   = 6;
+    repeated common.MetricType    metric_types    = 3;
+    resources.Kind                kind            = 4;
+    int64                         granularity     = 5;
+    string                        model_id        = 6;
+    string                        prediction_id   = 7;
 }
 
 message ListControllerPredictionsResponse {
@@ -70,9 +73,10 @@ message ListControllerPredictionsResponse {
 message ListApplicationPredictionsRequest {
     common.QueryCondition         query_condition = 1;
     repeated resources.ObjectMeta object_meta     = 2;
-    int64                         granularity     = 3;
-    string                        model_id        = 4;
-    string                        prediction_id   = 5;
+    repeated common.MetricType    metric_types    = 3;
+    int64                         granularity     = 4;
+    string                        model_id        = 5;
+    string                        prediction_id   = 6;
 }
 
 message ListApplicationPredictionsResponse {
@@ -83,9 +87,10 @@ message ListApplicationPredictionsResponse {
 message ListNamespacePredictionsRequest {
     common.QueryCondition         query_condition = 1;
     repeated resources.ObjectMeta object_meta     = 2;
-    int64                         granularity     = 3;
-    string                        model_id        = 4;
-    string                        prediction_id   = 5;
+    repeated common.MetricType    metric_types    = 3;
+    int64                         granularity     = 4;
+    string                        model_id        = 5;
+    string                        prediction_id   = 6;
 }
 
 message ListNamespacePredictionsResponse {
@@ -97,9 +102,10 @@ message ListNamespacePredictionsResponse {
 message ListNodePredictionsRequest {
     common.QueryCondition         query_condition = 1;
     repeated resources.ObjectMeta object_meta     = 2;
-    int64                         granularity     = 3;
-    string                        model_id        = 4;
-    string                        prediction_id   = 5;
+    repeated common.MetricType    metric_types    = 3;
+    int64                         granularity     = 4;
+    string                        model_id        = 5;
+    string                        prediction_id   = 6;
 }
 
 // Represents a response for a listing predictions of nodes request
@@ -111,14 +117,13 @@ message ListNodePredictionsResponse {
 message ListClusterPredictionsRequest {
     common.QueryCondition         query_condition = 1;
     repeated resources.ObjectMeta object_meta     = 2;
-    int64                         granularity     = 3;
-    string                        model_id        = 4;
-    string                        prediction_id   = 5;
+    repeated common.MetricType    metric_types    = 3;
+    int64                         granularity     = 4;
+    string                        model_id        = 5;
+    string                        prediction_id   = 6;
 }
 
 message ListClusterPredictionsResponse {
     google.rpc.Status          status              = 1;
     repeated ClusterPrediction cluster_predictions = 2;
 }
-
-
