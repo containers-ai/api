@@ -4,6 +4,7 @@ syntax = "proto3";
 
 package containersai.alameda.v1alpha1.datahub.common;
 
+import "common/common.proto";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/common";
@@ -18,6 +19,7 @@ enum MetricType {
     POWER_USAGE_WATTS            = 3;
     TEMPERATURE_CELSIUS          = 4;
     DUTY_CYCLE                   = 5;
+    CURRENT_OFFSET               = 6;
 }
 
 enum ResourceName {
@@ -42,4 +44,15 @@ message MetricData {
     MetricType      metric_type = 1;
     repeated Sample data        = 2; // data can be time series or non-time series
     int64           granularity = 3;
+}
+
+message ReadMetricData {
+    common.MetricType                  metric_type = 1;
+    repeated containersai.common.Group groups      = 2;
+}
+
+message WriteMetricData {
+    common.MetricType                metric_type = 1;
+    repeated string                  columns     = 2;
+    repeated containersai.common.Row rows        = 3;
 }

@@ -9,6 +9,7 @@ import "alameda_api/v1alpha1/datahub/resources/metadata.proto";
 import "alameda_api/v1alpha1/datahub/resources/policies.proto";
 import "alameda_api/v1alpha1/datahub/resources/resources.proto";
 import "alameda_api/v1alpha1/datahub/recommendations/types.proto";
+import "alameda_api/v1alpha1/datahub/schemas/types.proto";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/recommendations";
@@ -74,4 +75,14 @@ message ClusterRecommendation {
     ControllerRecommendedType    recommended_type     = 3;
     ControllerRecommendedSpec    recommended_spec     = 4;
     ControllerRecommendedSpecK8s recommended_spec_k8s = 5;
+}
+
+message ReadRecommendation {
+    schemas.SchemaMeta             schema_meta     = 1;
+    repeated common.ReadMetricData recommendations = 2;
+}
+
+message WriteRecommendation {
+    schemas.SchemaMeta              schema_meta     = 1;
+    repeated common.WriteMetricData recommendations = 2;
 }

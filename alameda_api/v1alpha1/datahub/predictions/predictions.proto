@@ -4,8 +4,10 @@ syntax = "proto3";
 
 package containersai.alameda.v1alpha1.datahub.predictions;
 
+import "alameda_api/v1alpha1/datahub/common/metrics.proto";
 import "alameda_api/v1alpha1/datahub/predictions/types.proto";
 import "alameda_api/v1alpha1/datahub/resources/metadata.proto";
+import "alameda_api/v1alpha1/datahub/schemas/types.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/predictions";
 
@@ -59,4 +61,18 @@ message ClusterPrediction {
     repeated MetricData  predicted_raw_data        = 2;
     repeated MetricData  predicted_upperbound_data = 3;
     repeated MetricData  predicted_lowerbound_data = 4;
+}
+
+message ReadPrediction {
+    schemas.SchemaMeta             schema_meta               = 1;
+    repeated common.ReadMetricData predicted_raw_data        = 2;
+    repeated common.ReadMetricData predicted_upperbound_data = 3;
+    repeated common.ReadMetricData predicted_lowerbound_data = 4;
+}
+
+message WritePrediction {
+    schemas.SchemaMeta              schema_meta               = 1;
+    repeated common.WriteMetricData predicted_raw_data        = 2;
+    repeated common.WriteMetricData predicted_upperbound_data = 3;
+    repeated common.WriteMetricData predicted_lowerbound_data = 4;
 }
