@@ -4,6 +4,7 @@ syntax = "proto3";
 
 package containersai.alameda.v1alpha1.datahub.common;
 
+import "common/types.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
 
@@ -26,6 +27,13 @@ message TimeRange {
     google.protobuf.Timestamp apply_time         = 5;
 }
 
+message WhereCondition {
+    repeated string                       keys      = 1;
+    repeated string                       values    = 2;
+    repeated string                       operators = 3;
+    repeated containersai.common.DataType types     = 4;
+}
+
 message QueryCondition {
     TimeRange time_range = 1;
     enum Order {
@@ -33,6 +41,8 @@ message QueryCondition {
         ASC  = 1;
         DESC = 2;
     }
-    Order     order      = 2;
-    uint64    limit      = 3;
+    Order           order  = 2;
+    WhereCondition  where  = 3;
+    repeated string groups = 4;
+    uint64          limit  = 5;
 }

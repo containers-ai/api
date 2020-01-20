@@ -8,9 +8,14 @@ import "alameda_api/v1alpha1/datahub/common/metrics.proto";
 import "alameda_api/v1alpha1/datahub/common/queries.proto";
 import "alameda_api/v1alpha1/datahub/metrics/metrics.proto";
 import "alameda_api/v1alpha1/datahub/resources/metadata.proto";
+import "alameda_api/v1alpha1/datahub/schemas/types.proto";
 import "google/rpc/status.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/metrics";
+
+message CreateMetricsRequest {
+    repeated WriteMetric metrics = 1;
+}
 
 // Represents a request for creating metrics data of pods
 message CreatePodMetricsRequest {
@@ -109,4 +114,15 @@ message ListClusterMetricsRequest {
 message ListClusterMetricsResponse {
     google.rpc.Status      status          = 1;
     repeated ClusterMetric cluster_metrics = 2;
+}
+
+message ListMetricsRequest {
+    common.QueryCondition      query_condition = 1;
+    schemas.SchemaMeta         schema_meta     = 2;
+    repeated common.MetricType metric_types    = 3;
+}
+
+message ListMetricsResponse {
+    google.rpc.Status   status  = 1;
+    repeated ReadMetric metrics = 2;
 }

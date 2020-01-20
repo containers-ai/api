@@ -9,6 +9,7 @@ import "alameda_api/v1alpha1/datahub/plannings/types.proto";
 import "alameda_api/v1alpha1/datahub/resources/metadata.proto";
 import "alameda_api/v1alpha1/datahub/resources/policies.proto";
 import "alameda_api/v1alpha1/datahub/resources/resources.proto";
+import "alameda_api/v1alpha1/datahub/schemas/types.proto";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/plannings";
@@ -95,4 +96,14 @@ message ClusterPlanning {
     google.protobuf.Timestamp  start_time          = 6;
     google.protobuf.Timestamp  end_time            = 7;
     repeated Planning          plannings           = 8;
+}
+
+message ReadPlanning {
+    schemas.SchemaMeta             schema_meta = 1;
+    repeated common.ReadMetricData plannings   = 2;
+}
+
+message WritePlanning {
+    schemas.SchemaMeta              schema_meta = 1;
+    repeated common.WriteMetricData plannings   = 2;
 }
