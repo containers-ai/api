@@ -10,5 +10,5 @@ option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/s
 
 message Schema {
     SchemaMeta           schema_meta  = 1;
-    repeated Mesaurement measurements = 2;
+    repeated Measurement measurements = 2;
 }

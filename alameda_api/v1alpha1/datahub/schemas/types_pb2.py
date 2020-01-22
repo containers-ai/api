@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.alameda.v1alpha1.datahub.schemas',
   syntax='proto3',
   serialized_options=_b('ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemas'),
-  serialized_pb=_b('\n0alameda_api/v1alpha1/datahub/schemas/types.proto\x12-containersai.alameda.v1alpha1.datahub.schemas\x1a\x12\x63ommon/types.proto\"\xb6\x01\n\nSchemaMeta\x12\x43\n\x05table\x18\x01 \x01(\x0e\x32\x34.containersai.alameda.v1alpha1.datahub.schemas.Table\x12\x43\n\x05scope\x18\x02 \x01(\x0e\x32\x34.containersai.alameda.v1alpha1.datahub.schemas.Scope\x12\x10\n\x08\x63\x61tegory\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\t\"c\n\x0bMesaurement\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x46\n\x07\x63olumns\x18\x02 \x03(\x0b\x32\x35.containersai.alameda.v1alpha1.datahub.schemas.Column\"\x92\x01\n\x06\x43olumn\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08required\x18\x02 \x01(\x08\x12\x35\n\x0c\x63olumn_types\x18\x03 \x01(\x0e\x32\x1f.containersai.common.ColumnType\x12\x31\n\ndata_types\x18\x04 \x01(\x0e\x32\x1d.containersai.common.DataType*\x9d\x01\n\x05Table\x12\x13\n\x0fTABLE_UNDEFINED\x10\x00\x12\x15\n\x11TABLE_APPLICATION\x10\x01\x12\x10\n\x0cTABLE_METRIC\x10\x02\x12\x12\n\x0eTABLE_PLANNING\x10\x03\x12\x14\n\x10TABLE_PREDICTION\x10\x04\x12\x12\n\x0eTABLE_RESOURCE\x10\x05\x12\x18\n\x14TABLE_RECOMMENDATION\x10\x06*G\n\x05Scope\x12\x13\n\x0fSCOPE_UNDEFINED\x10\x00\x12\x12\n\x0eSCOPE_RESOURCE\x10\x01\x12\x15\n\x11SCOPE_APPLICATION\x10\x02\x42\x43ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemasb\x06proto3')
+  serialized_pb=_b('\n0alameda_api/v1alpha1/datahub/schemas/types.proto\x12-containersai.alameda.v1alpha1.datahub.schemas\x1a\x12\x63ommon/types.proto\"\xb6\x01\n\nSchemaMeta\x12\x43\n\x05table\x18\x01 \x01(\x0e\x32\x34.containersai.alameda.v1alpha1.datahub.schemas.Table\x12\x43\n\x05scope\x18\x02 \x01(\x0e\x32\x34.containersai.alameda.v1alpha1.datahub.schemas.Scope\x12\x10\n\x08\x63\x61tegory\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\t\"c\n\x0bMeasurement\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x46\n\x07\x63olumns\x18\x02 \x03(\x0b\x32\x35.containersai.alameda.v1alpha1.datahub.schemas.Column\"\x92\x01\n\x06\x43olumn\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08required\x18\x02 \x01(\x08\x12\x35\n\x0c\x63olumn_types\x18\x03 \x01(\x0e\x32\x1f.containersai.common.ColumnType\x12\x31\n\ndata_types\x18\x04 \x01(\x0e\x32\x1d.containersai.common.DataType*\x9d\x01\n\x05Table\x12\x13\n\x0fTABLE_UNDEFINED\x10\x00\x12\x15\n\x11TABLE_APPLICATION\x10\x01\x12\x10\n\x0cTABLE_METRIC\x10\x02\x12\x12\n\x0eTABLE_PLANNING\x10\x03\x12\x14\n\x10TABLE_PREDICTION\x10\x04\x12\x12\n\x0eTABLE_RESOURCE\x10\x05\x12\x18\n\x14TABLE_RECOMMENDATION\x10\x06*G\n\x05Scope\x12\x13\n\x0fSCOPE_UNDEFINED\x10\x00\x12\x15\n\x11SCOPE_APPLICATION\x10\x01\x12\x12\n\x0eSCOPE_RESOURCE\x10\x02\x42\x43ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemasb\x06proto3')
   ,
   dependencies=[common_dot_types__pb2.DESCRIPTOR,])
 
@@ -80,11 +80,11 @@ _SCOPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SCOPE_RESOURCE', index=1, number=1,
+      name='SCOPE_APPLICATION', index=1, number=1,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SCOPE_APPLICATION', index=2, number=2,
+      name='SCOPE_RESOURCE', index=2, number=2,
       serialized_options=None,
       type=None),
   ],
@@ -104,8 +104,8 @@ TABLE_PREDICTION = 4
 TABLE_RESOURCE = 5
 TABLE_RECOMMENDATION = 6
 SCOPE_UNDEFINED = 0
-SCOPE_RESOURCE = 1
-SCOPE_APPLICATION = 2
+SCOPE_APPLICATION = 1
+SCOPE_RESOURCE = 2
 
 
 
@@ -161,22 +161,22 @@ _SCHEMAMETA = _descriptor.Descriptor(
 )
 
 
-_MESAUREMENT = _descriptor.Descriptor(
-  name='Mesaurement',
-  full_name='containersai.alameda.v1alpha1.datahub.schemas.Mesaurement',
+_MEASUREMENT = _descriptor.Descriptor(
+  name='Measurement',
+  full_name='containersai.alameda.v1alpha1.datahub.schemas.Measurement',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='containersai.alameda.v1alpha1.datahub.schemas.Mesaurement.name', index=0,
+      name='name', full_name='containersai.alameda.v1alpha1.datahub.schemas.Measurement.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='columns', full_name='containersai.alameda.v1alpha1.datahub.schemas.Mesaurement.columns', index=1,
+      name='columns', full_name='containersai.alameda.v1alpha1.datahub.schemas.Measurement.columns', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -252,11 +252,11 @@ _COLUMN = _descriptor.Descriptor(
 
 _SCHEMAMETA.fields_by_name['table'].enum_type = _TABLE
 _SCHEMAMETA.fields_by_name['scope'].enum_type = _SCOPE
-_MESAUREMENT.fields_by_name['columns'].message_type = _COLUMN
+_MEASUREMENT.fields_by_name['columns'].message_type = _COLUMN
 _COLUMN.fields_by_name['column_types'].enum_type = common_dot_types__pb2._COLUMNTYPE
 _COLUMN.fields_by_name['data_types'].enum_type = common_dot_types__pb2._DATATYPE
 DESCRIPTOR.message_types_by_name['SchemaMeta'] = _SCHEMAMETA
-DESCRIPTOR.message_types_by_name['Mesaurement'] = _MESAUREMENT
+DESCRIPTOR.message_types_by_name['Measurement'] = _MEASUREMENT
 DESCRIPTOR.message_types_by_name['Column'] = _COLUMN
 DESCRIPTOR.enum_types_by_name['Table'] = _TABLE
 DESCRIPTOR.enum_types_by_name['Scope'] = _SCOPE
@@ -269,12 +269,12 @@ SchemaMeta = _reflection.GeneratedProtocolMessageType('SchemaMeta', (_message.Me
   })
 _sym_db.RegisterMessage(SchemaMeta)
 
-Mesaurement = _reflection.GeneratedProtocolMessageType('Mesaurement', (_message.Message,), {
-  'DESCRIPTOR' : _MESAUREMENT,
+Measurement = _reflection.GeneratedProtocolMessageType('Measurement', (_message.Message,), {
+  'DESCRIPTOR' : _MEASUREMENT,
   '__module__' : 'alameda_api.v1alpha1.datahub.schemas.types_pb2'
-  # @@protoc_insertion_point(class_scope:containersai.alameda.v1alpha1.datahub.schemas.Mesaurement)
+  # @@protoc_insertion_point(class_scope:containersai.alameda.v1alpha1.datahub.schemas.Measurement)
   })
-_sym_db.RegisterMessage(Mesaurement)
+_sym_db.RegisterMessage(Measurement)
 
 Column = _reflection.GeneratedProtocolMessageType('Column', (_message.Message,), {
   'DESCRIPTOR' : _COLUMN,

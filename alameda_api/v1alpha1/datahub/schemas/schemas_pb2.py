@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.alameda.v1alpha1.datahub.schemas',
   syntax='proto3',
   serialized_options=_b('ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemas'),
-  serialized_pb=_b('\n2alameda_api/v1alpha1/datahub/schemas/schemas.proto\x12-containersai.alameda.v1alpha1.datahub.schemas\x1a\x30\x61lameda_api/v1alpha1/datahub/schemas/types.proto\"\xaa\x01\n\x06Schema\x12N\n\x0bschema_meta\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta\x12P\n\x0cmeasurements\x18\x02 \x03(\x0b\x32:.containersai.alameda.v1alpha1.datahub.schemas.MesaurementBCZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemasb\x06proto3')
+  serialized_pb=_b('\n2alameda_api/v1alpha1/datahub/schemas/schemas.proto\x12-containersai.alameda.v1alpha1.datahub.schemas\x1a\x30\x61lameda_api/v1alpha1/datahub/schemas/types.proto\"\xaa\x01\n\x06Schema\x12N\n\x0bschema_meta\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta\x12P\n\x0cmeasurements\x18\x02 \x03(\x0b\x32:.containersai.alameda.v1alpha1.datahub.schemas.MeasurementBCZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemasb\x06proto3')
   ,
   dependencies=[alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2.DESCRIPTOR,])
 
@@ -66,7 +66,7 @@ _SCHEMA = _descriptor.Descriptor(
 )
 
 _SCHEMA.fields_by_name['schema_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._SCHEMAMETA
-_SCHEMA.fields_by_name['measurements'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._MESAUREMENT
+_SCHEMA.fields_by_name['measurements'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._MEASUREMENT
 DESCRIPTOR.message_types_by_name['Schema'] = _SCHEMA
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
