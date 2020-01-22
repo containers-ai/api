@@ -38,6 +38,11 @@ class DatahubServiceStub(object):
         request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_services__pb2.ListApplicationsRequest.SerializeToString,
         response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_services__pb2.ListApplicationsResponse.FromString,
         )
+    self.DeleteApps = channel.unary_unary(
+        '/containersai.alameda.v1alpha1.datahub.DatahubService/DeleteApps',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_services__pb2.DeleteApplicationsRequest.SerializeToString,
+        response_deserializer=google_dot_rpc_dot_status__pb2.Status.FromString,
+        )
     self.CreateEvents = channel.unary_unary(
         '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateEvents',
         request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_events_dot_services__pb2.CreateEventsRequest.SerializeToString,
@@ -542,6 +547,13 @@ class DatahubServiceServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def ListApps(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def DeleteApps(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -1247,6 +1259,11 @@ def add_DatahubServiceServicer_to_server(servicer, server):
           servicer.ListApps,
           request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_services__pb2.ListApplicationsRequest.FromString,
           response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_services__pb2.ListApplicationsResponse.SerializeToString,
+      ),
+      'DeleteApps': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteApps,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_services__pb2.DeleteApplicationsRequest.FromString,
+          response_serializer=google_dot_rpc_dot_status__pb2.Status.SerializeToString,
       ),
       'CreateEvents': grpc.unary_unary_rpc_method_handler(
           servicer.CreateEvents,
