@@ -24,3 +24,8 @@ message ListApplicationsResponse {
     google.rpc.Status        status       = 1;
     repeated ReadApplication applications = 2;
 }
+
+message DeleteApplicationsRequest {
+    common.QueryCondition       query_condition = 1;
+    repeated schemas.SchemaMeta schema_meta     = 2;
+}
