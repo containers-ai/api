@@ -20,8 +20,8 @@ enum Table {
 
 enum Scope {
     SCOPE_UNDEFINED   = 0;
-    SCOPE_RESOURCE    = 1;
-    SCOPE_APPLICATION = 2;
+    SCOPE_APPLICATION = 1;
+    SCOPE_RESOURCE    = 2;
 }
 
 message SchemaMeta {
@@ -31,7 +31,7 @@ message SchemaMeta {
     string type     = 4;
 }
 
-message Mesaurement {
+message Measurement {
     string          name    = 1;
     repeated Column columns = 2;
 }

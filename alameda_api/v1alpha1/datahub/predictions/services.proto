@@ -140,6 +140,6 @@ message ListPredictionsRequest {
 }
 
 message ListPredictionsResponse {
-    google.rpc.Status status      = 1;
-    ReadPrediction    predictions = 2;
+    google.rpc.Status       status      = 1;
+    repeated ReadPrediction predictions = 2;
 }
