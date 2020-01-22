@@ -44,6 +44,8 @@ setup(
               'alameda_api.v1alpha1.datahub.resources',
               'alameda_api.v1alpha1.datahub.scores',
               'alameda_api.v1alpha1.datahub.weavescope',
+              'alameda_api.v1alpha1.datahub.schemas',
+              'alameda_api.v1alpha1.datahub.applications',
               'common'],
     package_dir={
         'alameda_api.v1alpha1.ai_service': 'alameda_api/v1alpha1/ai_service',
@@ -61,6 +63,8 @@ setup(
         'alameda_api.v1alpha1.datahub.resources': 'alameda_api/v1alpha1/datahub/resources',
         'alameda_api.v1alpha1.datahub.scores': 'alameda_api/v1alpha1/datahub/scores',
         'alameda_api.v1alpha1.datahub.weavescope': 'alameda_api/v1alpha1/datahub/weavescope',
+        'alameda_api.v1alpha1.datahub.schemas': 'alameda_api/v1alpha1/datahub/schemas',
+        'alameda_api.v1alpha1.datahub.applications': 'alameda_api/v1alpha1/datahub/applications',
         'common': 'common',
     },
     install_requires=INSTALL_REQUIRES,
