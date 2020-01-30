@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.alameda.v1alpha1.datahub.schemas',
   syntax='proto3',
   serialized_options=_b('ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemas'),
-  serialized_pb=_b('\n0alameda_api/v1alpha1/datahub/schemas/types.proto\x12-containersai.alameda.v1alpha1.datahub.schemas\x1a\x12\x63ommon/types.proto\"\xb6\x01\n\nSchemaMeta\x12\x43\n\x05table\x18\x01 \x01(\x0e\x32\x34.containersai.alameda.v1alpha1.datahub.schemas.Table\x12\x43\n\x05scope\x18\x02 \x01(\x0e\x32\x34.containersai.alameda.v1alpha1.datahub.schemas.Scope\x12\x10\n\x08\x63\x61tegory\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\t\"c\n\x0bMeasurement\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x46\n\x07\x63olumns\x18\x02 \x03(\x0b\x32\x35.containersai.alameda.v1alpha1.datahub.schemas.Column\"\x92\x01\n\x06\x43olumn\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08required\x18\x02 \x01(\x08\x12\x35\n\x0c\x63olumn_types\x18\x03 \x01(\x0e\x32\x1f.containersai.common.ColumnType\x12\x31\n\ndata_types\x18\x04 \x01(\x0e\x32\x1d.containersai.common.DataType*\x9d\x01\n\x05Table\x12\x13\n\x0fTABLE_UNDEFINED\x10\x00\x12\x15\n\x11TABLE_APPLICATION\x10\x01\x12\x10\n\x0cTABLE_METRIC\x10\x02\x12\x12\n\x0eTABLE_PLANNING\x10\x03\x12\x14\n\x10TABLE_PREDICTION\x10\x04\x12\x12\n\x0eTABLE_RESOURCE\x10\x05\x12\x18\n\x14TABLE_RECOMMENDATION\x10\x06*G\n\x05Scope\x12\x13\n\x0fSCOPE_UNDEFINED\x10\x00\x12\x15\n\x11SCOPE_APPLICATION\x10\x01\x12\x12\n\x0eSCOPE_RESOURCE\x10\x02\x42\x43ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemasb\x06proto3')
+  serialized_pb=_b('\n0alameda_api/v1alpha1/datahub/schemas/types.proto\x12-containersai.alameda.v1alpha1.datahub.schemas\x1a\x12\x63ommon/types.proto\"q\n\nSchemaMeta\x12\x43\n\x05table\x18\x01 \x01(\x0e\x32\x34.containersai.alameda.v1alpha1.datahub.schemas.Table\x12\x10\n\x08\x63\x61tegory\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\t\"c\n\x0bMeasurement\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x46\n\x07\x63olumns\x18\x02 \x03(\x0b\x32\x35.containersai.alameda.v1alpha1.datahub.schemas.Column\"\x92\x01\n\x06\x43olumn\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08required\x18\x02 \x01(\x08\x12\x35\n\x0c\x63olumn_types\x18\x03 \x01(\x0e\x32\x1f.containersai.common.ColumnType\x12\x31\n\ndata_types\x18\x04 \x01(\x0e\x32\x1d.containersai.common.DataType*\x9d\x01\n\x05Table\x12\x13\n\x0fTABLE_UNDEFINED\x10\x00\x12\x15\n\x11TABLE_APPLICATION\x10\x01\x12\x10\n\x0cTABLE_METRIC\x10\x02\x12\x12\n\x0eTABLE_PLANNING\x10\x03\x12\x14\n\x10TABLE_PREDICTION\x10\x04\x12\x18\n\x14TABLE_RECOMMENDATION\x10\x05\x12\x12\n\x0eTABLE_RESOURCE\x10\x06\x42\x43ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemasb\x06proto3')
   ,
   dependencies=[common_dot_types__pb2.DESCRIPTOR,])
 
@@ -53,59 +53,29 @@ _TABLE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TABLE_RESOURCE', index=5, number=5,
+      name='TABLE_RECOMMENDATION', index=5, number=5,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TABLE_RECOMMENDATION', index=6, number=6,
+      name='TABLE_RESOURCE', index=6, number=6,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=555,
-  serialized_end=712,
+  serialized_start=485,
+  serialized_end=642,
 )
 _sym_db.RegisterEnumDescriptor(_TABLE)
 
 Table = enum_type_wrapper.EnumTypeWrapper(_TABLE)
-_SCOPE = _descriptor.EnumDescriptor(
-  name='Scope',
-  full_name='containersai.alameda.v1alpha1.datahub.schemas.Scope',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SCOPE_UNDEFINED', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SCOPE_APPLICATION', index=1, number=1,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SCOPE_RESOURCE', index=2, number=2,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=714,
-  serialized_end=785,
-)
-_sym_db.RegisterEnumDescriptor(_SCOPE)
-
-Scope = enum_type_wrapper.EnumTypeWrapper(_SCOPE)
 TABLE_UNDEFINED = 0
 TABLE_APPLICATION = 1
 TABLE_METRIC = 2
 TABLE_PLANNING = 3
 TABLE_PREDICTION = 4
-TABLE_RESOURCE = 5
-TABLE_RECOMMENDATION = 6
-SCOPE_UNDEFINED = 0
-SCOPE_APPLICATION = 1
-SCOPE_RESOURCE = 2
+TABLE_RECOMMENDATION = 5
+TABLE_RESOURCE = 6
 
 
 
@@ -124,21 +94,14 @@ _SCHEMAMETA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='scope', full_name='containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta.scope', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='category', full_name='containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta.category', index=2,
+      name='category', full_name='containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta.category', index=1,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='type', full_name='containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta.type', index=3,
+      name='type', full_name='containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta.type', index=2,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -156,8 +119,8 @@ _SCHEMAMETA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=120,
-  serialized_end=302,
+  serialized_start=119,
+  serialized_end=232,
 )
 
 
@@ -194,8 +157,8 @@ _MEASUREMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=304,
-  serialized_end=403,
+  serialized_start=234,
+  serialized_end=333,
 )
 
 
@@ -246,12 +209,11 @@ _COLUMN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=406,
-  serialized_end=552,
+  serialized_start=336,
+  serialized_end=482,
 )
 
 _SCHEMAMETA.fields_by_name['table'].enum_type = _TABLE
-_SCHEMAMETA.fields_by_name['scope'].enum_type = _SCOPE
 _MEASUREMENT.fields_by_name['columns'].message_type = _COLUMN
 _COLUMN.fields_by_name['column_types'].enum_type = common_dot_types__pb2._COLUMNTYPE
 _COLUMN.fields_by_name['data_types'].enum_type = common_dot_types__pb2._DATATYPE
@@ -259,7 +221,6 @@ DESCRIPTOR.message_types_by_name['SchemaMeta'] = _SCHEMAMETA
 DESCRIPTOR.message_types_by_name['Measurement'] = _MEASUREMENT
 DESCRIPTOR.message_types_by_name['Column'] = _COLUMN
 DESCRIPTOR.enum_types_by_name['Table'] = _TABLE
-DESCRIPTOR.enum_types_by_name['Scope'] = _SCOPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SchemaMeta = _reflection.GeneratedProtocolMessageType('SchemaMeta', (_message.Message,), {
