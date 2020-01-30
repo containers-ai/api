@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.alameda.v1alpha1.datahub.schemas',
   syntax='proto3',
   serialized_options=_b('ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemas'),
-  serialized_pb=_b('\n0alameda_api/v1alpha1/datahub/schemas/types.proto\x12-containersai.alameda.v1alpha1.datahub.schemas\x1a\x12\x63ommon/types.proto\"q\n\nSchemaMeta\x12\x43\n\x05table\x18\x01 \x01(\x0e\x32\x34.containersai.alameda.v1alpha1.datahub.schemas.Table\x12\x10\n\x08\x63\x61tegory\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\t\"c\n\x0bMeasurement\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x46\n\x07\x63olumns\x18\x02 \x03(\x0b\x32\x35.containersai.alameda.v1alpha1.datahub.schemas.Column\"\x92\x01\n\x06\x43olumn\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08required\x18\x02 \x01(\x08\x12\x35\n\x0c\x63olumn_types\x18\x03 \x01(\x0e\x32\x1f.containersai.common.ColumnType\x12\x31\n\ndata_types\x18\x04 \x01(\x0e\x32\x1d.containersai.common.DataType*\x9d\x01\n\x05Table\x12\x13\n\x0fTABLE_UNDEFINED\x10\x00\x12\x15\n\x11TABLE_APPLICATION\x10\x01\x12\x10\n\x0cTABLE_METRIC\x10\x02\x12\x12\n\x0eTABLE_PLANNING\x10\x03\x12\x14\n\x10TABLE_PREDICTION\x10\x04\x12\x18\n\x14TABLE_RECOMMENDATION\x10\x05\x12\x12\n\x0eTABLE_RESOURCE\x10\x06\x42\x43ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemasb\x06proto3')
+  serialized_pb=_b('\n0alameda_api/v1alpha1/datahub/schemas/types.proto\x12-containersai.alameda.v1alpha1.datahub.schemas\x1a\x12\x63ommon/types.proto\"q\n\nSchemaMeta\x12\x43\n\x05table\x18\x01 \x01(\x0e\x32\x34.containersai.alameda.v1alpha1.datahub.schemas.Table\x12\x10\n\x08\x63\x61tegory\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\"c\n\x0bMeasurement\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x46\n\x07\x63olumns\x18\x02 \x03(\x0b\x32\x35.containersai.alameda.v1alpha1.datahub.schemas.Column\"\x92\x01\n\x06\x43olumn\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08required\x18\x02 \x01(\x08\x12\x35\n\x0c\x63olumn_types\x18\x03 \x01(\x0e\x32\x1f.containersai.common.ColumnType\x12\x31\n\ndata_types\x18\x04 \x01(\x0e\x32\x1d.containersai.common.DataType*\x9d\x01\n\x05Table\x12\x13\n\x0fTABLE_UNDEFINED\x10\x00\x12\x15\n\x11TABLE_APPLICATION\x10\x01\x12\x10\n\x0cTABLE_METRIC\x10\x02\x12\x12\n\x0eTABLE_PLANNING\x10\x03\x12\x14\n\x10TABLE_PREDICTION\x10\x04\x12\x18\n\x14TABLE_RECOMMENDATION\x10\x05\x12\x12\n\x0eTABLE_RESOURCE\x10\x06\x42\x43ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemasb\x06proto3')
   ,
   dependencies=[common_dot_types__pb2.DESCRIPTOR,])
 
@@ -95,14 +95,14 @@ _SCHEMAMETA = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='category', full_name='containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta.category', index=1,
-      number=3, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='type', full_name='containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta.type', index=2,
-      number=4, type=9, cpp_type=9, label=1,
+      number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
