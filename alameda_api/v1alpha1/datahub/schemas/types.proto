@@ -14,19 +14,12 @@ enum Table {
     TABLE_METRIC         = 2;
     TABLE_PLANNING       = 3;
     TABLE_PREDICTION     = 4;
-    TABLE_RESOURCE       = 5;
-    TABLE_RECOMMENDATION = 6;
-}
-
-enum Scope {
-    SCOPE_UNDEFINED   = 0;
-    SCOPE_APPLICATION = 1;
-    SCOPE_RESOURCE    = 2;
+    TABLE_RECOMMENDATION = 5;
+    TABLE_RESOURCE       = 6;
 }
 
 message SchemaMeta {
     Table  table    = 1;
-    Scope  scope    = 2;
     string category = 3;
     string type     = 4;
 }
