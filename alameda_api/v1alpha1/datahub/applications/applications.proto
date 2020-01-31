@@ -4,18 +4,17 @@ syntax = "proto3";
 
 package containersai.alameda.v1alpha1.datahub.applications;
 
-import "common/common.proto";
+import "alameda_api/v1alpha1/datahub/applications/types.proto";
 import "alameda_api/v1alpha1/datahub/schemas/types.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/applications";
 
-message ReadApplication {
-    schemas.SchemaMeta    schema_meta = 1;
-    repeated common.Group groups      = 2;
+message WriteApplication {
+    schemas.SchemaMeta            schema_meta      = 1;
+    repeated WriteApplicationData application_data = 2;
 }
 
-message WriteApplication {
-    schemas.SchemaMeta  schema_meta = 1;
-    repeated string     columns     = 2;
-    repeated common.Row rows        = 3;
+message ReadApplication {
+    schemas.SchemaMeta           schema_meta      = 1;
+    repeated ReadApplicationData application_data = 2;
 }

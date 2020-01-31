@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.alameda.v1alpha1.datahub.common',
   syntax='proto3',
   serialized_options=_b('Z@github.com/containers-ai/api/alameda_api/v1alpha1/datahub/common'),
-  serialized_pb=_b('\n1alameda_api/v1alpha1/datahub/common/metrics.proto\x12,containersai.alameda.v1alpha1.datahub.common\x1a\x13\x63ommon/common.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"s\n\x06Sample\x12(\n\x04time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tnum_value\x18\x03 \x01(\t\"\xb4\x01\n\nMetricData\x12M\n\x0bmetric_type\x18\x01 \x01(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x42\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x34.containersai.alameda.v1alpha1.datahub.common.Sample\x12\x13\n\x0bgranularity\x18\x03 \x01(\x03\"\x8b\x01\n\x0eReadMetricData\x12M\n\x0bmetric_type\x18\x01 \x01(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12*\n\x06groups\x18\x02 \x03(\x0b\x32\x1a.containersai.common.Group\"\x99\x01\n\x0fWriteMetricData\x12M\n\x0bmetric_type\x18\x01 \x01(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x0f\n\x07\x63olumns\x18\x02 \x03(\t\x12&\n\x04rows\x18\x03 \x03(\x0b\x32\x18.containersai.common.Row*\xb6\x01\n\nMetricType\x12\x1a\n\x16METRICS_TYPE_UNDEFINED\x10\x00\x12 \n\x1c\x43PU_USAGE_SECONDS_PERCENTAGE\x10\x01\x12\x16\n\x12MEMORY_USAGE_BYTES\x10\x02\x12\x15\n\x11POWER_USAGE_WATTS\x10\x03\x12\x17\n\x13TEMPERATURE_CELSIUS\x10\x04\x12\x0e\n\nDUTY_CYCLE\x10\x05\x12\x12\n\x0e\x43URRENT_OFFSET\x10\x06*@\n\x0cResourceName\x12\x1b\n\x17RESOURCE_NAME_UNDEFINED\x10\x00\x12\x07\n\x03\x43PU\x10\x01\x12\n\n\x06MEMORY\x10\x02\x42\x42Z@github.com/containers-ai/api/alameda_api/v1alpha1/datahub/commonb\x06proto3')
+  serialized_pb=_b('\n1alameda_api/v1alpha1/datahub/common/metrics.proto\x12,containersai.alameda.v1alpha1.datahub.common\x1a\x13\x63ommon/common.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"s\n\x06Sample\x12(\n\x04time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tnum_value\x18\x03 \x01(\t\"\xb4\x01\n\nMetricData\x12M\n\x0bmetric_type\x18\x01 \x01(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x42\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x34.containersai.alameda.v1alpha1.datahub.common.Sample\x12\x13\n\x0bgranularity\x18\x03 \x01(\x03\"\x9c\x01\n\x0eReadMetricData\x12M\n\x0bmetric_type\x18\x01 \x01(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x0f\n\x07\x63olumns\x18\x02 \x03(\t\x12*\n\x06groups\x18\x03 \x03(\x0b\x32\x1a.containersai.common.Group\"\x99\x01\n\x0fWriteMetricData\x12M\n\x0bmetric_type\x18\x01 \x01(\x0e\x32\x38.containersai.alameda.v1alpha1.datahub.common.MetricType\x12\x0f\n\x07\x63olumns\x18\x02 \x03(\t\x12&\n\x04rows\x18\x03 \x03(\x0b\x32\x18.containersai.common.Row*\xb6\x01\n\nMetricType\x12\x1a\n\x16METRICS_TYPE_UNDEFINED\x10\x00\x12 \n\x1c\x43PU_USAGE_SECONDS_PERCENTAGE\x10\x01\x12\x16\n\x12MEMORY_USAGE_BYTES\x10\x02\x12\x15\n\x11POWER_USAGE_WATTS\x10\x03\x12\x17\n\x13TEMPERATURE_CELSIUS\x10\x04\x12\x0e\n\nDUTY_CYCLE\x10\x05\x12\x12\n\x0e\x43URRENT_OFFSET\x10\x06*@\n\x0cResourceName\x12\x1b\n\x17RESOURCE_NAME_UNDEFINED\x10\x00\x12\x07\n\x03\x43PU\x10\x01\x12\n\n\x06MEMORY\x10\x02\x42\x42Z@github.com/containers-ai/api/alameda_api/v1alpha1/datahub/commonb\x06proto3')
   ,
   dependencies=[common_dot_common__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -64,8 +64,8 @@ _METRICTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=752,
-  serialized_end=934,
+  serialized_start=769,
+  serialized_end=951,
 )
 _sym_db.RegisterEnumDescriptor(_METRICTYPE)
 
@@ -91,8 +91,8 @@ _RESOURCENAME = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=936,
-  serialized_end=1000,
+  serialized_start=953,
+  serialized_end=1017,
 )
 _sym_db.RegisterEnumDescriptor(_RESOURCENAME)
 
@@ -215,8 +215,15 @@ _READMETRICDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='groups', full_name='containersai.alameda.v1alpha1.datahub.common.ReadMetricData.groups', index=1,
-      number=2, type=11, cpp_type=10, label=3,
+      name='columns', full_name='containersai.alameda.v1alpha1.datahub.common.ReadMetricData.columns', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='groups', full_name='containersai.alameda.v1alpha1.datahub.common.ReadMetricData.groups', index=2,
+      number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -234,7 +241,7 @@ _READMETRICDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=454,
-  serialized_end=593,
+  serialized_end=610,
 )
 
 
@@ -278,8 +285,8 @@ _WRITEMETRICDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=596,
-  serialized_end=749,
+  serialized_start=613,
+  serialized_end=766,
 )
 
 _SAMPLE.fields_by_name['time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
