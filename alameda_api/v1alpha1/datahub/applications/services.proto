@@ -16,8 +16,8 @@ message CreateApplicationsRequest {
 }
 
 message ListApplicationsRequest {
-    schemas.SchemaMeta    schema_meta = 1;
-    common.WhereCondition where       = 2;
+    schemas.SchemaMeta        schema_meta     = 1;
+    repeated common.Condition where_condition = 2;
 }
 
 message ListApplicationsResponse {
@@ -26,6 +26,6 @@ message ListApplicationsResponse {
 }
 
 message DeleteApplicationsRequest {
-    schemas.SchemaMeta    schema_meta = 1;
-    common.WhereCondition where       = 2;
+    schemas.SchemaMeta        schema_meta     = 1;
+    repeated common.Condition where_condition = 2;
 }

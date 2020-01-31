@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.alameda.v1alpha1.datahub.applications',
   syntax='proto3',
   serialized_options=_b('ZFgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/applications'),
-  serialized_pb=_b('\n8alameda_api/v1alpha1/datahub/applications/services.proto\x12\x32\x63ontainersai.alameda.v1alpha1.datahub.applications\x1a<alameda_api/v1alpha1/datahub/applications/applications.proto\x1a\x31\x61lameda_api/v1alpha1/datahub/common/queries.proto\x1a\x30\x61lameda_api/v1alpha1/datahub/schemas/types.proto\x1a\x17google/rpc/status.proto\"w\n\x19\x43reateApplicationsRequest\x12Z\n\x0c\x61pplications\x18\x01 \x03(\x0b\x32\x44.containersai.alameda.v1alpha1.datahub.applications.WriteApplication\"\xb6\x01\n\x17ListApplicationsRequest\x12N\n\x0bschema_meta\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta\x12K\n\x05where\x18\x02 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.WhereCondition\"\x99\x01\n\x18ListApplicationsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12Y\n\x0c\x61pplications\x18\x02 \x03(\x0b\x32\x43.containersai.alameda.v1alpha1.datahub.applications.ReadApplication\"\xb8\x01\n\x19\x44\x65leteApplicationsRequest\x12N\n\x0bschema_meta\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta\x12K\n\x05where\x18\x02 \x01(\x0b\x32<.containersai.alameda.v1alpha1.datahub.common.WhereConditionBHZFgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/applicationsb\x06proto3')
+  serialized_pb=_b('\n8alameda_api/v1alpha1/datahub/applications/services.proto\x12\x32\x63ontainersai.alameda.v1alpha1.datahub.applications\x1a<alameda_api/v1alpha1/datahub/applications/applications.proto\x1a\x31\x61lameda_api/v1alpha1/datahub/common/queries.proto\x1a\x30\x61lameda_api/v1alpha1/datahub/schemas/types.proto\x1a\x17google/rpc/status.proto\"w\n\x19\x43reateApplicationsRequest\x12Z\n\x0c\x61pplications\x18\x01 \x03(\x0b\x32\x44.containersai.alameda.v1alpha1.datahub.applications.WriteApplication\"\xbb\x01\n\x17ListApplicationsRequest\x12N\n\x0bschema_meta\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta\x12P\n\x0fwhere_condition\x18\x02 \x03(\x0b\x32\x37.containersai.alameda.v1alpha1.datahub.common.Condition\"\x99\x01\n\x18ListApplicationsResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12Y\n\x0c\x61pplications\x18\x02 \x03(\x0b\x32\x43.containersai.alameda.v1alpha1.datahub.applications.ReadApplication\"\xbd\x01\n\x19\x44\x65leteApplicationsRequest\x12N\n\x0bschema_meta\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta\x12P\n\x0fwhere_condition\x18\x02 \x03(\x0b\x32\x37.containersai.alameda.v1alpha1.datahub.common.ConditionBHZFgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/applicationsb\x06proto3')
   ,
   dependencies=[alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_applications__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2.DESCRIPTOR,google_dot_rpc_dot_status__pb2.DESCRIPTOR,])
 
@@ -77,9 +77,9 @@ _LISTAPPLICATIONSREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='where', full_name='containersai.alameda.v1alpha1.datahub.applications.ListApplicationsRequest.where', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='where_condition', full_name='containersai.alameda.v1alpha1.datahub.applications.ListApplicationsRequest.where_condition', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -96,7 +96,7 @@ _LISTAPPLICATIONSREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=422,
-  serialized_end=604,
+  serialized_end=609,
 )
 
 
@@ -133,8 +133,8 @@ _LISTAPPLICATIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=607,
-  serialized_end=760,
+  serialized_start=612,
+  serialized_end=765,
 )
 
 
@@ -153,9 +153,9 @@ _DELETEAPPLICATIONSREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='where', full_name='containersai.alameda.v1alpha1.datahub.applications.DeleteApplicationsRequest.where', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='where_condition', full_name='containersai.alameda.v1alpha1.datahub.applications.DeleteApplicationsRequest.where_condition', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -171,17 +171,17 @@ _DELETEAPPLICATIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=763,
-  serialized_end=947,
+  serialized_start=768,
+  serialized_end=957,
 )
 
 _CREATEAPPLICATIONSREQUEST.fields_by_name['applications'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_applications__pb2._WRITEAPPLICATION
 _LISTAPPLICATIONSREQUEST.fields_by_name['schema_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._SCHEMAMETA
-_LISTAPPLICATIONSREQUEST.fields_by_name['where'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._WHERECONDITION
+_LISTAPPLICATIONSREQUEST.fields_by_name['where_condition'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._CONDITION
 _LISTAPPLICATIONSRESPONSE.fields_by_name['status'].message_type = google_dot_rpc_dot_status__pb2._STATUS
 _LISTAPPLICATIONSRESPONSE.fields_by_name['applications'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_applications__pb2._READAPPLICATION
 _DELETEAPPLICATIONSREQUEST.fields_by_name['schema_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._SCHEMAMETA
-_DELETEAPPLICATIONSREQUEST.fields_by_name['where'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._WHERECONDITION
+_DELETEAPPLICATIONSREQUEST.fields_by_name['where_condition'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._CONDITION
 DESCRIPTOR.message_types_by_name['CreateApplicationsRequest'] = _CREATEAPPLICATIONSREQUEST
 DESCRIPTOR.message_types_by_name['ListApplicationsRequest'] = _LISTAPPLICATIONSREQUEST
 DESCRIPTOR.message_types_by_name['ListApplicationsResponse'] = _LISTAPPLICATIONSRESPONSE

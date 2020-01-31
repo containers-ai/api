@@ -15,19 +15,19 @@ option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/c
  *
  */
 message TimeRange {
-    google.protobuf.Timestamp start_time         = 1;
-    google.protobuf.Timestamp end_time           = 2;
-    google.protobuf.Duration  step               = 3;
+    google.protobuf.Timestamp start_time = 1;
+    google.protobuf.Timestamp end_time   = 2;
+    google.protobuf.Duration  step       = 3;
     enum AggregateFunction {
         NONE = 0;
         MAX  = 1;
         AVG  = 2;
     }
-    AggregateFunction         aggregateFunction  = 4;
-    google.protobuf.Timestamp apply_time         = 5;
+    AggregateFunction         aggregateFunction = 4;
+    google.protobuf.Timestamp apply_time        = 5;
 }
 
-message WhereCondition {
+message Condition {
     repeated string                       keys      = 1;
     repeated string                       values    = 2;
     repeated string                       operators = 3;
@@ -41,8 +41,9 @@ message QueryCondition {
         ASC  = 1;
         DESC = 2;
     }
-    Order           order  = 2;
-    WhereCondition  where  = 3;
-    repeated string groups = 4;
-    uint64          limit  = 5;
+    Order              order           = 2;
+    string             where_clause    = 3;
+    repeated Condition where_condition = 4;
+    repeated string    groups          = 5;
+    uint64             limit           = 6;
 }
