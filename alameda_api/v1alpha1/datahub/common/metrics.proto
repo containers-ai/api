@@ -48,7 +48,8 @@ message MetricData {
 
 message ReadMetricData {
     common.MetricType                  metric_type = 1;
-    repeated containersai.common.Group groups      = 2;
+    repeated string                    columns     = 2;
+    repeated containersai.common.Group groups      = 3;
 }
 
 message WriteMetricData {
