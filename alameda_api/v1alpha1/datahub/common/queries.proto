@@ -44,6 +44,7 @@ message QueryCondition {
     Order              order           = 2;
     string             where_clause    = 3;
     repeated Condition where_condition = 4;
-    repeated string    groups          = 5;
-    uint64             limit           = 6;
+    repeated string    selects         = 5;
+    repeated string    groups          = 6;
+    uint64             limit           = 7;
 }
