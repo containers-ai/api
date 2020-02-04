@@ -32,8 +32,8 @@ message Measurement {
 }
 
 message Column {
-    string                         name         = 1;
-    bool                           required     = 2;
-    containersai.common.ColumnType column_types = 3;
-    containersai.common.DataType   data_types   = 4;
+    string                         name        = 1;
+    bool                           required    = 2;
+    containersai.common.ColumnType column_type = 3;
+    containersai.common.DataType   data_type   = 4;
 }
