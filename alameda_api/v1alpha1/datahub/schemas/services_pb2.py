@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.alameda.v1alpha1.datahub.schemas',
   syntax='proto3',
   serialized_options=_b('ZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemas'),
-  serialized_pb=_b('\n3alameda_api/v1alpha1/datahub/schemas/services.proto\x12-containersai.alameda.v1alpha1.datahub.schemas\x1a\x32\x61lameda_api/v1alpha1/datahub/schemas/schemas.proto\x1a\x30\x61lameda_api/v1alpha1/datahub/schemas/types.proto\x1a\x17google/rpc/status.proto\"^\n\x14\x43reateSchemasRequest\x12\x46\n\x07schemas\x18\x01 \x03(\x0b\x32\x35.containersai.alameda.v1alpha1.datahub.schemas.Schema\"e\n\x12ListSchemasRequest\x12O\n\x0cschema_metas\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta\"\x81\x01\n\x13ListSchemasResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12\x46\n\x07schemas\x18\x02 \x03(\x0b\x32\x35.containersai.alameda.v1alpha1.datahub.schemas.Schema\"g\n\x14\x44\x65leteSchemasRequest\x12O\n\x0cschema_metas\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMetaBCZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemasb\x06proto3')
+  serialized_pb=_b('\n3alameda_api/v1alpha1/datahub/schemas/services.proto\x12-containersai.alameda.v1alpha1.datahub.schemas\x1a\x32\x61lameda_api/v1alpha1/datahub/schemas/schemas.proto\x1a\x30\x61lameda_api/v1alpha1/datahub/schemas/types.proto\x1a\x17google/rpc/status.proto\"^\n\x14\x43reateSchemasRequest\x12\x46\n\x07schemas\x18\x01 \x03(\x0b\x32\x35.containersai.alameda.v1alpha1.datahub.schemas.Schema\"d\n\x12ListSchemasRequest\x12N\n\x0bschema_meta\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta\"\x81\x01\n\x13ListSchemasResponse\x12\"\n\x06status\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12\x46\n\x07schemas\x18\x02 \x03(\x0b\x32\x35.containersai.alameda.v1alpha1.datahub.schemas.Schema\"f\n\x14\x44\x65leteSchemasRequest\x12N\n\x0bschema_meta\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMetaBCZAgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemasb\x06proto3')
   ,
   dependencies=[alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_schemas__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2.DESCRIPTOR,google_dot_rpc_dot_status__pb2.DESCRIPTOR,])
 
@@ -69,7 +69,7 @@ _LISTSCHEMASREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='schema_metas', full_name='containersai.alameda.v1alpha1.datahub.schemas.ListSchemasRequest.schema_metas', index=0,
+      name='schema_meta', full_name='containersai.alameda.v1alpha1.datahub.schemas.ListSchemasRequest.schema_meta', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -88,7 +88,7 @@ _LISTSCHEMASREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=325,
-  serialized_end=426,
+  serialized_end=425,
 )
 
 
@@ -125,8 +125,8 @@ _LISTSCHEMASRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=429,
-  serialized_end=558,
+  serialized_start=428,
+  serialized_end=557,
 )
 
 
@@ -138,7 +138,7 @@ _DELETESCHEMASREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='schema_metas', full_name='containersai.alameda.v1alpha1.datahub.schemas.DeleteSchemasRequest.schema_metas', index=0,
+      name='schema_meta', full_name='containersai.alameda.v1alpha1.datahub.schemas.DeleteSchemasRequest.schema_meta', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -156,15 +156,15 @@ _DELETESCHEMASREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=560,
-  serialized_end=663,
+  serialized_start=559,
+  serialized_end=661,
 )
 
 _CREATESCHEMASREQUEST.fields_by_name['schemas'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_schemas__pb2._SCHEMA
-_LISTSCHEMASREQUEST.fields_by_name['schema_metas'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._SCHEMAMETA
+_LISTSCHEMASREQUEST.fields_by_name['schema_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._SCHEMAMETA
 _LISTSCHEMASRESPONSE.fields_by_name['status'].message_type = google_dot_rpc_dot_status__pb2._STATUS
 _LISTSCHEMASRESPONSE.fields_by_name['schemas'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_schemas__pb2._SCHEMA
-_DELETESCHEMASREQUEST.fields_by_name['schema_metas'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._SCHEMAMETA
+_DELETESCHEMASREQUEST.fields_by_name['schema_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._SCHEMAMETA
 DESCRIPTOR.message_types_by_name['CreateSchemasRequest'] = _CREATESCHEMASREQUEST
 DESCRIPTOR.message_types_by_name['ListSchemasRequest'] = _LISTSCHEMASREQUEST
 DESCRIPTOR.message_types_by_name['ListSchemasResponse'] = _LISTSCHEMASRESPONSE
