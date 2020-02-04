@@ -15,7 +15,7 @@ message CreateSchemasRequest {
 }
 
 message ListSchemasRequest {
-    SchemaMeta schema_metas = 1;
+    SchemaMeta schema_meta = 1;
 }
 
 message ListSchemasResponse {
@@ -24,5 +24,5 @@ message ListSchemasResponse {
 }
 
 message DeleteSchemasRequest {
-    SchemaMeta schema_metas = 1;
+    SchemaMeta schema_meta = 1;
 }
