@@ -315,7 +315,7 @@ service DatahubService {
     rpc ListSchemas(schemas.ListSchemasRequest)
         returns (schemas.ListSchemasResponse){}
 
-    rpc DeleteMetricSchemas(schemas.DeleteSchemasRequest)
+    rpc DeleteSchemas(schemas.DeleteSchemasRequest)
         returns (google.rpc.Status){}
 
     // Scores --------------------------------------------------
