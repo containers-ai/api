@@ -5,8 +5,8 @@ syntax = "proto3";
 package containersai.alameda.v1alpha1.datahub.metrics;
 
 import "alameda_api/v1alpha1/datahub/common/metrics.proto";
+import "alameda_api/v1alpha1/datahub/common/rawdata.proto";
 import "alameda_api/v1alpha1/datahub/resources/metadata.proto";
-import "alameda_api/v1alpha1/datahub/schemas/types.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/metrics";
 
@@ -49,12 +49,7 @@ message ClusterMetric  {
     repeated common.MetricData metric_data = 2;
 }
 
-message ReadMetric {
-    schemas.SchemaMeta             schema_meta = 1;
-    repeated common.ReadMetricData metric_data = 2;
-}
-
 message WriteMetric {
-    schemas.SchemaMeta              schema_meta = 1;
-    repeated common.WriteMetricData metric_data = 2;
+    common.MetricType metric_type = 1;
+    common.WriteData  write_data  = 2;
 }

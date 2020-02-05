@@ -4,8 +4,8 @@ syntax = "proto3";
 
 package containersai.alameda.v1alpha1.datahub.schemas;
 
-import "common/types.proto";
 import "alameda_api/v1alpha1/datahub/common/metrics.proto";
+import "alameda_api/v1alpha1/datahub/common/types.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemas";
 
@@ -26,14 +26,16 @@ message SchemaMeta {
 }
 
 message Measurement {
-    string            name        = 1;
-    common.MetricType metric_type = 2;
-    repeated Column   columns     = 3;
+    string                  name              = 1;
+    common.MetricType       metric_type       = 2;
+    common.ResourceBoundary resource_boundary = 3;
+    common.ResourceQuota    resource_quota    = 4;
+    repeated Column         columns           = 5;
 }
 
 message Column {
-    string                         name        = 1;
-    bool                           required    = 2;
-    containersai.common.ColumnType column_type = 3;
-    containersai.common.DataType   data_type   = 4;
+    string            name        = 1;
+    bool              required    = 2;
+    common.ColumnType column_type = 3;
+    common.DataType   data_type   = 4;
 }

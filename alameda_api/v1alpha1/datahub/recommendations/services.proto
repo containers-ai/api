@@ -13,10 +13,6 @@ import "google/rpc/status.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/recommendations";
 
-message CreateRecommendationsRequest {
-    repeated WriteRecommendation recommendations = 1;
-}
-
 // Represents a request for creating a pod's recommendation
 message CreatePodRecommendationsRequest {
     repeated PodRecommendation pod_recommendations = 1;
@@ -120,12 +116,17 @@ message ListClusterRecommendationsResponse {
     repeated ClusterRecommendation cluster_recommendations = 2;
 }
 
+message CreateRecommendationsRequest {
+    schemas.SchemaMeta           schema_meta     = 1;
+    repeated WriteRecommendation recommendations = 2;
+}
+
 message ListRecommendationsRequest {
     common.QueryCondition query_condition = 1;
     schemas.SchemaMeta    schema_meta     = 2;
 }
 
 message ListRecommendationsResponse {
-    google.rpc.Status           status          = 1;
-    repeated ReadRecommendation recommendations = 2;
+    google.rpc.Status status          = 1;
+    Recommendation    recommendations = 2;
 }
