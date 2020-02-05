@@ -7,15 +7,12 @@ package containersai.alameda.v1alpha1.datahub.predictions;
 import "alameda_api/v1alpha1/datahub/common/metrics.proto";
 import "alameda_api/v1alpha1/datahub/common/queries.proto";
 import "alameda_api/v1alpha1/datahub/predictions/predictions.proto";
+import "alameda_api/v1alpha1/datahub/predictions/types.proto";
 import "alameda_api/v1alpha1/datahub/resources/metadata.proto";
 import "alameda_api/v1alpha1/datahub/schemas/types.proto";
 import "google/rpc/status.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/predictions";
-
-message CreatePredictionsRequest {
-    repeated WritePrediction predictions = 1;
-}
 
 // Represents a request for creating predictions of containers' metric data belonging to a pod
 message CreatePodPredictionsRequest {
@@ -133,6 +130,11 @@ message ListClusterPredictionsResponse {
     repeated ClusterPrediction cluster_predictions = 2;
 }
 
+message CreatePredictionsRequest {
+    schemas.SchemaMeta       schema_meta = 1;
+    repeated WritePrediction predictions = 2;
+}
+
 message ListPredictionsRequest {
     common.QueryCondition      query_condition = 1;
     schemas.SchemaMeta         schema_meta     = 2;
@@ -140,6 +142,6 @@ message ListPredictionsRequest {
 }
 
 message ListPredictionsResponse {
-    google.rpc.Status       status      = 1;
-    repeated ReadPrediction predictions = 2;
+    google.rpc.Status status      = 1;
+    Prediction        predictions = 2;
 }

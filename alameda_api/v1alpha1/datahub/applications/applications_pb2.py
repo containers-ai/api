@@ -13,8 +13,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from alameda_api.v1alpha1.datahub.applications import types_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_types__pb2
-from alameda_api.v1alpha1.datahub.schemas import types_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2
+from alameda_api.v1alpha1.datahub.common import queries_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2
+from alameda_api.v1alpha1.datahub.common import rawdata_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_rawdata__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.alameda.v1alpha1.datahub.applications',
   syntax='proto3',
   serialized_options=_b('ZFgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/applications'),
-  serialized_pb=_b('\n<alameda_api/v1alpha1/datahub/applications/applications.proto\x12\x32\x63ontainersai.alameda.v1alpha1.datahub.applications\x1a\x35\x61lameda_api/v1alpha1/datahub/applications/types.proto\x1a\x30\x61lameda_api/v1alpha1/datahub/schemas/types.proto\"\xc6\x01\n\x10WriteApplication\x12N\n\x0bschema_meta\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta\x12\x62\n\x10\x61pplication_data\x18\x02 \x03(\x0b\x32H.containersai.alameda.v1alpha1.datahub.applications.WriteApplicationData\"\xc4\x01\n\x0fReadApplication\x12N\n\x0bschema_meta\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta\x12\x61\n\x10\x61pplication_data\x18\x02 \x03(\x0b\x32G.containersai.alameda.v1alpha1.datahub.applications.ReadApplicationDataBHZFgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/applicationsb\x06proto3')
+  serialized_pb=_b('\n<alameda_api/v1alpha1/datahub/applications/applications.proto\x12\x32\x63ontainersai.alameda.v1alpha1.datahub.applications\x1a\x31\x61lameda_api/v1alpha1/datahub/common/queries.proto\x1a\x31\x61lameda_api/v1alpha1/datahub/common/rawdata.proto\"t\n\x10WriteApplication\x12\x13\n\x0bmeasurement\x18\x01 \x01(\t\x12K\n\nwrite_data\x18\x02 \x01(\x0b\x32\x37.containersai.alameda.v1alpha1.datahub.common.WriteData\"x\n\x0fReadApplication\x12\x13\n\x0bmeasurement\x18\x01 \x01(\t\x12P\n\x0fwhere_condition\x18\x02 \x03(\x0b\x32\x37.containersai.alameda.v1alpha1.datahub.common.Condition\"z\n\x11\x44\x65leteApplication\x12\x13\n\x0bmeasurement\x18\x01 \x01(\t\x12P\n\x0fwhere_condition\x18\x02 \x03(\x0b\x32\x37.containersai.alameda.v1alpha1.datahub.common.ConditionBHZFgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/applicationsb\x06proto3')
   ,
-  dependencies=[alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_types__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2.DESCRIPTOR,])
+  dependencies=[alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_rawdata__pb2.DESCRIPTOR,])
 
 
 
@@ -37,16 +37,16 @@ _WRITEAPPLICATION = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='schema_meta', full_name='containersai.alameda.v1alpha1.datahub.applications.WriteApplication.schema_meta', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='measurement', full_name='containersai.alameda.v1alpha1.datahub.applications.WriteApplication.measurement', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='application_data', full_name='containersai.alameda.v1alpha1.datahub.applications.WriteApplication.application_data', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='write_data', full_name='containersai.alameda.v1alpha1.datahub.applications.WriteApplication.write_data', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -62,8 +62,8 @@ _WRITEAPPLICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=222,
-  serialized_end=420,
+  serialized_start=218,
+  serialized_end=334,
 )
 
 
@@ -75,14 +75,14 @@ _READAPPLICATION = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='schema_meta', full_name='containersai.alameda.v1alpha1.datahub.applications.ReadApplication.schema_meta', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='measurement', full_name='containersai.alameda.v1alpha1.datahub.applications.ReadApplication.measurement', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='application_data', full_name='containersai.alameda.v1alpha1.datahub.applications.ReadApplication.application_data', index=1,
+      name='where_condition', full_name='containersai.alameda.v1alpha1.datahub.applications.ReadApplication.where_condition', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -100,16 +100,54 @@ _READAPPLICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=423,
-  serialized_end=619,
+  serialized_start=336,
+  serialized_end=456,
 )
 
-_WRITEAPPLICATION.fields_by_name['schema_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._SCHEMAMETA
-_WRITEAPPLICATION.fields_by_name['application_data'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_types__pb2._WRITEAPPLICATIONDATA
-_READAPPLICATION.fields_by_name['schema_meta'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_schemas_dot_types__pb2._SCHEMAMETA
-_READAPPLICATION.fields_by_name['application_data'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_types__pb2._READAPPLICATIONDATA
+
+_DELETEAPPLICATION = _descriptor.Descriptor(
+  name='DeleteApplication',
+  full_name='containersai.alameda.v1alpha1.datahub.applications.DeleteApplication',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='measurement', full_name='containersai.alameda.v1alpha1.datahub.applications.DeleteApplication.measurement', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='where_condition', full_name='containersai.alameda.v1alpha1.datahub.applications.DeleteApplication.where_condition', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=458,
+  serialized_end=580,
+)
+
+_WRITEAPPLICATION.fields_by_name['write_data'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_rawdata__pb2._WRITEDATA
+_READAPPLICATION.fields_by_name['where_condition'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._CONDITION
+_DELETEAPPLICATION.fields_by_name['where_condition'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_common_dot_queries__pb2._CONDITION
 DESCRIPTOR.message_types_by_name['WriteApplication'] = _WRITEAPPLICATION
 DESCRIPTOR.message_types_by_name['ReadApplication'] = _READAPPLICATION
+DESCRIPTOR.message_types_by_name['DeleteApplication'] = _DELETEAPPLICATION
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 WriteApplication = _reflection.GeneratedProtocolMessageType('WriteApplication', (_message.Message,), {
@@ -125,6 +163,13 @@ ReadApplication = _reflection.GeneratedProtocolMessageType('ReadApplication', (_
   # @@protoc_insertion_point(class_scope:containersai.alameda.v1alpha1.datahub.applications.ReadApplication)
   })
 _sym_db.RegisterMessage(ReadApplication)
+
+DeleteApplication = _reflection.GeneratedProtocolMessageType('DeleteApplication', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEAPPLICATION,
+  '__module__' : 'alameda_api.v1alpha1.datahub.applications.applications_pb2'
+  # @@protoc_insertion_point(class_scope:containersai.alameda.v1alpha1.datahub.applications.DeleteApplication)
+  })
+_sym_db.RegisterMessage(DeleteApplication)
 
 
 DESCRIPTOR._options = None

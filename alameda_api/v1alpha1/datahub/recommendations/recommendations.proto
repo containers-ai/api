@@ -5,11 +5,12 @@ syntax = "proto3";
 package containersai.alameda.v1alpha1.datahub.recommendations;
 
 import "alameda_api/v1alpha1/datahub/common/metrics.proto";
+import "alameda_api/v1alpha1/datahub/common/rawdata.proto";
+import "alameda_api/v1alpha1/datahub/common/types.proto";
 import "alameda_api/v1alpha1/datahub/resources/metadata.proto";
 import "alameda_api/v1alpha1/datahub/resources/policies.proto";
 import "alameda_api/v1alpha1/datahub/resources/resources.proto";
 import "alameda_api/v1alpha1/datahub/recommendations/types.proto";
-import "alameda_api/v1alpha1/datahub/schemas/types.proto";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/recommendations";
@@ -77,12 +78,8 @@ message ClusterRecommendation {
     ControllerRecommendedSpecK8s recommended_spec_k8s = 5;
 }
 
-message ReadRecommendation {
-    schemas.SchemaMeta             schema_meta     = 1;
-    repeated common.ReadMetricData recommendations = 2;
-}
-
 message WriteRecommendation {
-    schemas.SchemaMeta              schema_meta     = 1;
-    repeated common.WriteMetricData recommendations = 2;
+    common.MetricType    metric_type    = 1;
+    common.ResourceQuota resource_quota = 2;
+    common.WriteData     write_data     = 3;
 }
