@@ -9,18 +9,18 @@ import "alameda_api/v1alpha1/datahub/common/types.proto";
 
 option go_package = "github.com/containers-ai/api/alameda_api/v1alpha1/datahub/schemas";
 
-enum Table {
-    TABLE_UNDEFINED      = 0;
-    TABLE_APPLICATION    = 1;
-    TABLE_METRIC         = 2;
-    TABLE_PLANNING       = 3;
-    TABLE_PREDICTION     = 4;
-    TABLE_RECOMMENDATION = 5;
-    TABLE_RESOURCE       = 6;
+enum Scope {
+    SCOPE_UNDEFINED      = 0;
+    SCOPE_APPLICATION    = 1;
+    SCOPE_METRIC         = 2;
+    SCOPE_PLANNING       = 3;
+    SCOPE_PREDICTION     = 4;
+    SCOPE_RECOMMENDATION = 5;
+    SCOPE_RESOURCE       = 6;
 }
 
 message SchemaMeta {
-    Table  table    = 1;
+    Scope  scope    = 1;
     string category = 2;
     string type     = 3;
 }

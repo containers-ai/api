@@ -2,6 +2,7 @@
 import grpc
 
 from alameda_api.v1alpha1.datahub.applications import services_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_services__pb2
+from alameda_api.v1alpha1.datahub.data import services_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_data_dot_services__pb2
 from alameda_api.v1alpha1.datahub.events import services_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_events_dot_services__pb2
 from alameda_api.v1alpha1.datahub.gpu import services_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_gpu_dot_services__pb2
 from alameda_api.v1alpha1.datahub.licenses import services_pb2 as alameda__api_dot_v1alpha1_dot_datahub_dot_licenses_dot_services__pb2
@@ -41,6 +42,21 @@ class DatahubServiceStub(object):
     self.DeleteApps = channel.unary_unary(
         '/containersai.alameda.v1alpha1.datahub.DatahubService/DeleteApps',
         request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_services__pb2.DeleteApplicationsRequest.SerializeToString,
+        response_deserializer=google_dot_rpc_dot_status__pb2.Status.FromString,
+        )
+    self.ReadData = channel.unary_unary(
+        '/containersai.alameda.v1alpha1.datahub.DatahubService/ReadData',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_data_dot_services__pb2.ReadDataRequest.SerializeToString,
+        response_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_data_dot_services__pb2.ReadDataResponse.FromString,
+        )
+    self.WriteData = channel.unary_unary(
+        '/containersai.alameda.v1alpha1.datahub.DatahubService/WriteData',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_data_dot_services__pb2.WriteDataRequest.SerializeToString,
+        response_deserializer=google_dot_rpc_dot_status__pb2.Status.FromString,
+        )
+    self.DeleteData = channel.unary_unary(
+        '/containersai.alameda.v1alpha1.datahub.DatahubService/DeleteData',
+        request_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_data_dot_services__pb2.DeleteDataRequest.SerializeToString,
         response_deserializer=google_dot_rpc_dot_status__pb2.Status.FromString,
         )
     self.CreateEvents = channel.unary_unary(
@@ -554,6 +570,27 @@ class DatahubServiceServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def DeleteApps(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ReadData(self, request, context):
+    """Data --------------------------------------------------
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def WriteData(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def DeleteData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -1263,6 +1300,21 @@ def add_DatahubServiceServicer_to_server(servicer, server):
       'DeleteApps': grpc.unary_unary_rpc_method_handler(
           servicer.DeleteApps,
           request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_applications_dot_services__pb2.DeleteApplicationsRequest.FromString,
+          response_serializer=google_dot_rpc_dot_status__pb2.Status.SerializeToString,
+      ),
+      'ReadData': grpc.unary_unary_rpc_method_handler(
+          servicer.ReadData,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_data_dot_services__pb2.ReadDataRequest.FromString,
+          response_serializer=alameda__api_dot_v1alpha1_dot_datahub_dot_data_dot_services__pb2.ReadDataResponse.SerializeToString,
+      ),
+      'WriteData': grpc.unary_unary_rpc_method_handler(
+          servicer.WriteData,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_data_dot_services__pb2.WriteDataRequest.FromString,
+          response_serializer=google_dot_rpc_dot_status__pb2.Status.SerializeToString,
+      ),
+      'DeleteData': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteData,
+          request_deserializer=alameda__api_dot_v1alpha1_dot_datahub_dot_data_dot_services__pb2.DeleteDataRequest.FromString,
           response_serializer=google_dot_rpc_dot_status__pb2.Status.SerializeToString,
       ),
       'CreateEvents': grpc.unary_unary_rpc_method_handler(
