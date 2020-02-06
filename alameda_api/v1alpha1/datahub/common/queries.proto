@@ -4,7 +4,7 @@ syntax = "proto3";
 
 package containersai.alameda.v1alpha1.datahub.common;
 
-import "common/types.proto";
+import "alameda_api/v1alpha1/datahub/common/types.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
 
@@ -28,10 +28,10 @@ message TimeRange {
 }
 
 message Condition {
-    repeated string                       keys      = 1;
-    repeated string                       values    = 2;
-    repeated string                       operators = 3;
-    repeated containersai.common.DataType types     = 4;
+    repeated string          keys      = 1;
+    repeated string          values    = 2;
+    repeated string          operators = 3;
+    repeated common.DataType types     = 4;
 }
 
 message QueryCondition {

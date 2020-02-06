@@ -5,6 +5,7 @@ syntax = "proto3";
 package containersai.alameda.v1alpha1.datahub;
 
 import "alameda_api/v1alpha1/datahub/applications/services.proto";
+import "alameda_api/v1alpha1/datahub/data/services.proto";
 import "alameda_api/v1alpha1/datahub/events/services.proto";
 import "alameda_api/v1alpha1/datahub/gpu/services.proto";
 import "alameda_api/v1alpha1/datahub/licenses/services.proto";
@@ -32,6 +33,16 @@ service DatahubService {
         returns (applications.ListApplicationsResponse){}
 
     rpc DeleteApps(applications.DeleteApplicationsRequest)
+        returns (google.rpc.Status){}
+
+    // Data --------------------------------------------------
+    rpc ReadData(data.ReadDataRequest)
+        returns (data.ReadDataResponse){}
+
+    rpc WriteData(data.WriteDataRequest)
+        returns (google.rpc.Status){}
+
+    rpc DeleteData(data.DeleteDataRequest)
         returns (google.rpc.Status){}
 
     // Events --------------------------------------------------
