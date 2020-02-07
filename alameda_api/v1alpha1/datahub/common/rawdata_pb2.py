@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='containersai.alameda.v1alpha1.datahub.common',
   syntax='proto3',
   serialized_options=_b('Z@github.com/containers-ai/api/alameda_api/v1alpha1/datahub/common'),
-  serialized_pb=_b('\n1alameda_api/v1alpha1/datahub/common/rawdata.proto\x12,containersai.alameda.v1alpha1.datahub.common\x1a\x1fgoogle/protobuf/timestamp.proto\"]\n\tWriteData\x12\x0f\n\x07\x63olumns\x18\x01 \x03(\t\x12?\n\x04rows\x18\x02 \x03(\x0b\x32\x31.containersai.alameda.v1alpha1.datahub.common.Row\"`\n\x08ReadData\x12\x0f\n\x07\x63olumns\x18\x01 \x03(\t\x12\x43\n\x06groups\x18\x02 \x03(\x0b\x32\x33.containersai.alameda.v1alpha1.datahub.common.Group\"?\n\x03Row\x12(\n\x04time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0e\n\x06values\x18\x02 \x03(\t\"H\n\x05Group\x12?\n\x04rows\x18\x01 \x03(\x0b\x32\x31.containersai.alameda.v1alpha1.datahub.common.RowBBZ@github.com/containers-ai/api/alameda_api/v1alpha1/datahub/commonb\x06proto3')
+  serialized_pb=_b('\n1alameda_api/v1alpha1/datahub/common/rawdata.proto\x12,containersai.alameda.v1alpha1.datahub.common\x1a\x1fgoogle/protobuf/timestamp.proto\"]\n\tWriteData\x12\x0f\n\x07\x63olumns\x18\x01 \x03(\t\x12?\n\x04rows\x18\x02 \x03(\x0b\x32\x31.containersai.alameda.v1alpha1.datahub.common.Row\"O\n\x08ReadData\x12\x43\n\x06groups\x18\x01 \x03(\x0b\x32\x33.containersai.alameda.v1alpha1.datahub.common.Group\"?\n\x03Row\x12(\n\x04time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0e\n\x06values\x18\x02 \x03(\t\"Y\n\x05Group\x12\x0f\n\x07\x63olumns\x18\x01 \x03(\t\x12?\n\x04rows\x18\x02 \x03(\x0b\x32\x31.containersai.alameda.v1alpha1.datahub.common.RowBBZ@github.com/containers-ai/api/alameda_api/v1alpha1/datahub/commonb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -74,15 +74,8 @@ _READDATA = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='columns', full_name='containersai.alameda.v1alpha1.datahub.common.ReadData.columns', index=0,
-      number=1, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='groups', full_name='containersai.alameda.v1alpha1.datahub.common.ReadData.groups', index=1,
-      number=2, type=11, cpp_type=10, label=3,
+      name='groups', full_name='containersai.alameda.v1alpha1.datahub.common.ReadData.groups', index=0,
+      number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -100,7 +93,7 @@ _READDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=227,
-  serialized_end=323,
+  serialized_end=306,
 )
 
 
@@ -137,8 +130,8 @@ _ROW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=325,
-  serialized_end=388,
+  serialized_start=308,
+  serialized_end=371,
 )
 
 
@@ -150,8 +143,15 @@ _GROUP = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='rows', full_name='containersai.alameda.v1alpha1.datahub.common.Group.rows', index=0,
-      number=1, type=11, cpp_type=10, label=3,
+      name='columns', full_name='containersai.alameda.v1alpha1.datahub.common.Group.columns', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rows', full_name='containersai.alameda.v1alpha1.datahub.common.Group.rows', index=1,
+      number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -168,7 +168,7 @@ _GROUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=390,
+  serialized_start=373,
   serialized_end=462,
 )
 
