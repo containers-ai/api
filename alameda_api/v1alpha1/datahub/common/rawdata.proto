@@ -14,8 +14,7 @@ message WriteData {
 }
 
 message ReadData {
-    repeated string columns = 1;
-    repeated Group  groups  = 2;
+    repeated Group groups = 1;
 }
 
 message Row {
@@ -24,5 +23,6 @@ message Row {
 }
 
 message Group {
-    repeated Row rows = 1;
+    repeated string columns = 1;
+    repeated Row    rows    = 2;
 }
