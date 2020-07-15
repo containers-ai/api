@@ -279,7 +279,7 @@ proto.containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta.prototype.setType
  * @private {!Array<number>}
  * @const
  */
-proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.repeatedFields_ = [5];
+proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.repeatedFields_ = [6];
 
 
 
@@ -316,6 +316,7 @@ proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.toObject = funct
     metricType: jspb.Message.getFieldWithDefault(msg, 2, 0),
     resourceBoundary: jspb.Message.getFieldWithDefault(msg, 3, 0),
     resourceQuota: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    isTs: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
     columnsList: jspb.Message.toObjectList(msg.getColumnsList(),
     proto.containersai.alameda.v1alpha1.datahub.schemas.Column.toObject, includeInstance)
   };
@@ -371,6 +372,10 @@ proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.deserializeBinar
       msg.setResourceQuota(value);
       break;
     case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsTs(value);
+      break;
+    case 6:
       var value = new proto.containersai.alameda.v1alpha1.datahub.schemas.Column;
       reader.readMessage(value,proto.containersai.alameda.v1alpha1.datahub.schemas.Column.deserializeBinaryFromReader);
       msg.addColumns(value);
@@ -432,10 +437,17 @@ proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.serializeBinaryT
       f
     );
   }
+  f = message.getIsTs();
+  if (f) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
   f = message.getColumnsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      5,
+      6,
       f,
       proto.containersai.alameda.v1alpha1.datahub.schemas.Column.serializeBinaryToWriter
     );
@@ -516,12 +528,30 @@ proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.prototype.setRes
 
 
 /**
- * repeated Column columns = 5;
+ * optional bool is_ts = 5;
+ * @return {boolean}
+ */
+proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.prototype.getIsTs = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement} returns this
+ */
+proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.prototype.setIsTs = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * repeated Column columns = 6;
  * @return {!Array<!proto.containersai.alameda.v1alpha1.datahub.schemas.Column>}
  */
 proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.prototype.getColumnsList = function() {
   return /** @type{!Array<!proto.containersai.alameda.v1alpha1.datahub.schemas.Column>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.containersai.alameda.v1alpha1.datahub.schemas.Column, 5));
+    jspb.Message.getRepeatedWrapperField(this, proto.containersai.alameda.v1alpha1.datahub.schemas.Column, 6));
 };
 
 
@@ -530,7 +560,7 @@ proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.prototype.getCol
  * @return {!proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement} returns this
 */
 proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.prototype.setColumnsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 5, value);
+  return jspb.Message.setRepeatedWrapperField(this, 6, value);
 };
 
 
@@ -540,7 +570,7 @@ proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.prototype.setCol
  * @return {!proto.containersai.alameda.v1alpha1.datahub.schemas.Column}
  */
 proto.containersai.alameda.v1alpha1.datahub.schemas.Measurement.prototype.addColumns = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.containersai.alameda.v1alpha1.datahub.schemas.Column, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.containersai.alameda.v1alpha1.datahub.schemas.Column, opt_index);
 };
 
 
