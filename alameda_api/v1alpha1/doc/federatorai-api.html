@@ -1324,6 +1324,10 @@
                   <a href="#containersai.alameda.v1alpha1.datahub.data.WriteDataRequest"><span class="badge">M</span>WriteDataRequest</a>
                 </li>
               
+                <li>
+                  <a href="#containersai.alameda.v1alpha1.datahub.data.WriteMetaRequest"><span class="badge">M</span>WriteMetaRequest</a>
+                </li>
+              
               
               
               
@@ -1364,6 +1368,10 @@
               
                 <li>
                   <a href="#containersai.alameda.v1alpha1.datahub.data.WriteData"><span class="badge">M</span>WriteData</a>
+                </li>
+              
+                <li>
+                  <a href="#containersai.alameda.v1alpha1.datahub.data.WriteMeta"><span class="badge">M</span>WriteMeta</a>
                 </li>
               
               
@@ -10789,6 +10797,37 @@ Returns the rate of change between subsequent field values</p></td>
 
         
       
+        <h3 id="containersai.alameda.v1alpha1.datahub.data.WriteMetaRequest">WriteMetaRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>schema_meta</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta">containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>write_meta</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.data.WriteMeta">WriteMeta</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
 
       
 
@@ -11038,6 +11077,72 @@ Returns the rate of change between subsequent field values</p></td>
                 <tr>
                   <td>resource_quota</td>
                   <td><a href="#containersai.alameda.v1alpha1.datahub.common.ResourceQuota">containersai.alameda.v1alpha1.datahub.common.ResourceQuota</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>columns</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rows</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.Row">containersai.alameda.v1alpha1.datahub.common.Row</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="containersai.alameda.v1alpha1.datahub.data.WriteMeta">WriteMeta</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>measurement</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>metric_type</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.MetricType">containersai.alameda.v1alpha1.datahub.common.MetricType</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>resource_boundary</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.ResourceBoundary">containersai.alameda.v1alpha1.datahub.common.ResourceBoundary</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>resource_quota</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.ResourceQuota">containersai.alameda.v1alpha1.datahub.common.ResourceQuota</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>condition</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.Condition">containersai.alameda.v1alpha1.datahub.common.Condition</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -13200,6 +13305,13 @@ use enum ResourceName as key of the map which defined in common </p></td>
               <tr>
                 <td>DeleteData</td>
                 <td><a href="#containersai.alameda.v1alpha1.datahub.data.DeleteDataRequest">data.DeleteDataRequest</a></td>
+                <td><a href="#google.rpc.Status">.google.rpc.Status</a></td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>WriteMeta</td>
+                <td><a href="#containersai.alameda.v1alpha1.datahub.data.WriteMetaRequest">data.WriteMetaRequest</a></td>
                 <td><a href="#google.rpc.Status">.google.rpc.Status</a></td>
                 <td><p></p></td>
               </tr>
@@ -16262,6 +16374,13 @@ Used to add pods that need to be predicted</p></td>
                 <tr>
                   <td>resource_quota</td>
                   <td><a href="#containersai.alameda.v1alpha1.datahub.common.ResourceQuota">containersai.alameda.v1alpha1.datahub.common.ResourceQuota</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>is_ts</td>
+                  <td><a href="#bool">bool</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>

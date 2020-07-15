@@ -249,6 +249,61 @@ func (x *DeleteDataRequest) GetDeleteData() []*DeleteData {
 	return nil
 }
 
+type WriteMetaRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	SchemaMeta *schemas.SchemaMeta `protobuf:"bytes,1,opt,name=schema_meta,json=schemaMeta,proto3" json:"schema_meta,omitempty"`
+	WriteMeta  []*WriteMeta        `protobuf:"bytes,2,rep,name=write_meta,json=writeMeta,proto3" json:"write_meta,omitempty"`
+}
+
+func (x *WriteMetaRequest) Reset() {
+	*x = WriteMetaRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_alameda_api_v1alpha1_datahub_data_services_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WriteMetaRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WriteMetaRequest) ProtoMessage() {}
+
+func (x *WriteMetaRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_alameda_api_v1alpha1_datahub_data_services_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WriteMetaRequest.ProtoReflect.Descriptor instead.
+func (*WriteMetaRequest) Descriptor() ([]byte, []int) {
+	return file_alameda_api_v1alpha1_datahub_data_services_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *WriteMetaRequest) GetSchemaMeta() *schemas.SchemaMeta {
+	if x != nil {
+		return x.SchemaMeta
+	}
+	return nil
+}
+
+func (x *WriteMetaRequest) GetWriteMeta() []*WriteMeta {
+	if x != nil {
+		return x.WriteMeta
+	}
+	return nil
+}
+
 var File_alameda_api_v1alpha1_datahub_data_services_proto protoreflect.FileDescriptor
 
 var file_alameda_api_v1alpha1_datahub_data_services_proto_rawDesc = []byte{
@@ -314,11 +369,24 @@ var file_alameda_api_v1alpha1_datahub_data_services_proto_rawDesc = []byte{
 	0x61, 0x6d, 0x65, 0x64, 0x61, 0x2e, 0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2e, 0x64,
 	0x61, 0x74, 0x61, 0x68, 0x75, 0x62, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x2e, 0x44, 0x65, 0x6c, 0x65,
 	0x74, 0x65, 0x44, 0x61, 0x74, 0x61, 0x52, 0x0a, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x44, 0x61,
-	0x74, 0x61, 0x42, 0x40, 0x5a, 0x3e, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d,
-	0x2f, 0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69, 0x6e, 0x65, 0x72, 0x73, 0x2d, 0x61, 0x69, 0x2f, 0x61,
-	0x70, 0x69, 0x2f, 0x61, 0x6c, 0x61, 0x6d, 0x65, 0x64, 0x61, 0x5f, 0x61, 0x70, 0x69, 0x2f, 0x76,
-	0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2f, 0x64, 0x61, 0x74, 0x61, 0x68, 0x75, 0x62, 0x2f,
-	0x64, 0x61, 0x74, 0x61, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x61, 0x22, 0xc4, 0x01, 0x0a, 0x10, 0x57, 0x72, 0x69, 0x74, 0x65, 0x4d, 0x65, 0x74, 0x61,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x5a, 0x0a, 0x0b, 0x73, 0x63, 0x68, 0x65, 0x6d,
+	0x61, 0x5f, 0x6d, 0x65, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x39, 0x2e, 0x63,
+	0x6f, 0x6e, 0x74, 0x61, 0x69, 0x6e, 0x65, 0x72, 0x73, 0x61, 0x69, 0x2e, 0x61, 0x6c, 0x61, 0x6d,
+	0x65, 0x64, 0x61, 0x2e, 0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2e, 0x64, 0x61, 0x74,
+	0x61, 0x68, 0x75, 0x62, 0x2e, 0x73, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x73, 0x2e, 0x53, 0x63, 0x68,
+	0x65, 0x6d, 0x61, 0x4d, 0x65, 0x74, 0x61, 0x52, 0x0a, 0x73, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x4d,
+	0x65, 0x74, 0x61, 0x12, 0x54, 0x0a, 0x0a, 0x77, 0x72, 0x69, 0x74, 0x65, 0x5f, 0x6d, 0x65, 0x74,
+	0x61, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x35, 0x2e, 0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69,
+	0x6e, 0x65, 0x72, 0x73, 0x61, 0x69, 0x2e, 0x61, 0x6c, 0x61, 0x6d, 0x65, 0x64, 0x61, 0x2e, 0x76,
+	0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x68, 0x75, 0x62, 0x2e,
+	0x64, 0x61, 0x74, 0x61, 0x2e, 0x57, 0x72, 0x69, 0x74, 0x65, 0x4d, 0x65, 0x74, 0x61, 0x52, 0x09,
+	0x77, 0x72, 0x69, 0x74, 0x65, 0x4d, 0x65, 0x74, 0x61, 0x42, 0x40, 0x5a, 0x3e, 0x67, 0x69, 0x74,
+	0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69, 0x6e, 0x65,
+	0x72, 0x73, 0x2d, 0x61, 0x69, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x61, 0x6c, 0x61, 0x6d, 0x65, 0x64,
+	0x61, 0x5f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2f, 0x64,
+	0x61, 0x74, 0x61, 0x68, 0x75, 0x62, 0x2f, 0x64, 0x61, 0x74, 0x61, 0x62, 0x06, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x33,
 }
 
 var (
@@ -333,33 +401,37 @@ func file_alameda_api_v1alpha1_datahub_data_services_proto_rawDescGZIP() []byte 
 	return file_alameda_api_v1alpha1_datahub_data_services_proto_rawDescData
 }
 
-var file_alameda_api_v1alpha1_datahub_data_services_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_alameda_api_v1alpha1_datahub_data_services_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_alameda_api_v1alpha1_datahub_data_services_proto_goTypes = []interface{}{
 	(*WriteDataRequest)(nil),   // 0: containersai.alameda.v1alpha1.datahub.data.WriteDataRequest
 	(*ReadDataRequest)(nil),    // 1: containersai.alameda.v1alpha1.datahub.data.ReadDataRequest
 	(*ReadDataResponse)(nil),   // 2: containersai.alameda.v1alpha1.datahub.data.ReadDataResponse
 	(*DeleteDataRequest)(nil),  // 3: containersai.alameda.v1alpha1.datahub.data.DeleteDataRequest
-	(*schemas.SchemaMeta)(nil), // 4: containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta
-	(*WriteData)(nil),          // 5: containersai.alameda.v1alpha1.datahub.data.WriteData
-	(*ReadData)(nil),           // 6: containersai.alameda.v1alpha1.datahub.data.ReadData
-	(*status.Status)(nil),      // 7: google.rpc.Status
-	(*Data)(nil),               // 8: containersai.alameda.v1alpha1.datahub.data.Data
-	(*DeleteData)(nil),         // 9: containersai.alameda.v1alpha1.datahub.data.DeleteData
+	(*WriteMetaRequest)(nil),   // 4: containersai.alameda.v1alpha1.datahub.data.WriteMetaRequest
+	(*schemas.SchemaMeta)(nil), // 5: containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta
+	(*WriteData)(nil),          // 6: containersai.alameda.v1alpha1.datahub.data.WriteData
+	(*ReadData)(nil),           // 7: containersai.alameda.v1alpha1.datahub.data.ReadData
+	(*status.Status)(nil),      // 8: google.rpc.Status
+	(*Data)(nil),               // 9: containersai.alameda.v1alpha1.datahub.data.Data
+	(*DeleteData)(nil),         // 10: containersai.alameda.v1alpha1.datahub.data.DeleteData
+	(*WriteMeta)(nil),          // 11: containersai.alameda.v1alpha1.datahub.data.WriteMeta
 }
 var file_alameda_api_v1alpha1_datahub_data_services_proto_depIdxs = []int32{
-	4, // 0: containersai.alameda.v1alpha1.datahub.data.WriteDataRequest.schema_meta:type_name -> containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta
-	5, // 1: containersai.alameda.v1alpha1.datahub.data.WriteDataRequest.write_data:type_name -> containersai.alameda.v1alpha1.datahub.data.WriteData
-	4, // 2: containersai.alameda.v1alpha1.datahub.data.ReadDataRequest.schema_meta:type_name -> containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta
-	6, // 3: containersai.alameda.v1alpha1.datahub.data.ReadDataRequest.read_data:type_name -> containersai.alameda.v1alpha1.datahub.data.ReadData
-	7, // 4: containersai.alameda.v1alpha1.datahub.data.ReadDataResponse.status:type_name -> google.rpc.Status
-	8, // 5: containersai.alameda.v1alpha1.datahub.data.ReadDataResponse.data:type_name -> containersai.alameda.v1alpha1.datahub.data.Data
-	4, // 6: containersai.alameda.v1alpha1.datahub.data.DeleteDataRequest.schema_meta:type_name -> containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta
-	9, // 7: containersai.alameda.v1alpha1.datahub.data.DeleteDataRequest.delete_data:type_name -> containersai.alameda.v1alpha1.datahub.data.DeleteData
-	8, // [8:8] is the sub-list for method output_type
-	8, // [8:8] is the sub-list for method input_type
-	8, // [8:8] is the sub-list for extension type_name
-	8, // [8:8] is the sub-list for extension extendee
-	0, // [0:8] is the sub-list for field type_name
+	5,  // 0: containersai.alameda.v1alpha1.datahub.data.WriteDataRequest.schema_meta:type_name -> containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta
+	6,  // 1: containersai.alameda.v1alpha1.datahub.data.WriteDataRequest.write_data:type_name -> containersai.alameda.v1alpha1.datahub.data.WriteData
+	5,  // 2: containersai.alameda.v1alpha1.datahub.data.ReadDataRequest.schema_meta:type_name -> containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta
+	7,  // 3: containersai.alameda.v1alpha1.datahub.data.ReadDataRequest.read_data:type_name -> containersai.alameda.v1alpha1.datahub.data.ReadData
+	8,  // 4: containersai.alameda.v1alpha1.datahub.data.ReadDataResponse.status:type_name -> google.rpc.Status
+	9,  // 5: containersai.alameda.v1alpha1.datahub.data.ReadDataResponse.data:type_name -> containersai.alameda.v1alpha1.datahub.data.Data
+	5,  // 6: containersai.alameda.v1alpha1.datahub.data.DeleteDataRequest.schema_meta:type_name -> containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta
+	10, // 7: containersai.alameda.v1alpha1.datahub.data.DeleteDataRequest.delete_data:type_name -> containersai.alameda.v1alpha1.datahub.data.DeleteData
+	5,  // 8: containersai.alameda.v1alpha1.datahub.data.WriteMetaRequest.schema_meta:type_name -> containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta
+	11, // 9: containersai.alameda.v1alpha1.datahub.data.WriteMetaRequest.write_meta:type_name -> containersai.alameda.v1alpha1.datahub.data.WriteMeta
+	10, // [10:10] is the sub-list for method output_type
+	10, // [10:10] is the sub-list for method input_type
+	10, // [10:10] is the sub-list for extension type_name
+	10, // [10:10] is the sub-list for extension extendee
+	0,  // [0:10] is the sub-list for field type_name
 }
 
 func init() { file_alameda_api_v1alpha1_datahub_data_services_proto_init() }
@@ -418,6 +490,18 @@ func file_alameda_api_v1alpha1_datahub_data_services_proto_init() {
 				return nil
 			}
 		}
+		file_alameda_api_v1alpha1_datahub_data_services_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WriteMetaRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -425,7 +509,7 @@ func file_alameda_api_v1alpha1_datahub_data_services_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_alameda_api_v1alpha1_datahub_data_services_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

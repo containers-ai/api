@@ -110,6 +110,17 @@ function deserialize_containersai_alameda_v1alpha1_datahub_data_WriteDataRequest
   return alameda_api_v1alpha1_datahub_data_services_pb.WriteDataRequest.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_containersai_alameda_v1alpha1_datahub_data_WriteMetaRequest(arg) {
+  if (!(arg instanceof alameda_api_v1alpha1_datahub_data_services_pb.WriteMetaRequest)) {
+    throw new Error('Expected argument of type containersai.alameda.v1alpha1.datahub.data.WriteMetaRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_containersai_alameda_v1alpha1_datahub_data_WriteMetaRequest(buffer_arg) {
+  return alameda_api_v1alpha1_datahub_data_services_pb.WriteMetaRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_containersai_alameda_v1alpha1_datahub_events_CreateEventsRequest(arg) {
   if (!(arg instanceof alameda_api_v1alpha1_datahub_events_services_pb.CreateEventsRequest)) {
     throw new Error('Expected argument of type containersai.alameda.v1alpha1.datahub.events.CreateEventsRequest');
@@ -1663,6 +1674,17 @@ readData: {
     responseType: google_rpc_status_pb.Status,
     requestSerialize: serialize_containersai_alameda_v1alpha1_datahub_data_DeleteDataRequest,
     requestDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_data_DeleteDataRequest,
+    responseSerialize: serialize_google_rpc_Status,
+    responseDeserialize: deserialize_google_rpc_Status,
+  },
+  writeMeta: {
+    path: '/containersai.alameda.v1alpha1.datahub.DatahubService/WriteMeta',
+    requestStream: false,
+    responseStream: false,
+    requestType: alameda_api_v1alpha1_datahub_data_services_pb.WriteMetaRequest,
+    responseType: google_rpc_status_pb.Status,
+    requestSerialize: serialize_containersai_alameda_v1alpha1_datahub_data_WriteMetaRequest,
+    requestDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_data_WriteMetaRequest,
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },

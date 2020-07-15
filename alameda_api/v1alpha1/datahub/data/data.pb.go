@@ -273,6 +273,101 @@ func (x *DeleteData) GetQueryCondition() *common.QueryCondition {
 	return nil
 }
 
+type WriteMeta struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Measurement      string                  `protobuf:"bytes,1,opt,name=measurement,proto3" json:"measurement,omitempty"`
+	MetricType       common.MetricType       `protobuf:"varint,2,opt,name=metric_type,json=metricType,proto3,enum=containersai.alameda.v1alpha1.datahub.common.MetricType" json:"metric_type,omitempty"`
+	ResourceBoundary common.ResourceBoundary `protobuf:"varint,3,opt,name=resource_boundary,json=resourceBoundary,proto3,enum=containersai.alameda.v1alpha1.datahub.common.ResourceBoundary" json:"resource_boundary,omitempty"`
+	ResourceQuota    common.ResourceQuota    `protobuf:"varint,4,opt,name=resource_quota,json=resourceQuota,proto3,enum=containersai.alameda.v1alpha1.datahub.common.ResourceQuota" json:"resource_quota,omitempty"`
+	Condition        *common.Condition       `protobuf:"bytes,5,opt,name=condition,proto3" json:"condition,omitempty"`
+	Columns          []string                `protobuf:"bytes,6,rep,name=columns,proto3" json:"columns,omitempty"`
+	Rows             []*common.Row           `protobuf:"bytes,7,rep,name=rows,proto3" json:"rows,omitempty"`
+}
+
+func (x *WriteMeta) Reset() {
+	*x = WriteMeta{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_alameda_api_v1alpha1_datahub_data_data_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WriteMeta) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WriteMeta) ProtoMessage() {}
+
+func (x *WriteMeta) ProtoReflect() protoreflect.Message {
+	mi := &file_alameda_api_v1alpha1_datahub_data_data_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WriteMeta.ProtoReflect.Descriptor instead.
+func (*WriteMeta) Descriptor() ([]byte, []int) {
+	return file_alameda_api_v1alpha1_datahub_data_data_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *WriteMeta) GetMeasurement() string {
+	if x != nil {
+		return x.Measurement
+	}
+	return ""
+}
+
+func (x *WriteMeta) GetMetricType() common.MetricType {
+	if x != nil {
+		return x.MetricType
+	}
+	return common.MetricType_METRICS_TYPE_UNDEFINED
+}
+
+func (x *WriteMeta) GetResourceBoundary() common.ResourceBoundary {
+	if x != nil {
+		return x.ResourceBoundary
+	}
+	return common.ResourceBoundary_RESOURCE_BOUNDARY_UNDEFINED
+}
+
+func (x *WriteMeta) GetResourceQuota() common.ResourceQuota {
+	if x != nil {
+		return x.ResourceQuota
+	}
+	return common.ResourceQuota_RESOURCE_QUOTA_UNDEFINED
+}
+
+func (x *WriteMeta) GetCondition() *common.Condition {
+	if x != nil {
+		return x.Condition
+	}
+	return nil
+}
+
+func (x *WriteMeta) GetColumns() []string {
+	if x != nil {
+		return x.Columns
+	}
+	return nil
+}
+
+func (x *WriteMeta) GetRows() []*common.Row {
+	if x != nil {
+		return x.Rows
+	}
+	return nil
+}
+
 var File_alameda_api_v1alpha1_datahub_data_data_proto protoreflect.FileDescriptor
 
 var file_alameda_api_v1alpha1_datahub_data_data_proto_rawDesc = []byte{
@@ -378,12 +473,45 @@ var file_alameda_api_v1alpha1_datahub_data_data_proto_rawDesc = []byte{
 	0x2e, 0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x68, 0x75,
 	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x51, 0x75, 0x65, 0x72, 0x79, 0x43, 0x6f,
 	0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x0e, 0x71, 0x75, 0x65, 0x72, 0x79, 0x43, 0x6f,
-	0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x42, 0x40, 0x5a, 0x3e, 0x67, 0x69, 0x74, 0x68, 0x75,
-	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69, 0x6e, 0x65, 0x72, 0x73,
-	0x2d, 0x61, 0x69, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x61, 0x6c, 0x61, 0x6d, 0x65, 0x64, 0x61, 0x5f,
-	0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2f, 0x64, 0x61, 0x74,
-	0x61, 0x68, 0x75, 0x62, 0x2f, 0x64, 0x61, 0x74, 0x61, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x91, 0x04, 0x0a, 0x09, 0x57, 0x72, 0x69, 0x74,
+	0x65, 0x4d, 0x65, 0x74, 0x61, 0x12, 0x20, 0x0a, 0x0b, 0x6d, 0x65, 0x61, 0x73, 0x75, 0x72, 0x65,
+	0x6d, 0x65, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x6d, 0x65, 0x61, 0x73,
+	0x75, 0x72, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x59, 0x0a, 0x0b, 0x6d, 0x65, 0x74, 0x72, 0x69,
+	0x63, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x38, 0x2e, 0x63,
+	0x6f, 0x6e, 0x74, 0x61, 0x69, 0x6e, 0x65, 0x72, 0x73, 0x61, 0x69, 0x2e, 0x61, 0x6c, 0x61, 0x6d,
+	0x65, 0x64, 0x61, 0x2e, 0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2e, 0x64, 0x61, 0x74,
+	0x61, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x4d, 0x65, 0x74, 0x72,
+	0x69, 0x63, 0x54, 0x79, 0x70, 0x65, 0x52, 0x0a, 0x6d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x54, 0x79,
+	0x70, 0x65, 0x12, 0x6b, 0x0a, 0x11, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x62,
+	0x6f, 0x75, 0x6e, 0x64, 0x61, 0x72, 0x79, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x3e, 0x2e,
+	0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69, 0x6e, 0x65, 0x72, 0x73, 0x61, 0x69, 0x2e, 0x61, 0x6c, 0x61,
+	0x6d, 0x65, 0x64, 0x61, 0x2e, 0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2e, 0x64, 0x61,
+	0x74, 0x61, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x52, 0x65, 0x73,
+	0x6f, 0x75, 0x72, 0x63, 0x65, 0x42, 0x6f, 0x75, 0x6e, 0x64, 0x61, 0x72, 0x79, 0x52, 0x10, 0x72,
+	0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x42, 0x6f, 0x75, 0x6e, 0x64, 0x61, 0x72, 0x79, 0x12,
+	0x62, 0x0a, 0x0e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x71, 0x75, 0x6f, 0x74,
+	0x61, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x3b, 0x2e, 0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69,
+	0x6e, 0x65, 0x72, 0x73, 0x61, 0x69, 0x2e, 0x61, 0x6c, 0x61, 0x6d, 0x65, 0x64, 0x61, 0x2e, 0x76,
+	0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x68, 0x75, 0x62, 0x2e,
+	0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x51,
+	0x75, 0x6f, 0x74, 0x61, 0x52, 0x0d, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x51, 0x75,
+	0x6f, 0x74, 0x61, 0x12, 0x55, 0x0a, 0x09, 0x63, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e,
+	0x18, 0x05, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x37, 0x2e, 0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69, 0x6e,
+	0x65, 0x72, 0x73, 0x61, 0x69, 0x2e, 0x61, 0x6c, 0x61, 0x6d, 0x65, 0x64, 0x61, 0x2e, 0x76, 0x31,
+	0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x68, 0x75, 0x62, 0x2e, 0x63,
+	0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x43, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x52,
+	0x09, 0x63, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x18, 0x0a, 0x07, 0x63, 0x6f,
+	0x6c, 0x75, 0x6d, 0x6e, 0x73, 0x18, 0x06, 0x20, 0x03, 0x28, 0x09, 0x52, 0x07, 0x63, 0x6f, 0x6c,
+	0x75, 0x6d, 0x6e, 0x73, 0x12, 0x45, 0x0a, 0x04, 0x72, 0x6f, 0x77, 0x73, 0x18, 0x07, 0x20, 0x03,
+	0x28, 0x0b, 0x32, 0x31, 0x2e, 0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69, 0x6e, 0x65, 0x72, 0x73, 0x61,
+	0x69, 0x2e, 0x61, 0x6c, 0x61, 0x6d, 0x65, 0x64, 0x61, 0x2e, 0x76, 0x31, 0x61, 0x6c, 0x70, 0x68,
+	0x61, 0x31, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f,
+	0x6e, 0x2e, 0x52, 0x6f, 0x77, 0x52, 0x04, 0x72, 0x6f, 0x77, 0x73, 0x42, 0x40, 0x5a, 0x3e, 0x67,
+	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69,
+	0x6e, 0x65, 0x72, 0x73, 0x2d, 0x61, 0x69, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x61, 0x6c, 0x61, 0x6d,
+	0x65, 0x64, 0x61, 0x5f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31,
+	0x2f, 0x64, 0x61, 0x74, 0x61, 0x68, 0x75, 0x62, 0x2f, 0x64, 0x61, 0x74, 0x61, 0x62, 0x06, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -398,35 +526,42 @@ func file_alameda_api_v1alpha1_datahub_data_data_proto_rawDescGZIP() []byte {
 	return file_alameda_api_v1alpha1_datahub_data_data_proto_rawDescData
 }
 
-var file_alameda_api_v1alpha1_datahub_data_data_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_alameda_api_v1alpha1_datahub_data_data_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_alameda_api_v1alpha1_datahub_data_data_proto_goTypes = []interface{}{
 	(*WriteData)(nil),             // 0: containersai.alameda.v1alpha1.datahub.data.WriteData
 	(*ReadData)(nil),              // 1: containersai.alameda.v1alpha1.datahub.data.ReadData
 	(*DeleteData)(nil),            // 2: containersai.alameda.v1alpha1.datahub.data.DeleteData
-	(common.MetricType)(0),        // 3: containersai.alameda.v1alpha1.datahub.common.MetricType
-	(common.ResourceBoundary)(0),  // 4: containersai.alameda.v1alpha1.datahub.common.ResourceBoundary
-	(common.ResourceQuota)(0),     // 5: containersai.alameda.v1alpha1.datahub.common.ResourceQuota
-	(*common.Row)(nil),            // 6: containersai.alameda.v1alpha1.datahub.common.Row
-	(*common.QueryCondition)(nil), // 7: containersai.alameda.v1alpha1.datahub.common.QueryCondition
+	(*WriteMeta)(nil),             // 3: containersai.alameda.v1alpha1.datahub.data.WriteMeta
+	(common.MetricType)(0),        // 4: containersai.alameda.v1alpha1.datahub.common.MetricType
+	(common.ResourceBoundary)(0),  // 5: containersai.alameda.v1alpha1.datahub.common.ResourceBoundary
+	(common.ResourceQuota)(0),     // 6: containersai.alameda.v1alpha1.datahub.common.ResourceQuota
+	(*common.Row)(nil),            // 7: containersai.alameda.v1alpha1.datahub.common.Row
+	(*common.QueryCondition)(nil), // 8: containersai.alameda.v1alpha1.datahub.common.QueryCondition
+	(*common.Condition)(nil),      // 9: containersai.alameda.v1alpha1.datahub.common.Condition
 }
 var file_alameda_api_v1alpha1_datahub_data_data_proto_depIdxs = []int32{
-	3,  // 0: containersai.alameda.v1alpha1.datahub.data.WriteData.metric_type:type_name -> containersai.alameda.v1alpha1.datahub.common.MetricType
-	4,  // 1: containersai.alameda.v1alpha1.datahub.data.WriteData.resource_boundary:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceBoundary
-	5,  // 2: containersai.alameda.v1alpha1.datahub.data.WriteData.resource_quota:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceQuota
-	6,  // 3: containersai.alameda.v1alpha1.datahub.data.WriteData.rows:type_name -> containersai.alameda.v1alpha1.datahub.common.Row
-	3,  // 4: containersai.alameda.v1alpha1.datahub.data.ReadData.metric_type:type_name -> containersai.alameda.v1alpha1.datahub.common.MetricType
-	4,  // 5: containersai.alameda.v1alpha1.datahub.data.ReadData.resource_boundary:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceBoundary
-	5,  // 6: containersai.alameda.v1alpha1.datahub.data.ReadData.resource_quota:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceQuota
-	7,  // 7: containersai.alameda.v1alpha1.datahub.data.ReadData.query_condition:type_name -> containersai.alameda.v1alpha1.datahub.common.QueryCondition
-	3,  // 8: containersai.alameda.v1alpha1.datahub.data.DeleteData.metric_type:type_name -> containersai.alameda.v1alpha1.datahub.common.MetricType
-	4,  // 9: containersai.alameda.v1alpha1.datahub.data.DeleteData.resource_boundary:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceBoundary
-	5,  // 10: containersai.alameda.v1alpha1.datahub.data.DeleteData.resource_quota:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceQuota
-	7,  // 11: containersai.alameda.v1alpha1.datahub.data.DeleteData.query_condition:type_name -> containersai.alameda.v1alpha1.datahub.common.QueryCondition
-	12, // [12:12] is the sub-list for method output_type
-	12, // [12:12] is the sub-list for method input_type
-	12, // [12:12] is the sub-list for extension type_name
-	12, // [12:12] is the sub-list for extension extendee
-	0,  // [0:12] is the sub-list for field type_name
+	4,  // 0: containersai.alameda.v1alpha1.datahub.data.WriteData.metric_type:type_name -> containersai.alameda.v1alpha1.datahub.common.MetricType
+	5,  // 1: containersai.alameda.v1alpha1.datahub.data.WriteData.resource_boundary:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceBoundary
+	6,  // 2: containersai.alameda.v1alpha1.datahub.data.WriteData.resource_quota:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceQuota
+	7,  // 3: containersai.alameda.v1alpha1.datahub.data.WriteData.rows:type_name -> containersai.alameda.v1alpha1.datahub.common.Row
+	4,  // 4: containersai.alameda.v1alpha1.datahub.data.ReadData.metric_type:type_name -> containersai.alameda.v1alpha1.datahub.common.MetricType
+	5,  // 5: containersai.alameda.v1alpha1.datahub.data.ReadData.resource_boundary:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceBoundary
+	6,  // 6: containersai.alameda.v1alpha1.datahub.data.ReadData.resource_quota:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceQuota
+	8,  // 7: containersai.alameda.v1alpha1.datahub.data.ReadData.query_condition:type_name -> containersai.alameda.v1alpha1.datahub.common.QueryCondition
+	4,  // 8: containersai.alameda.v1alpha1.datahub.data.DeleteData.metric_type:type_name -> containersai.alameda.v1alpha1.datahub.common.MetricType
+	5,  // 9: containersai.alameda.v1alpha1.datahub.data.DeleteData.resource_boundary:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceBoundary
+	6,  // 10: containersai.alameda.v1alpha1.datahub.data.DeleteData.resource_quota:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceQuota
+	8,  // 11: containersai.alameda.v1alpha1.datahub.data.DeleteData.query_condition:type_name -> containersai.alameda.v1alpha1.datahub.common.QueryCondition
+	4,  // 12: containersai.alameda.v1alpha1.datahub.data.WriteMeta.metric_type:type_name -> containersai.alameda.v1alpha1.datahub.common.MetricType
+	5,  // 13: containersai.alameda.v1alpha1.datahub.data.WriteMeta.resource_boundary:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceBoundary
+	6,  // 14: containersai.alameda.v1alpha1.datahub.data.WriteMeta.resource_quota:type_name -> containersai.alameda.v1alpha1.datahub.common.ResourceQuota
+	9,  // 15: containersai.alameda.v1alpha1.datahub.data.WriteMeta.condition:type_name -> containersai.alameda.v1alpha1.datahub.common.Condition
+	7,  // 16: containersai.alameda.v1alpha1.datahub.data.WriteMeta.rows:type_name -> containersai.alameda.v1alpha1.datahub.common.Row
+	17, // [17:17] is the sub-list for method output_type
+	17, // [17:17] is the sub-list for method input_type
+	17, // [17:17] is the sub-list for extension type_name
+	17, // [17:17] is the sub-list for extension extendee
+	0,  // [0:17] is the sub-list for field type_name
 }
 
 func init() { file_alameda_api_v1alpha1_datahub_data_data_proto_init() }
@@ -471,6 +606,18 @@ func file_alameda_api_v1alpha1_datahub_data_data_proto_init() {
 				return nil
 			}
 		}
+		file_alameda_api_v1alpha1_datahub_data_data_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WriteMeta); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -478,7 +625,7 @@ func file_alameda_api_v1alpha1_datahub_data_data_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_alameda_api_v1alpha1_datahub_data_data_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
