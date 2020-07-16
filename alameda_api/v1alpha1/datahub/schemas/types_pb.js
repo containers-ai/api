@@ -815,7 +815,8 @@ proto.containersai.alameda.v1alpha1.datahub.schemas.Scope = {
   SCOPE_PLANNING: 5,
   SCOPE_PREDICTION: 6,
   SCOPE_RECOMMENDATION: 7,
-  SCOPE_RESOURCE: 8
+  SCOPE_RESOURCE: 8,
+  SCOPE_TARGET: 9
 };
 
 goog.object.extend(exports, proto.containersai.alameda.v1alpha1.datahub.schemas);
