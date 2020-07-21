@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'ZCgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/resources',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n2alameda_api/v1alpha1/datahub/resources/types.proto\x12/containersai.alameda.v1alpha1.datahub.resources\x1a\x35\x61lameda_api/v1alpha1/datahub/resources/metadata.proto\x1a\x35\x61lameda_api/v1alpha1/datahub/resources/policies.proto\"\x99\x03\n\x0e\x41lamedaPodSpec\x12S\n\x0e\x61lameda_scaler\x18\x01 \x01(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12R\n\x0cscaling_tool\x18\x02 \x01(\x0e\x32<.containersai.alameda.v1alpha1.datahub.resources.ScalingTool\x12\x1e\n\x16used_recommendation_id\x18\x03 \x01(\t\x12U\n\x06policy\x18\x04 \x01(\x0e\x32\x45.containersai.alameda.v1alpha1.datahub.resources.RecommendationPolicy\x12g\n\x18\x61lameda_scaler_resources\x18\x05 \x01(\x0b\x32\x45.containersai.alameda.v1alpha1.datahub.resources.ResourceRequirements\"\xec\x02\n\x15\x41lamedaControllerSpec\x12S\n\x0e\x61lameda_scaler\x18\x01 \x01(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12R\n\x0cscaling_tool\x18\x02 \x01(\x0e\x32<.containersai.alameda.v1alpha1.datahub.resources.ScalingTool\x12U\n\x06policy\x18\x03 \x01(\x0e\x32\x45.containersai.alameda.v1alpha1.datahub.resources.RecommendationPolicy\x12\x14\n\x0cmin_replicas\x18\x04 \x01(\x05\x12\x14\n\x0cmax_replicas\x18\x05 \x01(\x05\x12\'\n\x1f\x65nable_recommendation_execution\x18\x06 \x01(\x08\"\x90\x01\n\x16\x41lamedaApplicationSpec\x12R\n\x0cscaling_tool\x18\x01 \x01(\x0e\x32<.containersai.alameda.v1alpha1.datahub.resources.ScalingTool\x12\x10\n\x08\x61pp_spec\x18\x02 \x01(\t\x12\x10\n\x08selector\x18\x03 \x01(\t\"\xd3\x01\n\x0f\x41lamedaNodeSpec\x12K\n\x08provider\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.resources.Provider\x12\x17\n\x0fmachineset_name\x18\x02 \x01(\t\x12\x1c\n\x14machineset_namespace\x18\x03 \x01(\t\x12\x13\n\x0brole_master\x18\x04 \x01(\x08\x12\x13\n\x0brole_worker\x18\x05 \x01(\x08\x12\x12\n\nrole_infra\x18\x06 \x01(\x08\"X\n\x08\x43\x61pacity\x12\x11\n\tcpu_cores\x18\x01 \x01(\x03\x12\x14\n\x0cmemory_bytes\x18\x02 \x01(\x03\x12#\n\x1bnetwork_megabits_per_second\x18\x03 \x01(\x03\"\x96\x01\n\x08Provider\x12\x10\n\x08provider\x18\x01 \x01(\t\x12\x15\n\rinstance_type\x18\x02 \x01(\t\x12\x0e\n\x06region\x18\x03 \x01(\t\x12\x0c\n\x04zone\x18\x04 \x01(\t\x12\n\n\x02os\x18\x05 \x01(\t\x12\x0c\n\x04role\x18\x06 \x01(\t\x12\x13\n\x0binstance_id\x18\x07 \x01(\t\x12\x14\n\x0cstorage_size\x18\x08 \x01(\x03\"\xc0\x02\n\x14ResourceRequirements\x12\x61\n\x06limits\x18\x01 \x03(\x0b\x32Q.containersai.alameda.v1alpha1.datahub.resources.ResourceRequirements.LimitsEntry\x12\x65\n\x08requests\x18\x02 \x03(\x0b\x32S.containersai.alameda.v1alpha1.datahub.resources.ResourceRequirements.RequestsEntry\x1a-\n\x0bLimitsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a/\n\rRequestsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x45ZCgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/resourcesb\x06proto3'
+  serialized_pb=b'\n2alameda_api/v1alpha1/datahub/resources/types.proto\x12/containersai.alameda.v1alpha1.datahub.resources\x1a\x35\x61lameda_api/v1alpha1/datahub/resources/metadata.proto\x1a\x35\x61lameda_api/v1alpha1/datahub/resources/policies.proto\"\x99\x03\n\x0e\x41lamedaPodSpec\x12S\n\x0e\x61lameda_scaler\x18\x01 \x01(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12R\n\x0cscaling_tool\x18\x02 \x01(\x0e\x32<.containersai.alameda.v1alpha1.datahub.resources.ScalingTool\x12\x1e\n\x16used_recommendation_id\x18\x03 \x01(\t\x12U\n\x06policy\x18\x04 \x01(\x0e\x32\x45.containersai.alameda.v1alpha1.datahub.resources.RecommendationPolicy\x12g\n\x18\x61lameda_scaler_resources\x18\x05 \x01(\x0b\x32\x45.containersai.alameda.v1alpha1.datahub.resources.ResourceRequirements\"\xec\x02\n\x15\x41lamedaControllerSpec\x12S\n\x0e\x61lameda_scaler\x18\x01 \x01(\x0b\x32;.containersai.alameda.v1alpha1.datahub.resources.ObjectMeta\x12R\n\x0cscaling_tool\x18\x02 \x01(\x0e\x32<.containersai.alameda.v1alpha1.datahub.resources.ScalingTool\x12U\n\x06policy\x18\x03 \x01(\x0e\x32\x45.containersai.alameda.v1alpha1.datahub.resources.RecommendationPolicy\x12\x14\n\x0cmin_replicas\x18\x04 \x01(\x05\x12\x14\n\x0cmax_replicas\x18\x05 \x01(\x05\x12\'\n\x1f\x65nable_recommendation_execution\x18\x06 \x01(\x08\"\x18\n\x16\x41lamedaApplicationSpec\"\xd3\x01\n\x0f\x41lamedaNodeSpec\x12K\n\x08provider\x18\x01 \x01(\x0b\x32\x39.containersai.alameda.v1alpha1.datahub.resources.Provider\x12\x17\n\x0fmachineset_name\x18\x02 \x01(\t\x12\x1c\n\x14machineset_namespace\x18\x03 \x01(\t\x12\x13\n\x0brole_master\x18\x04 \x01(\x08\x12\x13\n\x0brole_worker\x18\x05 \x01(\x08\x12\x12\n\nrole_infra\x18\x06 \x01(\x08\"X\n\x08\x43\x61pacity\x12\x11\n\tcpu_cores\x18\x01 \x01(\x03\x12\x14\n\x0cmemory_bytes\x18\x02 \x01(\x03\x12#\n\x1bnetwork_megabits_per_second\x18\x03 \x01(\x03\"\x96\x01\n\x08Provider\x12\x10\n\x08provider\x18\x01 \x01(\t\x12\x15\n\rinstance_type\x18\x02 \x01(\t\x12\x0e\n\x06region\x18\x03 \x01(\t\x12\x0c\n\x04zone\x18\x04 \x01(\t\x12\n\n\x02os\x18\x05 \x01(\t\x12\x0c\n\x04role\x18\x06 \x01(\t\x12\x13\n\x0binstance_id\x18\x07 \x01(\t\x12\x14\n\x0cstorage_size\x18\x08 \x01(\x03\"\xc0\x02\n\x14ResourceRequirements\x12\x61\n\x06limits\x18\x01 \x03(\x0b\x32Q.containersai.alameda.v1alpha1.datahub.resources.ResourceRequirements.LimitsEntry\x12\x65\n\x08requests\x18\x02 \x03(\x0b\x32S.containersai.alameda.v1alpha1.datahub.resources.ResourceRequirements.RequestsEntry\x1a-\n\x0bLimitsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a/\n\rRequestsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x45ZCgithub.com/containers-ai/api/alameda_api/v1alpha1/datahub/resourcesb\x06proto3'
   ,
   dependencies=[alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2.DESCRIPTOR,alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_policies__pb2.DESCRIPTOR,])
 
@@ -163,27 +163,6 @@ _ALAMEDAAPPLICATIONSPEC = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='scaling_tool', full_name='containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.scaling_tool', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='app_spec', full_name='containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.app_spec', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='selector', full_name='containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.selector', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -196,8 +175,8 @@ _ALAMEDAAPPLICATIONSPEC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=993,
-  serialized_end=1137,
+  serialized_start=992,
+  serialized_end=1016,
 )
 
 
@@ -263,8 +242,8 @@ _ALAMEDANODESPEC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1140,
-  serialized_end=1351,
+  serialized_start=1019,
+  serialized_end=1230,
 )
 
 
@@ -309,8 +288,8 @@ _CAPACITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1353,
-  serialized_end=1441,
+  serialized_start=1232,
+  serialized_end=1320,
 )
 
 
@@ -390,8 +369,8 @@ _PROVIDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1444,
-  serialized_end=1594,
+  serialized_start=1323,
+  serialized_end=1473,
 )
 
 
@@ -429,8 +408,8 @@ _RESOURCEREQUIREMENTS_LIMITSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1823,
-  serialized_end=1868,
+  serialized_start=1702,
+  serialized_end=1747,
 )
 
 _RESOURCEREQUIREMENTS_REQUESTSENTRY = _descriptor.Descriptor(
@@ -467,8 +446,8 @@ _RESOURCEREQUIREMENTS_REQUESTSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1870,
-  serialized_end=1917,
+  serialized_start=1749,
+  serialized_end=1796,
 )
 
 _RESOURCEREQUIREMENTS = _descriptor.Descriptor(
@@ -505,8 +484,8 @@ _RESOURCEREQUIREMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1597,
-  serialized_end=1917,
+  serialized_start=1476,
+  serialized_end=1796,
 )
 
 _ALAMEDAPODSPEC.fields_by_name['alameda_scaler'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._OBJECTMETA
@@ -516,7 +495,6 @@ _ALAMEDAPODSPEC.fields_by_name['alameda_scaler_resources'].message_type = _RESOU
 _ALAMEDACONTROLLERSPEC.fields_by_name['alameda_scaler'].message_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._OBJECTMETA
 _ALAMEDACONTROLLERSPEC.fields_by_name['scaling_tool'].enum_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._SCALINGTOOL
 _ALAMEDACONTROLLERSPEC.fields_by_name['policy'].enum_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_policies__pb2._RECOMMENDATIONPOLICY
-_ALAMEDAAPPLICATIONSPEC.fields_by_name['scaling_tool'].enum_type = alameda__api_dot_v1alpha1_dot_datahub_dot_resources_dot_metadata__pb2._SCALINGTOOL
 _ALAMEDANODESPEC.fields_by_name['provider'].message_type = _PROVIDER
 _RESOURCEREQUIREMENTS_LIMITSENTRY.containing_type = _RESOURCEREQUIREMENTS
 _RESOURCEREQUIREMENTS_REQUESTSENTRY.containing_type = _RESOURCEREQUIREMENTS

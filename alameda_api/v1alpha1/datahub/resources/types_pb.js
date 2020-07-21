@@ -795,9 +795,7 @@ proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.pro
  */
 proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.toObject = function(includeInstance, msg) {
   var f, obj = {
-    scalingTool: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    appSpec: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    selector: jspb.Message.getFieldWithDefault(msg, 3, "")
+
   };
 
   if (includeInstance) {
@@ -834,18 +832,6 @@ proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.des
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!proto.containersai.alameda.v1alpha1.datahub.resources.ScalingTool} */ (reader.readEnum());
-      msg.setScalingTool(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setAppSpec(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSelector(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -875,81 +861,6 @@ proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.pro
  */
 proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getScalingTool();
-  if (f !== 0.0) {
-    writer.writeEnum(
-      1,
-      f
-    );
-  }
-  f = message.getAppSpec();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getSelector();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-};
-
-
-/**
- * optional ScalingTool scaling_tool = 1;
- * @return {!proto.containersai.alameda.v1alpha1.datahub.resources.ScalingTool}
- */
-proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.prototype.getScalingTool = function() {
-  return /** @type {!proto.containersai.alameda.v1alpha1.datahub.resources.ScalingTool} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
-};
-
-
-/**
- * @param {!proto.containersai.alameda.v1alpha1.datahub.resources.ScalingTool} value
- * @return {!proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec} returns this
- */
-proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.prototype.setScalingTool = function(value) {
-  return jspb.Message.setProto3EnumField(this, 1, value);
-};
-
-
-/**
- * optional string app_spec = 2;
- * @return {string}
- */
-proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.prototype.getAppSpec = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec} returns this
- */
-proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.prototype.setAppSpec = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string selector = 3;
- * @return {string}
- */
-proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.prototype.getSelector = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec} returns this
- */
-proto.containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec.prototype.setSelector = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
