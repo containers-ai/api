@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ALAMEA_GRPC_GO_IMAGE_REPO="alameda/grpc_go"
+ALAMEA_GRPC_GO_IMAGE_REPO="alameda/grpc_go_$(docker run --rm -v $(pwd):$(pwd) -w $(pwd) golang:stretch git rev-parse --abbrev-ref HEAD)"
 ALAMEA_GRPC_GO_IMAGE_TAG="latest"
 ALAMEA_GRPC_GO_IMAGE="$ALAMEA_GRPC_GO_IMAGE_REPO:$ALAMEA_GRPC_GO_IMAGE_TAG"
 ALAMEA_GRPC_GO_IMAGE_DOCKERFILE=Dockerfile_gRPC_go
@@ -9,7 +9,7 @@ generate_dockerfiles(){
     cat > $ALAMEA_GRPC_GO_IMAGE_DOCKERFILE - <<EOF
 FROM golang:stretch
 ARG DOCKERFILE_MD5
-ENV DOCKERFILE_MD5=\$DOCKERFILE_MD5 PROTOC_VER=3.11.3 OS_ARC=linux-x86_64 PROTOC_GEN_GO_VER=v1.3.3 PROTOC_GEN_DOC_VER=v1.3.2
+ENV DOCKERFILE_MD5=\$DOCKERFILE_MD5 PROTOC_VER=3.11.3 OS_ARC=linux-x86_64 PROTOC_GEN_GO_VER=v1.3.3 PROTOC_GEN_DOC_VER=v1.3.2 API_COMMON_PROTOS_VER=1.50.0
 COPY setup.py .
 RUN apt-get update && apt-get install unzip python3 python3-pip -y && \\
 curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v\$PROTOC_VER/protoc-\$PROTOC_VER-\$OS_ARC.zip && \\
@@ -18,6 +18,8 @@ go get -d -u github.com/golang/protobuf/protoc-gen-go && \\
 git -C "\$(go env GOPATH)"/src/github.com/golang/protobuf checkout \$PROTOC_GEN_GO_VER && \\
 go install github.com/golang/protobuf/protoc-gen-go && \\
 GO111MODULE=on go get -u github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@\$PROTOC_GEN_DOC_VER && \\
+git clone --depth 1 --branch \$API_COMMON_PROTOS_VER https://github.com/googleapis/api-common-protos.git && \\
+mv api-common-protos/google/rpc /usr/local/include/google/ && rm -rf api-common-protos && \\
 perl -lne 'print if /INSTALL_REQUIRES =/ .. /\)/' setup.py | grep -v \( | grep -v \) |  awk -F  "'" '{print \$2}' > requirements.txt && \\
 pip3 install -r requirements.txt && rm requirements.txt && rm setup.py && \\
 rm -rf /var/lib/apt/lists/*
@@ -45,8 +47,8 @@ compile_grpc(){
         build_go_image
     fi
     echo "Start compiling proto files."
-    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "for pt in \$(find . | grep \\\.proto\$ | grep -v ^\\\./include | grep -v ^\\\./google);do protoc -I . -I include/ \$pt --go_out=paths=source_relative,plugins=grpc:.; python3 -m grpc_tools.protoc -I . -I include/ --python_out=./ --grpc_python_out=./ \$pt; done"
-    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "protoc -I . -I include/ --doc_out=./ --doc_opt=html,index.html $(find . | grep \\\.proto\$ | grep -v ^\\\./include | grep -v ^\\\./google | tr '\n' ' ');"
+    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "for pt in \$(find . | grep \\\.proto\$);do protoc -I . -I /usr/local/include \$pt --go_out=paths=source_relative,plugins=grpc:.; python3 -m grpc_tools.protoc -I . -I /usr/local/include --python_out=./ --grpc_python_out=./ \$pt; done"
+    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "protoc -I . -I /usr/local/include --doc_out=./ --doc_opt=html,index.html $(find . | grep \\\.proto\$ | tr '\n' ' ');"
     echo "Finish compiling proto files."
 }
 
