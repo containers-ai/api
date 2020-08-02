@@ -46,9 +46,12 @@ compile_grpc(){
         docker rmi $ALAMEA_GRPC_GO_IMAGE;
         build_go_image
     fi
+
+    echo "Remove generated files."
+    rm -f `find .| grep -E '\.go$|\.py$|\.html$' | grep -v setup.py`
     echo "Start compiling proto files."
     docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "for pt in \$(find . | grep \\\.proto\$);do protoc -I . -I /usr/local/include \$pt --go_out=paths=source_relative,plugins=grpc:.; python3 -m grpc_tools.protoc -I . -I /usr/local/include --python_out=./ --grpc_python_out=./ \$pt; done"
-    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "protoc -I . -I /usr/local/include --doc_out=./ --doc_opt=html,index.html $(find . | grep \\\.proto\$ | tr '\n' ' ');"
+    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "protoc -I . -I /usr/local/include --doc_out=./alameda_api/v1alpha1/doc/ --doc_opt=html,federatorai-api.html $(find . | grep \\\.proto\$ | tr '\n' ' ');"
     echo "Finish compiling proto files."
 }
 
