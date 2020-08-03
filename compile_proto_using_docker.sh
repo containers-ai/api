@@ -28,7 +28,7 @@ EOF
 
 build_go_image(){
     local DOCKERFILE_MD5=`md5sum $ALAMEA_GRPC_GO_IMAGE_DOCKERFILE | awk '{print $1}'`
-    docker build --build-arg DOCKERFILE_MD5=$DOCKERFILE_MD5 . -t $ALAMEA_GRPC_GO_IMAGE -f $ALAMEA_GRPC_GO_IMAGE_DOCKERFILE 
+    docker build --build-arg DOCKERFILE_MD5=$DOCKERFILE_MD5 . -t $ALAMEA_GRPC_GO_IMAGE -f $ALAMEA_GRPC_GO_IMAGE_DOCKERFILE
 }
 
 compile_grpc(){
@@ -48,11 +48,14 @@ compile_grpc(){
     fi
 
     echo "Remove generated files."
-    rm -f `find .| grep -E '\.go$|\.py$|\.html$' | grep -v setup.py`
+    rm -f `find .| grep -E '\.go$|\.py$|\.html$|\.md$' | grep -v setup.py | grep -v README.md`
     echo "Start compiling proto files."
     docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "for pt in \$(find . | grep \\\.proto\$);do protoc -I . -I /usr/local/include \$pt --go_out=paths=source_relative,plugins=grpc:.; python3 -m grpc_tools.protoc -I . -I /usr/local/include --python_out=./ --grpc_python_out=./ \$pt; done"
-    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "protoc -I . -I /usr/local/include --doc_out=./alameda_api/v1alpha1/doc/ --doc_opt=html,federatorai-api.html $(find . | grep \\\.proto\$ | tr '\n' ' ');"
-    echo "Finish compiling proto files."
+    echo "Start generating api(html) document"
+    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "protoc -I . -I /usr/local/include --doc_out=./alameda_api/v1alpha1/doc/ --doc_opt=html,datahub-api.html $(find . | grep \\\.proto\$ | tr '\n' ' ');"
+    echo "Start generating api(markdown) document"
+    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "protoc -I . -I /usr/local/include --doc_out=./alameda_api/v1alpha1/doc/ --doc_opt=markdown,datahub-api.md $(find . | grep \\\.proto\$ | tr '\n' ' ');"
+    echo "All jobs completed."
 }
 
 remove_dockerfiles(){
