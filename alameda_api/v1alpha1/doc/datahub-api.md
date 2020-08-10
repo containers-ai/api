@@ -542,7 +542,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.common.ColumnType"></a>
 
 ### ColumnType
-
+Represents the field type of a record which queried from datahub.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -555,7 +555,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.common.DataType"></a>
 
 ### DataType
-
+Represents the datahub specified data type.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -594,7 +594,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.common.Group"></a>
 
 ### Group
-
+Represents a dataset which are collected that have the same attributes.
 
 
 | Field | Type | Label | Description |
@@ -609,7 +609,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.common.Query"></a>
 
 ### Query
-
+Represents a general datahub query request.
 
 
 | Field | Type | Label | Description |
@@ -627,7 +627,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.common.QueryCondition"></a>
 
 ### QueryCondition
-
+Represents a datahub query request.
 
 
 | Field | Type | Label | Description |
@@ -647,7 +647,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.common.ReadRawdata"></a>
 
 ### ReadRawdata
-
+Represents a rawdata whcih is read from datahub.
 
 
 | Field | Type | Label | Description |
@@ -665,7 +665,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.common.Row"></a>
 
 ### Row
-
+Represents a record of data.
 
 
 | Field | Type | Label | Description |
@@ -681,7 +681,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.common.TimeRange"></a>
 
 ### TimeRange
-Represents a time range definition
+Represents a time range definition.
 
 
 | Field | Type | Label | Description |
@@ -701,7 +701,7 @@ Represents a time range definition
 <a name="containersai.common.WriteRawdata"></a>
 
 ### WriteRawdata
-
+Represents a rawdata which will be written to datahub.
 
 
 | Field | Type | Label | Description |
@@ -723,7 +723,7 @@ Represents a time range definition
 <a name="containersai.common.DatabaseType"></a>
 
 ### DatabaseType
-
+Represents a specified database whcih is to query.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -776,7 +776,7 @@ Represents a time range definition
 <a name="containersai.alameda.v1alpha1.datahub.predictions.CreateApplicationPredictionsRequest"></a>
 
 ### CreateApplicationPredictionsRequest
-
+Represents a request for creating predictions of alameda scalers&#39; metric data.
 
 
 | Field | Type | Label | Description |
@@ -791,7 +791,7 @@ Represents a time range definition
 <a name="containersai.alameda.v1alpha1.datahub.predictions.CreateClusterPredictionsRequest"></a>
 
 ### CreateClusterPredictionsRequest
-
+Represents a request for creating predictions clusters&#39; metric data.
 
 
 | Field | Type | Label | Description |
@@ -806,7 +806,7 @@ Represents a time range definition
 <a name="containersai.alameda.v1alpha1.datahub.predictions.CreateControllerPredictionsRequest"></a>
 
 ### CreateControllerPredictionsRequest
-
+Represents a request for creating predictions of controllers&#39; metric data.
 
 
 | Field | Type | Label | Description |
@@ -821,7 +821,7 @@ Represents a time range definition
 <a name="containersai.alameda.v1alpha1.datahub.predictions.CreateNamespacePredictionsRequest"></a>
 
 ### CreateNamespacePredictionsRequest
-
+Represents a request for creating predictions of namespaces&#39; metric data.
 
 
 | Field | Type | Label | Description |
@@ -836,7 +836,7 @@ Represents a time range definition
 <a name="containersai.alameda.v1alpha1.datahub.predictions.CreateNodePredictionsRequest"></a>
 
 ### CreateNodePredictionsRequest
-Represents a request for creating predictions of a node metric data
+Represents a request for creating predictions nodes&#39; metric data.
 
 
 | Field | Type | Label | Description |
@@ -851,7 +851,7 @@ Represents a request for creating predictions of a node metric data
 <a name="containersai.alameda.v1alpha1.datahub.predictions.CreatePodPredictionsRequest"></a>
 
 ### CreatePodPredictionsRequest
-Represents a request for creating predictions of containers&#39; metric data belonging to a pod
+Represents a request for creating predictions of containers&#39; metric data belonging to a pod.
 
 
 | Field | Type | Label | Description |
@@ -882,7 +882,7 @@ Represents a request for creating predictions of containers&#39; metric data bel
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsRequest"></a>
 
 ### ListApplicationPredictionsRequest
-
+Represents a request for listing predictions of alameda scalers.
 
 
 | Field | Type | Label | Description |
@@ -902,7 +902,7 @@ Represents a request for creating predictions of containers&#39; metric data bel
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsResponse"></a>
 
 ### ListApplicationPredictionsResponse
-
+Represents a response for a listing predictions of alameda scalers request.
 
 
 | Field | Type | Label | Description |
@@ -918,7 +918,7 @@ Represents a request for creating predictions of containers&#39; metric data bel
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsRequest"></a>
 
 ### ListClusterPredictionsRequest
-
+Represents a request for listing predictions of clusters.
 
 
 | Field | Type | Label | Description |
@@ -938,7 +938,7 @@ Represents a request for creating predictions of containers&#39; metric data bel
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsResponse"></a>
 
 ### ListClusterPredictionsResponse
-
+Represents a response for a listing predictions of clusters request.
 
 
 | Field | Type | Label | Description |
@@ -954,7 +954,7 @@ Represents a request for creating predictions of containers&#39; metric data bel
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest"></a>
 
 ### ListControllerPredictionsRequest
-
+Represents a request for listing predictions of controllers.
 
 
 | Field | Type | Label | Description |
@@ -975,7 +975,7 @@ Represents a request for creating predictions of containers&#39; metric data bel
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsResponse"></a>
 
 ### ListControllerPredictionsResponse
-
+Represents a response for a listing predictions of controllers request.
 
 
 | Field | Type | Label | Description |
@@ -991,7 +991,7 @@ Represents a request for creating predictions of containers&#39; metric data bel
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsRequest"></a>
 
 ### ListNamespacePredictionsRequest
-
+Represents a request for listing predictions of namespaces.
 
 
 | Field | Type | Label | Description |
@@ -1011,7 +1011,7 @@ Represents a request for creating predictions of containers&#39; metric data bel
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsResponse"></a>
 
 ### ListNamespacePredictionsResponse
-
+Represents a response for a listing predictions of namespaces request.
 
 
 | Field | Type | Label | Description |
@@ -1027,7 +1027,7 @@ Represents a request for creating predictions of containers&#39; metric data bel
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsRequest"></a>
 
 ### ListNodePredictionsRequest
-Represents a request for listing predictions of nodes
+Represents a request for listing predictions of nodes.
 
 
 | Field | Type | Label | Description |
@@ -1047,7 +1047,7 @@ Represents a request for listing predictions of nodes
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsResponse"></a>
 
 ### ListNodePredictionsResponse
-Represents a response for a listing predictions of nodes request
+Represents a response for a listing predictions of nodes request.
 
 
 | Field | Type | Label | Description |
@@ -1063,7 +1063,7 @@ Represents a response for a listing predictions of nodes request
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest"></a>
 
 ### ListPodPredictionsRequest
-Represents a request for listing predictions of pods
+Represents a request for listing predictions of pods.
 
 
 | Field | Type | Label | Description |
@@ -1084,7 +1084,7 @@ Represents a request for listing predictions of pods
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsResponse"></a>
 
 ### ListPodPredictionsResponse
-Represents a response for a listing predictions of pods request
+Represents a response for a listing predictions of pods request.
 
 
 | Field | Type | Label | Description |
@@ -1149,7 +1149,7 @@ Represents a response for a listing predictions of pods request
 <a name="containersai.alameda.v1alpha1.datahub.predictions.MetricData"></a>
 
 ### MetricData
-
+Represents a piece of metreic data.
 
 
 | Field | Type | Label | Description |
@@ -1199,7 +1199,7 @@ Represents a response for a listing predictions of pods request
 <a name="containersai.alameda.v1alpha1.datahub.predictions.Sample"></a>
 
 ### Sample
-
+Represents a data point of time-series metric data.
 
 
 | Field | Type | Label | Description |
@@ -1234,7 +1234,7 @@ Represents a response for a listing predictions of pods request
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ApplicationPrediction"></a>
 
 ### ApplicationPrediction
-
+Represents a list of predicted metrics data of a alameda scaler.
 
 
 | Field | Type | Label | Description |
@@ -1252,7 +1252,7 @@ Represents a response for a listing predictions of pods request
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ClusterPrediction"></a>
 
 ### ClusterPrediction
-
+Represents a list of predicted metric data of a cluster.
 
 
 | Field | Type | Label | Description |
@@ -1270,7 +1270,7 @@ Represents a response for a listing predictions of pods request
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ContainerPrediction"></a>
 
 ### ContainerPrediction
-Represents a list of predicted metric data of a container
+Represents a list of predicted metric data of a container.
 
 
 | Field | Type | Label | Description |
@@ -1288,7 +1288,7 @@ Represents a list of predicted metric data of a container
 <a name="containersai.alameda.v1alpha1.datahub.predictions.ControllerPrediction"></a>
 
 ### ControllerPrediction
-
+Represents a list of predicted metrics data of a controller.
 
 
 | Field | Type | Label | Description |
@@ -1307,7 +1307,7 @@ Represents a list of predicted metric data of a container
 <a name="containersai.alameda.v1alpha1.datahub.predictions.NamespacePrediction"></a>
 
 ### NamespacePrediction
-
+Represents a list of predicted metrics data of a namespace.
 
 
 | Field | Type | Label | Description |
@@ -1325,7 +1325,7 @@ Represents a list of predicted metric data of a container
 <a name="containersai.alameda.v1alpha1.datahub.predictions.NodePrediction"></a>
 
 ### NodePrediction
-Represents a list of predicted metric data of a node
+Represents a list of predicted metric data of a node.
 
 
 | Field | Type | Label | Description |
@@ -1344,7 +1344,7 @@ Represents a list of predicted metric data of a node
 <a name="containersai.alameda.v1alpha1.datahub.predictions.PodPrediction"></a>
 
 ### PodPrediction
-Represents a list of predicted metrics data of a pod
+Represents a list of predicted metrics data of a pod.
 
 
 | Field | Type | Label | Description |
@@ -1611,7 +1611,7 @@ Represents a list of predicted metrics data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.metrics.CreateApplicationMetricsRequest"></a>
 
 ### CreateApplicationMetricsRequest
-
+Represents a request for creating metrics data of alameda scalers.
 
 
 | Field | Type | Label | Description |
@@ -1626,7 +1626,7 @@ Represents a list of predicted metrics data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.metrics.CreateClusterMetricsRequest"></a>
 
 ### CreateClusterMetricsRequest
-
+Represents a request for creating metrics data of clusters.
 
 
 | Field | Type | Label | Description |
@@ -1641,7 +1641,7 @@ Represents a list of predicted metrics data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.metrics.CreateControllerMetricsRequest"></a>
 
 ### CreateControllerMetricsRequest
-
+Represents a request for creating metrics data of controllers.
 
 
 | Field | Type | Label | Description |
@@ -1672,7 +1672,7 @@ Represents a list of predicted metrics data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.metrics.CreateNamespaceMetricsRequest"></a>
 
 ### CreateNamespaceMetricsRequest
-
+Represents a request for creating metrics data of namespaces.
 
 
 | Field | Type | Label | Description |
@@ -1687,7 +1687,7 @@ Represents a list of predicted metrics data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.metrics.CreateNodeMetricsRequest"></a>
 
 ### CreateNodeMetricsRequest
-Represents a request for creating metrics data of nodes
+Represents a request for creating metrics data of nodes.
 
 
 | Field | Type | Label | Description |
@@ -1702,7 +1702,7 @@ Represents a request for creating metrics data of nodes
 <a name="containersai.alameda.v1alpha1.datahub.metrics.CreatePodMetricsRequest"></a>
 
 ### CreatePodMetricsRequest
-Represents a request for creating metrics data of pods
+Represents a request for creating metrics data of pods.
 
 
 | Field | Type | Label | Description |
@@ -1718,7 +1718,7 @@ Represents a request for creating metrics data of pods
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListApplicationMetricsRequest"></a>
 
 ### ListApplicationMetricsRequest
-
+Represents a request for listing metric data of alameda scalers.
 
 
 | Field | Type | Label | Description |
@@ -1735,7 +1735,7 @@ Represents a request for creating metrics data of pods
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListApplicationMetricsResponse"></a>
 
 ### ListApplicationMetricsResponse
-
+Represents a response for a listing alameda scalers metric data request.
 
 
 | Field | Type | Label | Description |
@@ -1751,7 +1751,7 @@ Represents a request for creating metrics data of pods
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListClusterMetricsRequest"></a>
 
 ### ListClusterMetricsRequest
-
+Represents a request for listing metric data of clusters.
 
 
 | Field | Type | Label | Description |
@@ -1768,7 +1768,7 @@ Represents a request for creating metrics data of pods
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListClusterMetricsResponse"></a>
 
 ### ListClusterMetricsResponse
-
+Represents a response for a listing clusters metrics request.
 
 
 | Field | Type | Label | Description |
@@ -1784,7 +1784,7 @@ Represents a request for creating metrics data of pods
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListControllerMetricsRequest"></a>
 
 ### ListControllerMetricsRequest
-
+Represents a request for listing metric data of controllers.
 
 
 | Field | Type | Label | Description |
@@ -1802,7 +1802,7 @@ Represents a request for creating metrics data of pods
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListControllerMetricsResponse"></a>
 
 ### ListControllerMetricsResponse
-
+Represents a response for a listing controllers metric data request.
 
 
 | Field | Type | Label | Description |
@@ -1851,7 +1851,7 @@ Represents a request for creating metrics data of pods
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListNamespaceMetricsRequest"></a>
 
 ### ListNamespaceMetricsRequest
-
+Represents a request for listing metric data of namespaces.
 
 
 | Field | Type | Label | Description |
@@ -1868,7 +1868,7 @@ Represents a request for creating metrics data of pods
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListNamespaceMetricsResponse"></a>
 
 ### ListNamespaceMetricsResponse
-
+Represents a response for a listing namespaces metric data request.
 
 
 | Field | Type | Label | Description |
@@ -1884,7 +1884,7 @@ Represents a request for creating metrics data of pods
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListNodeMetricsRequest"></a>
 
 ### ListNodeMetricsRequest
-Represents a request for listing metric data of a node
+Represents a request for listing metric data of nodes.
 
 
 | Field | Type | Label | Description |
@@ -1901,7 +1901,7 @@ Represents a request for listing metric data of a node
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListNodeMetricsResponse"></a>
 
 ### ListNodeMetricsResponse
-Represents a response for a listing node metrics request
+Represents a response for a listing nodes metrics request.
 
 
 | Field | Type | Label | Description |
@@ -1917,7 +1917,7 @@ Represents a response for a listing node metrics request
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListPodMetricsRequest"></a>
 
 ### ListPodMetricsRequest
-Represents a request for listing metric data of a pod
+Represents a request for listing metric data of pods.
 
 
 | Field | Type | Label | Description |
@@ -1935,7 +1935,7 @@ Represents a request for listing metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ListPodMetricsResponse"></a>
 
 ### ListPodMetricsResponse
-Represents a response for a listing pod metric data request
+Represents a response for a listing pods metric data request.
 
 
 | Field | Type | Label | Description |
@@ -1983,7 +1983,7 @@ Represents a response for a listing pod metric data request
 <a name="containersai.alameda.v1alpha1.datahub.metrics.MetricData"></a>
 
 ### MetricData
-
+Represents a piece of metreic data.
 
 
 | Field | Type | Label | Description |
@@ -2015,7 +2015,7 @@ Represents a response for a listing pod metric data request
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ApplicationMetric"></a>
 
 ### ApplicationMetric
-
+Represents metric data of a alameda scaler.
 
 
 | Field | Type | Label | Description |
@@ -2031,7 +2031,7 @@ Represents a response for a listing pod metric data request
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ClusterMetric"></a>
 
 ### ClusterMetric
-
+Represents metric data of a cluster.
 
 
 | Field | Type | Label | Description |
@@ -2047,7 +2047,7 @@ Represents a response for a listing pod metric data request
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ContainerMetric"></a>
 
 ### ContainerMetric
-Represents metric data of a container
+Represents metric data of a container.
 
 
 | Field | Type | Label | Description |
@@ -2063,7 +2063,7 @@ Represents metric data of a container
 <a name="containersai.alameda.v1alpha1.datahub.metrics.ControllerMetric"></a>
 
 ### ControllerMetric
-
+Represents metric data of a controller.
 
 
 | Field | Type | Label | Description |
@@ -2080,7 +2080,7 @@ Represents metric data of a container
 <a name="containersai.alameda.v1alpha1.datahub.metrics.NamespaceMetric"></a>
 
 ### NamespaceMetric
-
+Represents metric data of a namespace.
 
 
 | Field | Type | Label | Description |
@@ -2096,7 +2096,7 @@ Represents metric data of a container
 <a name="containersai.alameda.v1alpha1.datahub.metrics.NodeMetric"></a>
 
 ### NodeMetric
-Represents metric data of a node
+Represents metric data of a node.
 
 
 | Field | Type | Label | Description |
@@ -2112,7 +2112,7 @@ Represents metric data of a node
 <a name="containersai.alameda.v1alpha1.datahub.metrics.PodMetric"></a>
 
 ### PodMetric
-Represents metric data of a pod
+Represents metric data of a pod.
 
 
 | Field | Type | Label | Description |
@@ -2160,7 +2160,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.applications.CreateApplicationsRequest"></a>
 
 ### CreateApplicationsRequest
-
+Represents a request for adding alameda scalers that need to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -2176,7 +2176,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.applications.DeleteApplicationsRequest"></a>
 
 ### DeleteApplicationsRequest
-
+Represents a request for stopping predicting alameda sclaers.
 
 
 | Field | Type | Label | Description |
@@ -2192,7 +2192,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.applications.ListApplicationsRequest"></a>
 
 ### ListApplicationsRequest
-
+Represents a request for listing alameda scalers that need to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -2208,7 +2208,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.applications.ListApplicationsResponse"></a>
 
 ### ListApplicationsResponse
-
+Represents a response for a listing alameda scalers request.
 
 
 | Field | Type | Label | Description |
@@ -2240,7 +2240,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.applications.Application"></a>
 
 ### Application
-
+Represents a dataset of private alameda scalers.
 
 
 | Field | Type | Label | Description |
@@ -2256,7 +2256,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.applications.ApplicationData"></a>
 
 ### ApplicationData
-
+Represents a private alameda scaler.
 
 
 | Field | Type | Label | Description |
@@ -2288,7 +2288,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.applications.DeleteApplication"></a>
 
 ### DeleteApplication
-
+Represents the condition of deleting alameda scalers.
 
 
 | Field | Type | Label | Description |
@@ -2304,7 +2304,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.applications.ReadApplication"></a>
 
 ### ReadApplication
-
+Represents the condition of reading alameda scalers.
 
 
 | Field | Type | Label | Description |
@@ -2320,7 +2320,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.applications.WriteApplication"></a>
 
 ### WriteApplication
-
+Represents the data of alameda scaler which is to be created.
 
 
 | Field | Type | Label | Description |
@@ -2352,7 +2352,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.CreateApplicationRecommendationsRequest"></a>
 
 ### CreateApplicationRecommendationsRequest
-
+Represents a request for creating alameda scalers&#39; recommendation.
 
 
 | Field | Type | Label | Description |
@@ -2367,7 +2367,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.CreateClusterRecommendationsRequest"></a>
 
 ### CreateClusterRecommendationsRequest
-
+Represents a request for creating clusters&#39; recommendation.
 
 
 | Field | Type | Label | Description |
@@ -2382,7 +2382,7 @@ Represents metric data of a pod
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.CreateControllerRecommendationsRequest"></a>
 
 ### CreateControllerRecommendationsRequest
-Represents a request for creating a controller&#39;s recommendation
+Represents a request for creating controllers&#39; recommendation.
 
 
 | Field | Type | Label | Description |
@@ -2397,7 +2397,7 @@ Represents a request for creating a controller&#39;s recommendation
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.CreateNamespaceRecommendationsRequest"></a>
 
 ### CreateNamespaceRecommendationsRequest
-
+Represents a request for creating namespaces&#39; recommendation.
 
 
 | Field | Type | Label | Description |
@@ -2412,7 +2412,7 @@ Represents a request for creating a controller&#39;s recommendation
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.CreateNodeRecommendationsRequest"></a>
 
 ### CreateNodeRecommendationsRequest
-
+Represents a request for creating nodes&#39; recommendation.
 
 
 | Field | Type | Label | Description |
@@ -2427,7 +2427,7 @@ Represents a request for creating a controller&#39;s recommendation
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.CreatePodRecommendationsRequest"></a>
 
 ### CreatePodRecommendationsRequest
-Represents a request for creating a pod&#39;s recommendation
+Represents a request for creating pods&#39; recommendation.
 
 
 | Field | Type | Label | Description |
@@ -2459,7 +2459,7 @@ Represents a request for creating a pod&#39;s recommendation
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListApplicationRecommendationsRequest"></a>
 
 ### ListApplicationRecommendationsRequest
-
+Represents a request for listing recommendations of alameda scalers.
 
 
 | Field | Type | Label | Description |
@@ -2477,7 +2477,7 @@ Represents a request for creating a pod&#39;s recommendation
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListApplicationRecommendationsResponse"></a>
 
 ### ListApplicationRecommendationsResponse
-
+Represents a response for listing alameda scalers recommendations request.
 
 
 | Field | Type | Label | Description |
@@ -2493,7 +2493,7 @@ Represents a request for creating a pod&#39;s recommendation
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListClusterRecommendationsRequest"></a>
 
 ### ListClusterRecommendationsRequest
-
+Represents a request for listing recommendations of clusters.
 
 
 | Field | Type | Label | Description |
@@ -2511,7 +2511,7 @@ Represents a request for creating a pod&#39;s recommendation
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListClusterRecommendationsResponse"></a>
 
 ### ListClusterRecommendationsResponse
-
+Represents a response for listing clusters recommendations request.
 
 
 | Field | Type | Label | Description |
@@ -2527,7 +2527,7 @@ Represents a request for creating a pod&#39;s recommendation
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListControllerRecommendationsRequest"></a>
 
 ### ListControllerRecommendationsRequest
-Represents a request for listing recommendations of controllers
+Represents a request for listing recommendations of controllers.
 
 
 | Field | Type | Label | Description |
@@ -2545,7 +2545,7 @@ Represents a request for listing recommendations of controllers
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListControllerRecommendationsResponse"></a>
 
 ### ListControllerRecommendationsResponse
-Represents a response for listing controller recommendations request
+Represents a response for listing controllers recommendations request.
 
 
 | Field | Type | Label | Description |
@@ -2561,7 +2561,7 @@ Represents a response for listing controller recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListNamespaceRecommendationsRequest"></a>
 
 ### ListNamespaceRecommendationsRequest
-
+Represents a request for listing recommendations of namespaces.
 
 
 | Field | Type | Label | Description |
@@ -2579,7 +2579,7 @@ Represents a response for listing controller recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListNamespaceRecommendationsResponse"></a>
 
 ### ListNamespaceRecommendationsResponse
-
+Represents a response for listing namespaces recommendations request.
 
 
 | Field | Type | Label | Description |
@@ -2595,7 +2595,7 @@ Represents a response for listing controller recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListNodeRecommendationsRequest"></a>
 
 ### ListNodeRecommendationsRequest
-
+Represents a request for listing recommendations of nodes.
 
 
 | Field | Type | Label | Description |
@@ -2613,7 +2613,7 @@ Represents a response for listing controller recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListNodeRecommendationsResponse"></a>
 
 ### ListNodeRecommendationsResponse
-
+Represents a response for listing nodes recommendations request.
 
 
 | Field | Type | Label | Description |
@@ -2629,7 +2629,7 @@ Represents a response for listing controller recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListPodRecommendationsRequest"></a>
 
 ### ListPodRecommendationsRequest
-Represents a request for listing recommendations of pods
+Represents a request for listing recommendations of pods.
 
 
 | Field | Type | Label | Description |
@@ -2647,7 +2647,7 @@ Represents a request for listing recommendations of pods
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ListPodRecommendationsResponse"></a>
 
 ### ListPodRecommendationsResponse
-Represents a response for listing pod recommendations request
+Represents a response for listing pods recommendations request.
 
 
 | Field | Type | Label | Description |
@@ -2711,7 +2711,7 @@ Represents a response for listing pod recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ControllerRecommendedSpec"></a>
 
 ### ControllerRecommendedSpec
-
+Represents a private spec of a controller recommendation.
 
 
 | Field | Type | Label | Description |
@@ -2754,7 +2754,7 @@ Represents a response for listing pod recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.Recommendation"></a>
 
 ### Recommendation
-
+Represents a set of container resource configuration recommendations of a pod.
 
 
 | Field | Type | Label | Description |
@@ -2770,7 +2770,7 @@ Represents a response for listing pod recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.RecommendationData"></a>
 
 ### RecommendationData
-
+Represents a piece of recommendation data.
 
 
 | Field | Type | Label | Description |
@@ -2816,7 +2816,7 @@ Represents a response for listing pod recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ApplicationRecommendation"></a>
 
 ### ApplicationRecommendation
-
+Represents resource configuration recommendations of a alameda scaler.
 
 
 | Field | Type | Label | Description |
@@ -2835,7 +2835,7 @@ Represents a response for listing pod recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ClusterRecommendation"></a>
 
 ### ClusterRecommendation
-
+Represents resource configuration recommendations of a cluster.
 
 
 | Field | Type | Label | Description |
@@ -2854,8 +2854,9 @@ Represents a response for listing pod recommendations request
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ContainerRecommendation"></a>
 
 ### ContainerRecommendation
-Represents a resource configuration recommendation
-It includes recommended limits and requests for the initial stage (a container which is just started) and after the initial stage
+Represents a resource configuration recommendation made by the AI Engine.
+
+It includes recommended limits and requests for the initial stage (a container which is just started) and after the initial strage.
 
 
 | Field | Type | Label | Description |
@@ -2874,7 +2875,7 @@ It includes recommended limits and requests for the initial stage (a container w
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.ControllerRecommendation"></a>
 
 ### ControllerRecommendation
-
+Represents resource configuration recommendations of a controller.
 
 
 | Field | Type | Label | Description |
@@ -2893,7 +2894,7 @@ It includes recommended limits and requests for the initial stage (a container w
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.NamespaceRecommendation"></a>
 
 ### NamespaceRecommendation
-
+Represents resource configuration recommendations of a namespace.
 
 
 | Field | Type | Label | Description |
@@ -2912,7 +2913,7 @@ It includes recommended limits and requests for the initial stage (a container w
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.NodeRecommendation"></a>
 
 ### NodeRecommendation
-
+Represents resource configuration recommendations of a node.
 
 
 | Field | Type | Label | Description |
@@ -2931,7 +2932,7 @@ It includes recommended limits and requests for the initial stage (a container w
 <a name="containersai.alameda.v1alpha1.datahub.recommendations.PodRecommendation"></a>
 
 ### PodRecommendation
-Represents a set of container resource configuration recommendations of a pod
+Represents a set of container resource configuration recommendations of a pod.
 
 
 | Field | Type | Label | Description |
@@ -2989,7 +2990,7 @@ Represents a set of container resource configuration recommendations of a pod
 <a name="containersai.alameda.v1alpha1.datahub.common.ColumnType"></a>
 
 ### ColumnType
-
+Represents the field type of a record which queried from datahub.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -3002,7 +3003,7 @@ Represents a set of container resource configuration recommendations of a pod
 <a name="containersai.alameda.v1alpha1.datahub.common.DataType"></a>
 
 ### DataType
-
+Represents the datahub specified data type.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -3027,20 +3028,20 @@ Represents a set of container resource configuration recommendations of a pod
 <a name="containersai.alameda.v1alpha1.datahub.common.FunctionType"></a>
 
 ### FunctionType
-
+Represents the functional query type of datahub.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
 | FUNCTIONTYPE_UNDEFINED | 0 |  |
 | FUNCTIONTYPE_COUNT | 1 | Aggregation function
 
-Returns the number of non-null field values |
-| FUNCTIONTYPE_DISTINCT | 2 | Returns the list of unique field values |
-| FUNCTIONTYPE_INTEGRAL | 3 | Returns the area under the curve for subsequent field values |
+Returns the number of non-null field values. |
+| FUNCTIONTYPE_DISTINCT | 2 | Returns the list of unique field values. |
+| FUNCTIONTYPE_INTEGRAL | 3 | Returns the area under the curve for subsequent field values. |
 | FUNCTIONTYPE_MEAN | 4 | Returns the arithmetic mean (average) of field values. |
 | FUNCTIONTYPE_MEDIAN | 5 | Returns the middle value from a sorted list of field values. |
-| FUNCTIONTYPE_MODE | 6 | Returns the most frequent value in a list of field values |
-| FUNCTIONTYPE_SPREAD | 7 | Returns the difference between the minimum and maximum field values |
+| FUNCTIONTYPE_MODE | 6 | Returns the most frequent value in a list of field values. |
+| FUNCTIONTYPE_SPREAD | 7 | Returns the difference between the minimum and maximum field values. |
 | FUNCTIONTYPE_STDDEV | 8 | Returns the standard deviation of field values. |
 | FUNCTIONTYPE_SUM | 9 | Returns the sum of field values. |
 | FUNCTIONTYPE_BOTTOM | 10 | Selector function
@@ -3050,19 +3051,19 @@ Returns the smallest N field values. |
 | FUNCTIONTYPE_LAST | 12 | Returns the field value with the most recent timestamp. |
 | FUNCTIONTYPE_MAX | 13 | Returns the greatest field value. |
 | FUNCTIONTYPE_MIN | 14 | Returns the lowest field value. |
-| FUNCTIONTYPE_PERCENTILE | 15 | Returns the Nth percentile field value |
-| FUNCTIONTYPE_SAMPLE | 16 | Returns a random sample of N field values. SAMPLE() uses reservoir sampling to generate the random points |
+| FUNCTIONTYPE_PERCENTILE | 15 | Returns the Nth percentile field value. |
+| FUNCTIONTYPE_SAMPLE | 16 | Returns a random sample of N field values. SAMPLE() uses reservoir sampling to generate the random points. |
 | FUNCTIONTYPE_TOP | 17 | Returns the greatest N field values. |
 | FUNCTIONTYPE_DERIVATIVE | 18 | Transformation function
 
-Returns the rate of change between subsequent field values |
+Returns the rate of change between subsequent field values. |
 
 
 
 <a name="containersai.alameda.v1alpha1.datahub.common.ResourceBoundary"></a>
 
 ### ResourceBoundary
-
+Represents the amount resources that a Kubernete object is allowed to use.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -3076,7 +3077,7 @@ Returns the rate of change between subsequent field values |
 <a name="containersai.alameda.v1alpha1.datahub.common.ResourceQuota"></a>
 
 ### ResourceQuota
-
+Represents the constraints that limit aggretage resource consumption per Kubernete object.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -3105,13 +3106,13 @@ Returns the rate of change between subsequent field values |
 <a name="containersai.alameda.v1alpha1.datahub.common.MetricData"></a>
 
 ### MetricData
-Represents a piece of metreic data
+Represents a piece of metreic data.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | metric_type | [MetricType](#containersai.alameda.v1alpha1.datahub.common.MetricType) |  |  |
-| data | [Sample](#containersai.alameda.v1alpha1.datahub.common.Sample) | repeated | data can be time series or non-time series |
+| data | [Sample](#containersai.alameda.v1alpha1.datahub.common.Sample) | repeated | Data can be time series or non-time series. |
 | granularity | [int64](#int64) |  |  |
 
 
@@ -3122,7 +3123,7 @@ Represents a piece of metreic data
 <a name="containersai.alameda.v1alpha1.datahub.common.Sample"></a>
 
 ### Sample
-Represents a data point of time-series metric data
+Represents a data point of time-series metric data.
 
 
 | Field | Type | Label | Description |
@@ -3141,7 +3142,7 @@ Represents a data point of time-series metric data
 <a name="containersai.alameda.v1alpha1.datahub.common.MetricType"></a>
 
 ### MetricType
-Metric type. A metric may be either CPU or memory.
+Metric type. A metric may be CPU, memory and etc.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -3183,7 +3184,7 @@ Metric type. A metric may be either CPU or memory.
 <a name="containersai.alameda.v1alpha1.datahub.common.ResourceName"></a>
 
 ### ResourceName
-
+Represents Kubernetes resources which will be allocated to pods.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -3210,7 +3211,7 @@ Metric type. A metric may be either CPU or memory.
 <a name="containersai.alameda.v1alpha1.datahub.common.Condition"></a>
 
 ### Condition
-
+Represents a query condition.
 
 
 | Field | Type | Label | Description |
@@ -3228,7 +3229,7 @@ Metric type. A metric may be either CPU or memory.
 <a name="containersai.alameda.v1alpha1.datahub.common.Function"></a>
 
 ### Function
-
+Represents a datahub functional query, includes aggregation, selector and transformation.
 
 
 | Field | Type | Label | Description |
@@ -3249,7 +3250,7 @@ Metric type. A metric may be either CPU or memory.
 <a name="containersai.alameda.v1alpha1.datahub.common.Into"></a>
 
 ### Into
-
+Represents a query to a user-specified measurement.
 
 
 | Field | Type | Label | Description |
@@ -3268,7 +3269,7 @@ Metric type. A metric may be either CPU or memory.
 <a name="containersai.alameda.v1alpha1.datahub.common.QueryCondition"></a>
 
 ### QueryCondition
-
+Represents a datahub query request.
 
 
 | Field | Type | Label | Description |
@@ -3291,7 +3292,7 @@ Metric type. A metric may be either CPU or memory.
 <a name="containersai.alameda.v1alpha1.datahub.common.TimeRange"></a>
 
 ### TimeRange
-Represents a time range definition
+Represents a time range definition.
 
 
 | Field | Type | Label | Description |
@@ -3352,7 +3353,7 @@ Represents a time range definition
 <a name="containersai.alameda.v1alpha1.datahub.common.Group"></a>
 
 ### Group
-
+Represents a dataset which are collected that have the same attributes.
 
 
 | Field | Type | Label | Description |
@@ -3368,7 +3369,7 @@ Represents a time range definition
 <a name="containersai.alameda.v1alpha1.datahub.common.ReadData"></a>
 
 ### ReadData
-
+Represents a dataset whcih is read from datahub.
 
 
 | Field | Type | Label | Description |
@@ -3383,7 +3384,7 @@ Represents a time range definition
 <a name="containersai.alameda.v1alpha1.datahub.common.Row"></a>
 
 ### Row
-
+Represents a record of data.
 
 
 | Field | Type | Label | Description |
@@ -3399,7 +3400,7 @@ Represents a time range definition
 <a name="containersai.alameda.v1alpha1.datahub.common.WriteData"></a>
 
 ### WriteData
-
+Represents a dataset which will be written to datahub.
 
 
 | Field | Type | Label | Description |
@@ -3508,7 +3509,7 @@ Represents a time range definition
 <a name="containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdataRequest"></a>
 
 ### ReadRawdataRequest
-Represents a request for reading rawdata from database
+Represents a request for reading rawdata from database.
 
 
 | Field | Type | Label | Description |
@@ -3524,7 +3525,7 @@ Represents a request for reading rawdata from database
 <a name="containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdataResponse"></a>
 
 ### ReadRawdataResponse
-Represents a response for listing rawdata from database
+Represents a response for listing rawdata from database.
 
 
 | Field | Type | Label | Description |
@@ -3540,7 +3541,7 @@ Represents a response for listing rawdata from database
 <a name="containersai.alameda.v1alpha1.datahub.rawdata.WriteRawdataRequest"></a>
 
 ### WriteRawdataRequest
-Represents a request for writing rawdata to database
+Represents a request for writing rawdata to database.
 
 
 | Field | Type | Label | Description |
@@ -3572,7 +3573,7 @@ Represents a request for writing rawdata to database
 <a name="containersai.alameda.v1alpha1.datahub.licenses.GetLicenseResponse"></a>
 
 ### GetLicenseResponse
-
+Represents a response for reading a license information request.
 
 
 | Field | Type | Label | Description |
@@ -3604,7 +3605,7 @@ Represents a request for writing rawdata to database
 <a name="containersai.alameda.v1alpha1.datahub.licenses.License"></a>
 
 ### License
-
+Represents the information of a license.
 
 
 | Field | Type | Label | Description |
@@ -3730,7 +3731,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.DeleteDataRequest"></a>
 
 ### DeleteDataRequest
-
+Represents a request for deleting data in datahub.
 
 
 | Field | Type | Label | Description |
@@ -3746,7 +3747,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.ReadDataRequest"></a>
 
 ### ReadDataRequest
-
+Represents a request for reading data from datahub.
 
 
 | Field | Type | Label | Description |
@@ -3762,7 +3763,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.ReadDataResponse"></a>
 
 ### ReadDataResponse
-
+Represents a response for a reading data request.
 
 
 | Field | Type | Label | Description |
@@ -3778,7 +3779,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.WriteDataRequest"></a>
 
 ### WriteDataRequest
-
+Represents a request for writing data to datahub.
 
 
 | Field | Type | Label | Description |
@@ -3794,7 +3795,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.WriteMetaRequest"></a>
 
 ### WriteMetaRequest
-
+Represents a request for writing data(none time-series) to datahub.
 
 
 | Field | Type | Label | Description |
@@ -3826,7 +3827,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.Data"></a>
 
 ### Data
-
+Represents a dataset of rawdata which will be written to datahub.
 
 
 | Field | Type | Label | Description |
@@ -3842,7 +3843,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.Rawdata"></a>
 
 ### Rawdata
-
+Represents a private alameda specified rawdata.
 
 
 | Field | Type | Label | Description |
@@ -3877,7 +3878,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.DeleteData"></a>
 
 ### DeleteData
-
+Represents the condition of deleting data in datahub.
 
 
 | Field | Type | Label | Description |
@@ -3896,7 +3897,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.ReadData"></a>
 
 ### ReadData
-
+Represents the condition of reading data from datahub.
 
 
 | Field | Type | Label | Description |
@@ -3915,7 +3916,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.WriteData"></a>
 
 ### WriteData
-
+Represents the data which is to be written to datahub.
 
 
 | Field | Type | Label | Description |
@@ -3935,7 +3936,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.data.WriteMeta"></a>
 
 ### WriteMeta
-
+Represents the data(none time-series) which is to be written to datahub.
 
 
 | Field | Type | Label | Description |
@@ -3972,7 +3973,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.resources.CreateApplicationsRequest"></a>
 
 ### CreateApplicationsRequest
-
+Represents a request for creating alameda scalers.
 
 
 | Field | Type | Label | Description |
@@ -3987,7 +3988,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.resources.CreateClustersRequest"></a>
 
 ### CreateClustersRequest
-
+Represents a request for adding clusters that need to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -4002,7 +4003,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.resources.CreateControllersRequest"></a>
 
 ### CreateControllersRequest
-
+Represents a request for creating controllers to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -4017,7 +4018,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.resources.CreateNamespacesRequest"></a>
 
 ### CreateNamespacesRequest
-
+Represents a request for creating namespaces to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -4032,7 +4033,7 @@ Represents a system score before and after pod scheduled on node
 <a name="containersai.alameda.v1alpha1.datahub.resources.CreateNodesRequest"></a>
 
 ### CreateNodesRequest
-Represents a request for adding nodes that need to be predicted
+Represents a request for adding nodes that need to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -4047,7 +4048,7 @@ Represents a request for adding nodes that need to be predicted
 <a name="containersai.alameda.v1alpha1.datahub.resources.CreatePodsRequest"></a>
 
 ### CreatePodsRequest
-Represents a request for creating pods
+Represents a request for creating pods to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -4062,7 +4063,7 @@ Represents a request for creating pods
 <a name="containersai.alameda.v1alpha1.datahub.resources.DeleteApplicationsRequest"></a>
 
 ### DeleteApplicationsRequest
-
+Represents a request for deleting alameda scalers data.
 
 
 | Field | Type | Label | Description |
@@ -4077,7 +4078,7 @@ Represents a request for creating pods
 <a name="containersai.alameda.v1alpha1.datahub.resources.DeleteClustersRequest"></a>
 
 ### DeleteClustersRequest
-
+Represents a request for stopping predicting clusters.
 
 
 | Field | Type | Label | Description |
@@ -4092,7 +4093,7 @@ Represents a request for creating pods
 <a name="containersai.alameda.v1alpha1.datahub.resources.DeleteControllersRequest"></a>
 
 ### DeleteControllersRequest
-
+Represents a request for stopping predicting controllers.
 
 
 | Field | Type | Label | Description |
@@ -4108,7 +4109,7 @@ Represents a request for creating pods
 <a name="containersai.alameda.v1alpha1.datahub.resources.DeleteNamespacesRequest"></a>
 
 ### DeleteNamespacesRequest
-
+Represents a request for stopping predicting namespaces.
 
 
 | Field | Type | Label | Description |
@@ -4123,7 +4124,7 @@ Represents a request for creating pods
 <a name="containersai.alameda.v1alpha1.datahub.resources.DeleteNodesRequest"></a>
 
 ### DeleteNodesRequest
-Represents a request for stopping predicting nodes
+Represents a request for stopping predicting nodes.
 
 
 | Field | Type | Label | Description |
@@ -4138,7 +4139,7 @@ Represents a request for stopping predicting nodes
 <a name="containersai.alameda.v1alpha1.datahub.resources.DeletePodsRequest"></a>
 
 ### DeletePodsRequest
-Represents a request for deleting pods data
+Represents a request for stopping predicting pods.
 
 
 | Field | Type | Label | Description |
@@ -4153,7 +4154,7 @@ Represents a request for deleting pods data
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListApplicationsRequest"></a>
 
 ### ListApplicationsRequest
-
+Represents a request for listing alameda scalers.
 
 
 | Field | Type | Label | Description |
@@ -4168,7 +4169,7 @@ Represents a request for deleting pods data
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListApplicationsResponse"></a>
 
 ### ListApplicationsResponse
-
+Represents a response for a listing alameda scalers request.
 
 
 | Field | Type | Label | Description |
@@ -4184,7 +4185,7 @@ Represents a request for deleting pods data
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListClustersRequest"></a>
 
 ### ListClustersRequest
-
+Represents a request for listing clusters that need to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -4199,7 +4200,7 @@ Represents a request for deleting pods data
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListClustersResponse"></a>
 
 ### ListClustersResponse
-
+Represents a response for a listing clusters request.
 
 
 | Field | Type | Label | Description |
@@ -4215,7 +4216,7 @@ Represents a request for deleting pods data
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListControllersRequest"></a>
 
 ### ListControllersRequest
-
+Represents a request for listing controllers that need to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -4232,7 +4233,7 @@ Represents a request for deleting pods data
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListControllersResponse"></a>
 
 ### ListControllersResponse
-
+Represents a response for a listing controllers request.
 
 
 | Field | Type | Label | Description |
@@ -4248,7 +4249,7 @@ Represents a request for deleting pods data
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListNamespacesRequest"></a>
 
 ### ListNamespacesRequest
-
+Represents a request for listing namespaces that need to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -4263,7 +4264,7 @@ Represents a request for deleting pods data
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListNamespacesResponse"></a>
 
 ### ListNamespacesResponse
-
+Represents a response for a listing namespaces request.
 
 
 | Field | Type | Label | Description |
@@ -4279,7 +4280,7 @@ Represents a request for deleting pods data
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListNodesRequest"></a>
 
 ### ListNodesRequest
-Represents a request for listing nodes that need to be predicted
+Represents a request for listing nodes that need to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -4295,7 +4296,7 @@ Represents a request for listing nodes that need to be predicted
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListNodesResponse"></a>
 
 ### ListNodesResponse
-Represents a response for a listing nodes request
+Represents a response for a listing nodes request.
 
 
 | Field | Type | Label | Description |
@@ -4311,7 +4312,7 @@ Represents a response for a listing nodes request
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListPodsRequest"></a>
 
 ### ListPodsRequest
-Represents a request for listing pods that need to be predicted
+Represents a request for listing pods that need to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -4329,7 +4330,7 @@ Represents a request for listing pods that need to be predicted
 <a name="containersai.alameda.v1alpha1.datahub.resources.ListPodsResponse"></a>
 
 ### ListPodsResponse
-Represents a response for a listing pods request
+Represents a response for a listing pods request.
 
 
 | Field | Type | Label | Description |
@@ -4361,7 +4362,7 @@ Represents a response for a listing pods request
 <a name="containersai.alameda.v1alpha1.datahub.resources.ObjectMeta"></a>
 
 ### ObjectMeta
-
+Represents the private metadata of alameda object.
 
 
 | Field | Type | Label | Description |
@@ -4380,7 +4381,7 @@ Represents a response for a listing pods request
 <a name="containersai.alameda.v1alpha1.datahub.resources.OwnerReference"></a>
 
 ### OwnerReference
-
+Represents the owner of Kubernetes object. The owned objects are called dependents of the owner object.
 
 
 | Field | Type | Label | Description |
@@ -4398,7 +4399,7 @@ Represents a response for a listing pods request
 <a name="containersai.alameda.v1alpha1.datahub.resources.Kind"></a>
 
 ### Kind
-Represents kubernetes resource kind
+Represents Kubernetes resource kind.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -4413,7 +4414,7 @@ Represents kubernetes resource kind
 <a name="containersai.alameda.v1alpha1.datahub.resources.ScalingTool"></a>
 
 ### ScalingTool
-
+Represents the scaling tool for managing Kubernetes resources.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -4442,7 +4443,7 @@ Represents kubernetes resource kind
 <a name="containersai.alameda.v1alpha1.datahub.resources.AssignPodPolicy"></a>
 
 ### AssignPodPolicy
-Represents a recommended pod-to-node assignment (i.e. pod placement)
+Represents a recommended pod-to-node assignment. (i.e. pod placement)
 
 
 | Field | Type | Label | Description |
@@ -4460,7 +4461,7 @@ Represents a recommended pod-to-node assignment (i.e. pod placement)
 <a name="containersai.alameda.v1alpha1.datahub.resources.NodePriority"></a>
 
 ### NodePriority
-Represents the priority of a node
+Represents the priority of a node.
 
 
 | Field | Type | Label | Description |
@@ -4475,7 +4476,7 @@ Represents the priority of a node
 <a name="containersai.alameda.v1alpha1.datahub.resources.Selector"></a>
 
 ### Selector
-
+Represents a Kubernetes label selector.
 
 
 | Field | Type | Label | Description |
@@ -4535,7 +4536,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.alameda.v1alpha1.datahub.resources.AlamedaApplicationSpec"></a>
 
 ### AlamedaApplicationSpec
-
+Represents the private alameda applcation specification.
 
 
 
@@ -4545,7 +4546,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.alameda.v1alpha1.datahub.resources.AlamedaControllerSpec"></a>
 
 ### AlamedaControllerSpec
-
+Represents the private alameda controller specification.
 
 
 | Field | Type | Label | Description |
@@ -4565,7 +4566,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.alameda.v1alpha1.datahub.resources.AlamedaNodeSpec"></a>
 
 ### AlamedaNodeSpec
-
+Represents the private alameda node specification.
 
 
 | Field | Type | Label | Description |
@@ -4585,7 +4586,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.alameda.v1alpha1.datahub.resources.AlamedaPodSpec"></a>
 
 ### AlamedaPodSpec
-
+Represents the private alameda pod specification.
 
 
 | Field | Type | Label | Description |
@@ -4604,7 +4605,7 @@ Recommendation policy. A policy may be either stable or compact.
 <a name="containersai.alameda.v1alpha1.datahub.resources.Capacity"></a>
 
 ### Capacity
-Represents the capacity of a Kubernetes node
+Represents the capacity of a Kubernetes node.
 
 
 | Field | Type | Label | Description |
@@ -4621,7 +4622,7 @@ Represents the capacity of a Kubernetes node
 <a name="containersai.alameda.v1alpha1.datahub.resources.Provider"></a>
 
 ### Provider
-
+The information of cloud service provider.
 
 
 | Field | Type | Label | Description |
@@ -4707,7 +4708,7 @@ ResourceRequirements describes the compute resource requirements
 <a name="containersai.alameda.v1alpha1.datahub.resources.ContainerState"></a>
 
 ### ContainerState
-ContainerState holds a possible state of container
+ContainerState holds a possible state of container.
 
 
 | Field | Type | Label | Description |
@@ -4724,7 +4725,7 @@ ContainerState holds a possible state of container
 <a name="containersai.alameda.v1alpha1.datahub.resources.ContainerStateRunning"></a>
 
 ### ContainerStateRunning
-ContainerStateRunning is a running state of a container
+ContainerStateRunning is a running state of a container.
 
 
 | Field | Type | Label | Description |
@@ -4739,7 +4740,7 @@ ContainerStateRunning is a running state of a container
 <a name="containersai.alameda.v1alpha1.datahub.resources.ContainerStateTerminated"></a>
 
 ### ContainerStateTerminated
-ContainerStateTerminated is a terminated state of a container
+ContainerStateTerminated is a terminated state of a container.
 
 
 | Field | Type | Label | Description |
@@ -4758,7 +4759,7 @@ ContainerStateTerminated is a terminated state of a container
 <a name="containersai.alameda.v1alpha1.datahub.resources.ContainerStateWaiting"></a>
 
 ### ContainerStateWaiting
-ContainerStateWaiting is a waiting state of a container
+ContainerStateWaiting is a waiting state of a container.
 
 
 | Field | Type | Label | Description |
@@ -4774,7 +4775,7 @@ ContainerStateWaiting is a waiting state of a container
 <a name="containersai.alameda.v1alpha1.datahub.resources.ContainerStatus"></a>
 
 ### ContainerStatus
-ContainerStatus contains details for the current status of this container
+ContainerStatus contains details for the current status of this container.
 
 
 | Field | Type | Label | Description |
@@ -4791,7 +4792,7 @@ ContainerStatus contains details for the current status of this container
 <a name="containersai.alameda.v1alpha1.datahub.resources.PodStatus"></a>
 
 ### PodStatus
-PodStatus represents information about the status of a pod
+PodStatus represents information about the status of a pod.
 
 
 | Field | Type | Label | Description |
@@ -4810,7 +4811,7 @@ PodStatus represents information about the status of a pod
 <a name="containersai.alameda.v1alpha1.datahub.resources.PodPhase"></a>
 
 ### PodPhase
-The valid statuses of pods
+The valid statuses of pods.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -4842,7 +4843,7 @@ The valid statuses of pods
 <a name="containersai.alameda.v1alpha1.datahub.resources.Application"></a>
 
 ### Application
-
+Represents a alameda scaler.
 
 
 | Field | Type | Label | Description |
@@ -4859,7 +4860,7 @@ The valid statuses of pods
 <a name="containersai.alameda.v1alpha1.datahub.resources.Cluster"></a>
 
 ### Cluster
-
+Represents a Kubernetes cluster.
 
 
 | Field | Type | Label | Description |
@@ -4874,7 +4875,7 @@ The valid statuses of pods
 <a name="containersai.alameda.v1alpha1.datahub.resources.Container"></a>
 
 ### Container
-Represents a container and its containing limit and requeset configurations
+Represents a container and its containing limit and requeset configurations.
 
 
 | Field | Type | Label | Description |
@@ -4891,7 +4892,7 @@ Represents a container and its containing limit and requeset configurations
 <a name="containersai.alameda.v1alpha1.datahub.resources.Controller"></a>
 
 ### Controller
-
+Represents a Kubernetes namespace.
 
 
 | Field | Type | Label | Description |
@@ -4910,7 +4911,7 @@ Represents a container and its containing limit and requeset configurations
 <a name="containersai.alameda.v1alpha1.datahub.resources.Namespace"></a>
 
 ### Namespace
-
+Represents a Kubernetes namespace.
 
 
 | Field | Type | Label | Description |
@@ -4925,7 +4926,7 @@ Represents a container and its containing limit and requeset configurations
 <a name="containersai.alameda.v1alpha1.datahub.resources.Node"></a>
 
 ### Node
-Represents a Kubernetes node
+Represents a Kubernetes node.
 
 
 | Field | Type | Label | Description |
@@ -4944,7 +4945,7 @@ Represents a Kubernetes node
 <a name="containersai.alameda.v1alpha1.datahub.resources.Pod"></a>
 
 ### Pod
-Represents a Kubernetes pod
+Represents a Kubernetes pod.
 
 
 | Field | Type | Label | Description |
@@ -4993,21 +4994,21 @@ Service for providing data stored in the backend
 
 | Method Name | Request Type | Response Type | Description |
 | ----------- | ------------ | ------------- | ------------|
-| CreateApps | [applications.CreateApplicationsRequest](#containersai.alameda.v1alpha1.datahub.applications.CreateApplicationsRequest) | [.google.rpc.Status](#google.rpc.Status) | Applications -------------------------------------------------- |
+| CreateApps | [applications.CreateApplicationsRequest](#containersai.alameda.v1alpha1.datahub.applications.CreateApplicationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | ListApps | [applications.ListApplicationsRequest](#containersai.alameda.v1alpha1.datahub.applications.ListApplicationsRequest) | [applications.ListApplicationsResponse](#containersai.alameda.v1alpha1.datahub.applications.ListApplicationsResponse) |  |
 | DeleteApps | [applications.DeleteApplicationsRequest](#containersai.alameda.v1alpha1.datahub.applications.DeleteApplicationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| ReadData | [data.ReadDataRequest](#containersai.alameda.v1alpha1.datahub.data.ReadDataRequest) | [data.ReadDataResponse](#containersai.alameda.v1alpha1.datahub.data.ReadDataResponse) | Data -------------------------------------------------- |
-| WriteData | [data.WriteDataRequest](#containersai.alameda.v1alpha1.datahub.data.WriteDataRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| DeleteData | [data.DeleteDataRequest](#containersai.alameda.v1alpha1.datahub.data.DeleteDataRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| WriteMeta | [data.WriteMetaRequest](#containersai.alameda.v1alpha1.datahub.data.WriteMetaRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateEvents | [events.CreateEventsRequest](#containersai.alameda.v1alpha1.datahub.events.CreateEventsRequest) | [.google.rpc.Status](#google.rpc.Status) | Events -------------------------------------------------- |
-| ListEvents | [events.ListEventsRequest](#containersai.alameda.v1alpha1.datahub.events.ListEventsRequest) | [events.ListEventsResponse](#containersai.alameda.v1alpha1.datahub.events.ListEventsResponse) |  |
-| CreateGpuPredictions | [gpu.CreateGpuPredictionsRequest](#containersai.alameda.v1alpha1.datahub.gpu.CreateGpuPredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) | GPU -------------------------------------------------- |
-| ListGpus | [gpu.ListGpusRequest](#containersai.alameda.v1alpha1.datahub.gpu.ListGpusRequest) | [gpu.ListGpusResponse](#containersai.alameda.v1alpha1.datahub.gpu.ListGpusResponse) |  |
-| ListGpuMetrics | [gpu.ListGpuMetricsRequest](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuMetricsRequest) | [gpu.ListGpuMetricsResponse](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuMetricsResponse) |  |
-| ListGpuPredictions | [gpu.ListGpuPredictionsRequest](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuPredictionsRequest) | [gpu.ListGpuPredictionsResponse](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuPredictionsResponse) |  |
-| GetLicense | [.google.protobuf.Empty](#google.protobuf.Empty) | [licenses.GetLicenseResponse](#containersai.alameda.v1alpha1.datahub.licenses.GetLicenseResponse) | Licenses -------------------------------------------------- |
-| CreateMetrics | [metrics.CreateMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.CreateMetricsRequest) | [.google.rpc.Status](#google.rpc.Status) | Metrics -------------------------------------------------- |
+| ReadData | [data.ReadDataRequest](#containersai.alameda.v1alpha1.datahub.data.ReadDataRequest) | [data.ReadDataResponse](#containersai.alameda.v1alpha1.datahub.data.ReadDataResponse) | Used to read data based on alameda specific schemas |
+| WriteData | [data.WriteDataRequest](#containersai.alameda.v1alpha1.datahub.data.WriteDataRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to write data based on alameda specific schemas |
+| DeleteData | [data.DeleteDataRequest](#containersai.alameda.v1alpha1.datahub.data.DeleteDataRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to delete data based on alameda specific schemas |
+| WriteMeta | [data.WriteMetaRequest](#containersai.alameda.v1alpha1.datahub.data.WriteMetaRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to write metadata based on alameda specific schemas |
+| CreateEvents | [events.CreateEventsRequest](#containersai.alameda.v1alpha1.datahub.events.CreateEventsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create alameda specific events |
+| ListEvents | [events.ListEventsRequest](#containersai.alameda.v1alpha1.datahub.events.ListEventsRequest) | [events.ListEventsResponse](#containersai.alameda.v1alpha1.datahub.events.ListEventsResponse) | Used to list alameda specific events |
+| CreateGpuPredictions | [gpu.CreateGpuPredictionsRequest](#containersai.alameda.v1alpha1.datahub.gpu.CreateGpuPredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create GPU predictions |
+| ListGpus | [gpu.ListGpusRequest](#containersai.alameda.v1alpha1.datahub.gpu.ListGpusRequest) | [gpu.ListGpusResponse](#containersai.alameda.v1alpha1.datahub.gpu.ListGpusResponse) | Used to list GPU need to be predicted |
+| ListGpuMetrics | [gpu.ListGpuMetricsRequest](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuMetricsRequest) | [gpu.ListGpuMetricsResponse](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuMetricsResponse) | Used to list GPU metrics data |
+| ListGpuPredictions | [gpu.ListGpuPredictionsRequest](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuPredictionsRequest) | [gpu.ListGpuPredictionsResponse](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuPredictionsResponse) | Used to list GPU predictions |
+| GetLicense | [.google.protobuf.Empty](#google.protobuf.Empty) | [licenses.GetLicenseResponse](#containersai.alameda.v1alpha1.datahub.licenses.GetLicenseResponse) | Used to get datahub license information |
+| CreateMetrics | [metrics.CreateMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.CreateMetricsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | CreatePodMetrics | [metrics.CreatePodMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.CreatePodMetricsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | CreateControllerMetrics | [metrics.CreateControllerMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.CreateControllerMetricsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | CreateApplicationMetrics | [metrics.CreateApplicationMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.CreateApplicationMetricsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
@@ -5015,14 +5016,14 @@ Service for providing data stored in the backend
 | CreateNodeMetrics | [metrics.CreateNodeMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.CreateNodeMetricsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | CreateClusterMetrics | [metrics.CreateClusterMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.CreateClusterMetricsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | ListMetrics | [metrics.ListMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListMetricsRequest) | [metrics.ListMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListMetricsResponse) |  |
-| ListPodMetrics | [metrics.ListPodMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListPodMetricsRequest) | [metrics.ListPodMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListPodMetricsResponse) |  |
-| ListControllerMetrics | [metrics.ListControllerMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListControllerMetricsRequest) | [metrics.ListControllerMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListControllerMetricsResponse) |  |
-| ListApplicationMetrics | [metrics.ListApplicationMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListApplicationMetricsRequest) | [metrics.ListApplicationMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListApplicationMetricsResponse) |  |
-| ListNamespaceMetrics | [metrics.ListNamespaceMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListNamespaceMetricsRequest) | [metrics.ListNamespaceMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListNamespaceMetricsResponse) |  |
-| ListNodeMetrics | [metrics.ListNodeMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListNodeMetricsRequest) | [metrics.ListNodeMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListNodeMetricsResponse) |  |
-| ListClusterMetrics | [metrics.ListClusterMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListClusterMetricsRequest) | [metrics.ListClusterMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListClusterMetricsResponse) |  |
-| Ping | [.google.protobuf.Empty](#google.protobuf.Empty) | [.google.rpc.Status](#google.rpc.Status) | Ping -------------------------------------------------- |
-| CreatePlannings | [plannings.CreatePlanningsRequest](#containersai.alameda.v1alpha1.datahub.plannings.CreatePlanningsRequest) | [.google.rpc.Status](#google.rpc.Status) | Plannings -------------------------------------------------- |
+| ListPodMetrics | [metrics.ListPodMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListPodMetricsRequest) | [metrics.ListPodMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListPodMetricsResponse) | Used to list pod metric data |
+| ListControllerMetrics | [metrics.ListControllerMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListControllerMetricsRequest) | [metrics.ListControllerMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListControllerMetricsResponse) | Used to list controller metric data |
+| ListApplicationMetrics | [metrics.ListApplicationMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListApplicationMetricsRequest) | [metrics.ListApplicationMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListApplicationMetricsResponse) | Used to list alameda scaler metric data |
+| ListNamespaceMetrics | [metrics.ListNamespaceMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListNamespaceMetricsRequest) | [metrics.ListNamespaceMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListNamespaceMetricsResponse) | Used to list namespace metric data |
+| ListNodeMetrics | [metrics.ListNodeMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListNodeMetricsRequest) | [metrics.ListNodeMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListNodeMetricsResponse) | Used to list node metric data |
+| ListClusterMetrics | [metrics.ListClusterMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.ListClusterMetricsRequest) | [metrics.ListClusterMetricsResponse](#containersai.alameda.v1alpha1.datahub.metrics.ListClusterMetricsResponse) | Used to list cluster metric data |
+| Ping | [.google.protobuf.Empty](#google.protobuf.Empty) | [.google.rpc.Status](#google.rpc.Status) | Used to check if datahub is still alive |
+| CreatePlannings | [plannings.CreatePlanningsRequest](#containersai.alameda.v1alpha1.datahub.plannings.CreatePlanningsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | CreatePodPlannings | [plannings.CreatePodPlanningsRequest](#containersai.alameda.v1alpha1.datahub.plannings.CreatePodPlanningsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | CreateControllerPlannings | [plannings.CreateControllerPlanningsRequest](#containersai.alameda.v1alpha1.datahub.plannings.CreateControllerPlanningsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | CreateApplicationPlannings | [plannings.CreateApplicationPlanningsRequest](#containersai.alameda.v1alpha1.datahub.plannings.CreateApplicationPlanningsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
@@ -5036,61 +5037,61 @@ Service for providing data stored in the backend
 | ListNamespacePlannings | [plannings.ListNamespacePlanningsRequest](#containersai.alameda.v1alpha1.datahub.plannings.ListNamespacePlanningsRequest) | [plannings.ListNamespacePlanningsResponse](#containersai.alameda.v1alpha1.datahub.plannings.ListNamespacePlanningsResponse) |  |
 | ListNodePlannings | [plannings.ListNodePlanningsRequest](#containersai.alameda.v1alpha1.datahub.plannings.ListNodePlanningsRequest) | [plannings.ListNodePlanningsResponse](#containersai.alameda.v1alpha1.datahub.plannings.ListNodePlanningsResponse) |  |
 | ListClusterPlannings | [plannings.ListClusterPlanningsRequest](#containersai.alameda.v1alpha1.datahub.plannings.ListClusterPlanningsRequest) | [plannings.ListClusterPlanningsResponse](#containersai.alameda.v1alpha1.datahub.plannings.ListClusterPlanningsResponse) |  |
-| CreatePredictions | [predictions.CreatePredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreatePredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) | Predictions -------------------------------------------------- |
-| CreatePodPredictions | [predictions.CreatePodPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreatePodPredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateControllerPredictions | [predictions.CreateControllerPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreateControllerPredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateApplicationPredictions | [predictions.CreateApplicationPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreateApplicationPredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateNamespacePredictions | [predictions.CreateNamespacePredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreateNamespacePredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateNodePredictions | [predictions.CreateNodePredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreateNodePredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateClusterPredictions | [predictions.CreateClusterPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreateClusterPredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
+| CreatePredictions | [predictions.CreatePredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreatePredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
+| CreatePodPredictions | [predictions.CreatePodPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreatePodPredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create predictions of pods |
+| CreateControllerPredictions | [predictions.CreateControllerPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreateControllerPredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create predictions of controllers |
+| CreateApplicationPredictions | [predictions.CreateApplicationPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreateApplicationPredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create predictions of alameda scalers |
+| CreateNamespacePredictions | [predictions.CreateNamespacePredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreateNamespacePredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create predictions of namespaces |
+| CreateNodePredictions | [predictions.CreateNodePredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreateNodePredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create predictions of nodes |
+| CreateClusterPredictions | [predictions.CreateClusterPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.CreateClusterPredictionsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create predictions of clusters |
 | ListPredictions | [predictions.ListPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListPredictionsRequest) | [predictions.ListPredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListPredictionsResponse) |  |
-| ListPodPredictions | [predictions.ListPodPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest) | [predictions.ListPodPredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsResponse) |  |
-| ListControllerPredictions | [predictions.ListControllerPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest) | [predictions.ListControllerPredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsResponse) |  |
-| ListApplicationPredictions | [predictions.ListApplicationPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsRequest) | [predictions.ListApplicationPredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsResponse) |  |
-| ListNamespacePredictions | [predictions.ListNamespacePredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsRequest) | [predictions.ListNamespacePredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsResponse) |  |
-| ListNodePredictions | [predictions.ListNodePredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsRequest) | [predictions.ListNodePredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsResponse) |  |
-| ListClusterPredictions | [predictions.ListClusterPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsRequest) | [predictions.ListClusterPredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsResponse) |  |
-| ReadRawdata | [rawdata.ReadRawdataRequest](#containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdataRequest) | [rawdata.ReadRawdataResponse](#containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdataResponse) | Rawdata -------------------------------------------------- |
+| ListPodPredictions | [predictions.ListPodPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsRequest) | [predictions.ListPodPredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListPodPredictionsResponse) | Used to list pod predictions |
+| ListControllerPredictions | [predictions.ListControllerPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsRequest) | [predictions.ListControllerPredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListControllerPredictionsResponse) | Used to list controller predictions |
+| ListApplicationPredictions | [predictions.ListApplicationPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsRequest) | [predictions.ListApplicationPredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListApplicationPredictionsResponse) | Used to list alameda scaler predictions |
+| ListNamespacePredictions | [predictions.ListNamespacePredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsRequest) | [predictions.ListNamespacePredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListNamespacePredictionsResponse) | Used to list namespace predictions |
+| ListNodePredictions | [predictions.ListNodePredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsRequest) | [predictions.ListNodePredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListNodePredictionsResponse) | Used to list node predictions |
+| ListClusterPredictions | [predictions.ListClusterPredictionsRequest](#containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsRequest) | [predictions.ListClusterPredictionsResponse](#containersai.alameda.v1alpha1.datahub.predictions.ListClusterPredictionsResponse) | Used to list cluster predictions |
+| ReadRawdata | [rawdata.ReadRawdataRequest](#containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdataRequest) | [rawdata.ReadRawdataResponse](#containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdataResponse) |  |
 | WriteRawdata | [rawdata.WriteRawdataRequest](#containersai.alameda.v1alpha1.datahub.rawdata.WriteRawdataRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateRecommendations | [recommendations.CreateRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) | Recommendations -------------------------------------------------- |
-| CreatePodRecommendations | [recommendations.CreatePodRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreatePodRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateControllerRecommendations | [recommendations.CreateControllerRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateControllerRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateApplicationRecommendations | [recommendations.CreateApplicationRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateApplicationRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateNamespaceRecommendations | [recommendations.CreateNamespaceRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateNamespaceRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateNodeRecommendations | [recommendations.CreateNodeRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateNodeRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateClusterRecommendations | [recommendations.CreateClusterRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateClusterRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
+| CreateRecommendations | [recommendations.CreateRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
+| CreatePodRecommendations | [recommendations.CreatePodRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreatePodRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create recommendations of pods |
+| CreateControllerRecommendations | [recommendations.CreateControllerRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateControllerRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create recommendations of controllers |
+| CreateApplicationRecommendations | [recommendations.CreateApplicationRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateApplicationRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create recommendations of alameda scalers |
+| CreateNamespaceRecommendations | [recommendations.CreateNamespaceRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateNamespaceRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create recommendations of namespaces |
+| CreateNodeRecommendations | [recommendations.CreateNodeRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateNodeRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create recommendations of nodes |
+| CreateClusterRecommendations | [recommendations.CreateClusterRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.CreateClusterRecommendationsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to create recommendations of clusters |
 | ListRecommendations | [recommendations.ListRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListRecommendationsRequest) | [recommendations.ListRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListRecommendationsResponse) |  |
-| ListPodRecommendations | [recommendations.ListPodRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListPodRecommendationsRequest) | [recommendations.ListPodRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListPodRecommendationsResponse) |  |
-| ListAvailablePodRecommendations | [recommendations.ListPodRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListPodRecommendationsRequest) | [recommendations.ListPodRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListPodRecommendationsResponse) |  |
-| ListControllerRecommendations | [recommendations.ListControllerRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListControllerRecommendationsRequest) | [recommendations.ListControllerRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListControllerRecommendationsResponse) |  |
-| ListApplicationRecommendations | [recommendations.ListApplicationRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListApplicationRecommendationsRequest) | [recommendations.ListApplicationRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListApplicationRecommendationsResponse) |  |
-| ListNamespaceRecommendations | [recommendations.ListNamespaceRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListNamespaceRecommendationsRequest) | [recommendations.ListNamespaceRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListNamespaceRecommendationsResponse) |  |
-| ListNodeRecommendations | [recommendations.ListNodeRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListNodeRecommendationsRequest) | [recommendations.ListNodeRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListNodeRecommendationsResponse) |  |
-| ListClusterRecommendations | [recommendations.ListClusterRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListClusterRecommendationsRequest) | [recommendations.ListClusterRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListClusterRecommendationsResponse) |  |
-| CreatePods | [resources.CreatePodsRequest](#containersai.alameda.v1alpha1.datahub.resources.CreatePodsRequest) | [.google.rpc.Status](#google.rpc.Status) | Resources -------------------------------------------------- Used to add pods that need to be predicted |
-| CreateControllers | [resources.CreateControllersRequest](#containersai.alameda.v1alpha1.datahub.resources.CreateControllersRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateApplications | [resources.CreateApplicationsRequest](#containersai.alameda.v1alpha1.datahub.resources.CreateApplicationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateNamespaces | [resources.CreateNamespacesRequest](#containersai.alameda.v1alpha1.datahub.resources.CreateNamespacesRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
+| ListPodRecommendations | [recommendations.ListPodRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListPodRecommendationsRequest) | [recommendations.ListPodRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListPodRecommendationsResponse) | Used to list pod recommenations |
+| ListAvailablePodRecommendations | [recommendations.ListPodRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListPodRecommendationsRequest) | [recommendations.ListPodRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListPodRecommendationsResponse) | Used to list available pod recommenations |
+| ListControllerRecommendations | [recommendations.ListControllerRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListControllerRecommendationsRequest) | [recommendations.ListControllerRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListControllerRecommendationsResponse) | Used to list controller recommenations |
+| ListApplicationRecommendations | [recommendations.ListApplicationRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListApplicationRecommendationsRequest) | [recommendations.ListApplicationRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListApplicationRecommendationsResponse) | Used to list alameda scaler recommenations |
+| ListNamespaceRecommendations | [recommendations.ListNamespaceRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListNamespaceRecommendationsRequest) | [recommendations.ListNamespaceRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListNamespaceRecommendationsResponse) | Used to list namespace recommenations |
+| ListNodeRecommendations | [recommendations.ListNodeRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListNodeRecommendationsRequest) | [recommendations.ListNodeRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListNodeRecommendationsResponse) | Used to list node recommenations |
+| ListClusterRecommendations | [recommendations.ListClusterRecommendationsRequest](#containersai.alameda.v1alpha1.datahub.recommendations.ListClusterRecommendationsRequest) | [recommendations.ListClusterRecommendationsResponse](#containersai.alameda.v1alpha1.datahub.recommendations.ListClusterRecommendationsResponse) | Used to list cluster recommenations |
+| CreatePods | [resources.CreatePodsRequest](#containersai.alameda.v1alpha1.datahub.resources.CreatePodsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to add pods that need to be predicted |
+| CreateControllers | [resources.CreateControllersRequest](#containersai.alameda.v1alpha1.datahub.resources.CreateControllersRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to add controllers that need to be predicted |
+| CreateApplications | [resources.CreateApplicationsRequest](#containersai.alameda.v1alpha1.datahub.resources.CreateApplicationsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to add alameda scalers that need to be predicted |
+| CreateNamespaces | [resources.CreateNamespacesRequest](#containersai.alameda.v1alpha1.datahub.resources.CreateNamespacesRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to add namespaces that need to be predicted |
 | CreateNodes | [resources.CreateNodesRequest](#containersai.alameda.v1alpha1.datahub.resources.CreateNodesRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to add nodes that need to be predicted |
-| CreateClusters | [resources.CreateClustersRequest](#containersai.alameda.v1alpha1.datahub.resources.CreateClustersRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
+| CreateClusters | [resources.CreateClustersRequest](#containersai.alameda.v1alpha1.datahub.resources.CreateClustersRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to add clusters that need to be predicted |
 | ListPods | [resources.ListPodsRequest](#containersai.alameda.v1alpha1.datahub.resources.ListPodsRequest) | [resources.ListPodsResponse](#containersai.alameda.v1alpha1.datahub.resources.ListPodsResponse) | Used to list pods need to be predicted |
-| ListControllers | [resources.ListControllersRequest](#containersai.alameda.v1alpha1.datahub.resources.ListControllersRequest) | [resources.ListControllersResponse](#containersai.alameda.v1alpha1.datahub.resources.ListControllersResponse) |  |
-| ListApplications | [resources.ListApplicationsRequest](#containersai.alameda.v1alpha1.datahub.resources.ListApplicationsRequest) | [resources.ListApplicationsResponse](#containersai.alameda.v1alpha1.datahub.resources.ListApplicationsResponse) | Application |
-| ListNamespaces | [resources.ListNamespacesRequest](#containersai.alameda.v1alpha1.datahub.resources.ListNamespacesRequest) | [resources.ListNamespacesResponse](#containersai.alameda.v1alpha1.datahub.resources.ListNamespacesResponse) | Namespace |
+| ListControllers | [resources.ListControllersRequest](#containersai.alameda.v1alpha1.datahub.resources.ListControllersRequest) | [resources.ListControllersResponse](#containersai.alameda.v1alpha1.datahub.resources.ListControllersResponse) | Used to list contollers need to be predicted |
+| ListApplications | [resources.ListApplicationsRequest](#containersai.alameda.v1alpha1.datahub.resources.ListApplicationsRequest) | [resources.ListApplicationsResponse](#containersai.alameda.v1alpha1.datahub.resources.ListApplicationsResponse) | Used to list alameda scalers need to be predicted |
+| ListNamespaces | [resources.ListNamespacesRequest](#containersai.alameda.v1alpha1.datahub.resources.ListNamespacesRequest) | [resources.ListNamespacesResponse](#containersai.alameda.v1alpha1.datahub.resources.ListNamespacesResponse) | Used to list namespaces need to be predicted |
 | ListNodes | [resources.ListNodesRequest](#containersai.alameda.v1alpha1.datahub.resources.ListNodesRequest) | [resources.ListNodesResponse](#containersai.alameda.v1alpha1.datahub.resources.ListNodesResponse) | Used to list nodes&#39; information |
-| ListClusters | [resources.ListClustersRequest](#containersai.alameda.v1alpha1.datahub.resources.ListClustersRequest) | [resources.ListClustersResponse](#containersai.alameda.v1alpha1.datahub.resources.ListClustersResponse) | Cluster |
-| DeletePods | [resources.DeletePodsRequest](#containersai.alameda.v1alpha1.datahub.resources.DeletePodsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to delete info of pods |
-| DeleteControllers | [resources.DeleteControllersRequest](#containersai.alameda.v1alpha1.datahub.resources.DeleteControllersRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| DeleteApplications | [resources.DeleteApplicationsRequest](#containersai.alameda.v1alpha1.datahub.resources.DeleteApplicationsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| DeleteNamespaces | [resources.DeleteNamespacesRequest](#containersai.alameda.v1alpha1.datahub.resources.DeleteNamespacesRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
+| ListClusters | [resources.ListClustersRequest](#containersai.alameda.v1alpha1.datahub.resources.ListClustersRequest) | [resources.ListClustersResponse](#containersai.alameda.v1alpha1.datahub.resources.ListClustersResponse) | Used to list clusters&#39; information |
+| DeletePods | [resources.DeletePodsRequest](#containersai.alameda.v1alpha1.datahub.resources.DeletePodsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to stop generating predictions for the pods |
+| DeleteControllers | [resources.DeleteControllersRequest](#containersai.alameda.v1alpha1.datahub.resources.DeleteControllersRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to stop generating predictions for the controllers |
+| DeleteApplications | [resources.DeleteApplicationsRequest](#containersai.alameda.v1alpha1.datahub.resources.DeleteApplicationsRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to stop generating predictions for the applications |
+| DeleteNamespaces | [resources.DeleteNamespacesRequest](#containersai.alameda.v1alpha1.datahub.resources.DeleteNamespacesRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to stop generating predictions for the namespaces |
 | DeleteNodes | [resources.DeleteNodesRequest](#containersai.alameda.v1alpha1.datahub.resources.DeleteNodesRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to stop generating predictions for the nodes |
-| DeleteClusters | [resources.DeleteClustersRequest](#containersai.alameda.v1alpha1.datahub.resources.DeleteClustersRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateSchemas | [schemas.CreateSchemasRequest](#containersai.alameda.v1alpha1.datahub.schemas.CreateSchemasRequest) | [.google.rpc.Status](#google.rpc.Status) | Schemas -------------------------------------------------- |
+| DeleteClusters | [resources.DeleteClustersRequest](#containersai.alameda.v1alpha1.datahub.resources.DeleteClustersRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to stop generating predictions for the clusters |
+| CreateSchemas | [schemas.CreateSchemasRequest](#containersai.alameda.v1alpha1.datahub.schemas.CreateSchemasRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | ListSchemas | [schemas.ListSchemasRequest](#containersai.alameda.v1alpha1.datahub.schemas.ListSchemasRequest) | [schemas.ListSchemasResponse](#containersai.alameda.v1alpha1.datahub.schemas.ListSchemasResponse) |  |
 | DeleteSchemas | [schemas.DeleteSchemasRequest](#containersai.alameda.v1alpha1.datahub.schemas.DeleteSchemasRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
-| CreateSimulatedSchedulingScores | [scores.CreateSimulatedSchedulingScoresRequest](#containersai.alameda.v1alpha1.datahub.scores.CreateSimulatedSchedulingScoresRequest) | [.google.rpc.Status](#google.rpc.Status) | Scores -------------------------------------------------- |
+| CreateSimulatedSchedulingScores | [scores.CreateSimulatedSchedulingScoresRequest](#containersai.alameda.v1alpha1.datahub.scores.CreateSimulatedSchedulingScoresRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | ListSimulatedSchedulingScores | [scores.ListSimulatedSchedulingScoresRequest](#containersai.alameda.v1alpha1.datahub.scores.ListSimulatedSchedulingScoresRequest) | [scores.ListSimulatedSchedulingScoresResponse](#containersai.alameda.v1alpha1.datahub.scores.ListSimulatedSchedulingScoresResponse) | Used to list system scores |
-| ListWeaveScopeHosts | [weavescope.ListWeaveScopeHostsRequest](#containersai.alameda.v1alpha1.datahub.weavescope.ListWeaveScopeHostsRequest) | [weavescope.WeaveScopeResponse](#containersai.alameda.v1alpha1.datahub.weavescope.WeaveScopeResponse) | weave scope -------------------------------------------------- |
+| ListWeaveScopeHosts | [weavescope.ListWeaveScopeHostsRequest](#containersai.alameda.v1alpha1.datahub.weavescope.ListWeaveScopeHostsRequest) | [weavescope.WeaveScopeResponse](#containersai.alameda.v1alpha1.datahub.weavescope.WeaveScopeResponse) |  |
 | GetWeaveScopeHostDetails | [weavescope.ListWeaveScopeHostsRequest](#containersai.alameda.v1alpha1.datahub.weavescope.ListWeaveScopeHostsRequest) | [weavescope.WeaveScopeResponse](#containersai.alameda.v1alpha1.datahub.weavescope.WeaveScopeResponse) |  |
 | ListWeaveScopePods | [weavescope.ListWeaveScopePodsRequest](#containersai.alameda.v1alpha1.datahub.weavescope.ListWeaveScopePodsRequest) | [weavescope.WeaveScopeResponse](#containersai.alameda.v1alpha1.datahub.weavescope.WeaveScopeResponse) |  |
 | GetWeaveScopePodDetails | [weavescope.ListWeaveScopePodsRequest](#containersai.alameda.v1alpha1.datahub.weavescope.ListWeaveScopePodsRequest) | [weavescope.WeaveScopeResponse](#containersai.alameda.v1alpha1.datahub.weavescope.WeaveScopeResponse) |  |
@@ -5801,7 +5802,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.CreateGpuPredictionsRequest"></a>
 
 ### CreateGpuPredictionsRequest
-
+Represents a request for creating predictions of graphics processing units&#39; metric data.
 
 
 | Field | Type | Label | Description |
@@ -5816,7 +5817,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.ListGpuMetricsRequest"></a>
 
 ### ListGpuMetricsRequest
-
+Represents a request for listing metric data of graphics processing units.
 
 
 | Field | Type | Label | Description |
@@ -5834,7 +5835,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.ListGpuMetricsResponse"></a>
 
 ### ListGpuMetricsResponse
-
+Represents a response for a listing graphics processing units metric data request.
 
 
 | Field | Type | Label | Description |
@@ -5850,7 +5851,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.ListGpuPredictionsRequest"></a>
 
 ### ListGpuPredictionsRequest
-
+Represents a list of predicted metric data of graphics processing units.
 
 
 | Field | Type | Label | Description |
@@ -5870,7 +5871,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.ListGpuPredictionsResponse"></a>
 
 ### ListGpuPredictionsResponse
-
+Represents a response for a listing predictions of graphics processing units request.
 
 
 | Field | Type | Label | Description |
@@ -5886,7 +5887,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.ListGpusRequest"></a>
 
 ### ListGpusRequest
-
+Represents a request for listing graphics processing units that need to be predicted.
 
 
 | Field | Type | Label | Description |
@@ -5903,7 +5904,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.ListGpusResponse"></a>
 
 ### ListGpusResponse
-
+Represents a response for a listing graphics processing units request.
 
 
 | Field | Type | Label | Description |
@@ -5935,7 +5936,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.GpuMetadata"></a>
 
 ### GpuMetadata
-
+Represents the metadata of a graphics processing unit.
 
 
 | Field | Type | Label | Description |
@@ -5953,7 +5954,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.GpuSpec"></a>
 
 ### GpuSpec
-
+Represents the spec of a graphics processing unit.
 
 
 | Field | Type | Label | Description |
@@ -5984,7 +5985,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.Gpu"></a>
 
 ### Gpu
-
+Represents a graphics processing unit.
 
 
 | Field | Type | Label | Description |
@@ -6002,7 +6003,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.GpuMetric"></a>
 
 ### GpuMetric
-
+Represents metric data of a graphics processing unit.
 
 
 | Field | Type | Label | Description |
@@ -6020,7 +6021,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.gpu.GpuPrediction"></a>
 
 ### GpuPrediction
-
+Represents a list of predicted metrics data of a graphics processing unit.
 
 
 | Field | Type | Label | Description |
@@ -6056,7 +6057,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.schemas.CreateSchemasRequest"></a>
 
 ### CreateSchemasRequest
-
+Represents a request for creating datahub schemas.
 
 
 | Field | Type | Label | Description |
@@ -6071,7 +6072,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.schemas.DeleteSchemasRequest"></a>
 
 ### DeleteSchemasRequest
-
+Represents a request for deleting datahub schemas.
 
 
 | Field | Type | Label | Description |
@@ -6086,7 +6087,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.schemas.ListSchemasRequest"></a>
 
 ### ListSchemasRequest
-
+Represents a request for listing datahub schemas.
 
 
 | Field | Type | Label | Description |
@@ -6101,7 +6102,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.schemas.ListSchemasResponse"></a>
 
 ### ListSchemasResponse
-
+Represents a response for a listing datahub schemas request.
 
 
 | Field | Type | Label | Description |
@@ -6133,7 +6134,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.schemas.Column"></a>
 
 ### Column
-
+Represents a data record.
 
 
 | Field | Type | Label | Description |
@@ -6151,7 +6152,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.schemas.Measurement"></a>
 
 ### Measurement
-
+Represents the information of measurment which datahub will write data in InfluxDB.
 
 
 | Field | Type | Label | Description |
@@ -6171,7 +6172,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.schemas.SchemaMeta"></a>
 
 ### SchemaMeta
-
+Represents the private metadata of datahub schema.
 
 
 | Field | Type | Label | Description |
@@ -6224,7 +6225,7 @@ Represents a response for listing pod plannings request
 <a name="containersai.alameda.v1alpha1.datahub.schemas.Schema"></a>
 
 ### Schema
-
+Represents the private datahub specific schema of data.
 
 
 | Field | Type | Label | Description |
@@ -7134,7 +7135,7 @@ This file has messages related to nodes
 <a name="containersai.datahub.resource.pod.assign.v1alpha2.NodePriority"></a>
 
 ### NodePriority
-Represents the priority of a node
+Represents the priority of a node.
 
 
 | Field | Type | Label | Description |
@@ -7149,7 +7150,7 @@ Represents the priority of a node
 <a name="containersai.datahub.resource.pod.assign.v1alpha2.Selector"></a>
 
 ### Selector
-
+Represents a Kubernetes label selector.
 
 
 | Field | Type | Label | Description |

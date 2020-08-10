@@ -28,6 +28,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents a request for creating datahub schemas.
 type CreateSchemasRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -75,6 +77,8 @@ func (x *CreateSchemasRequest) GetSchemas() []*Schema {
 	return nil
 }
 
+//*
+// Represents a request for listing datahub schemas.
 type ListSchemasRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -122,6 +126,8 @@ func (x *ListSchemasRequest) GetSchemaMeta() *SchemaMeta {
 	return nil
 }
 
+//*
+// Represents a response for a listing datahub schemas request.
 type ListSchemasResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -177,6 +183,8 @@ func (x *ListSchemasResponse) GetSchemas() []*Schema {
 	return nil
 }
 
+//*
+// Represents a request for deleting datahub schemas.
 type DeleteSchemasRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

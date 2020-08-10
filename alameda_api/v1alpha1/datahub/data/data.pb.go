@@ -28,6 +28,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents the data which is to be written to datahub.
 type WriteData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -115,6 +117,8 @@ func (x *WriteData) GetRows() []*common.Row {
 	return nil
 }
 
+//*
+// Represents the condition of reading data from datahub.
 type ReadData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -194,6 +198,8 @@ func (x *ReadData) GetQueryCondition() *common.QueryCondition {
 	return nil
 }
 
+//*
+// Represents the condition of deleting data in datahub.
 type DeleteData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -273,6 +279,8 @@ func (x *DeleteData) GetQueryCondition() *common.QueryCondition {
 	return nil
 }
 
+//*
+// Represents the data(none time-series) which is to be written to datahub.
 type WriteMeta struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

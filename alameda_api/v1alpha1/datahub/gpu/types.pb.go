@@ -27,6 +27,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents the metadata of a graphics processing unit.
 type GpuMetadata struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -98,6 +100,8 @@ func (x *GpuMetadata) GetMinorNumber() string {
 	return ""
 }
 
+//*
+// Represents the spec of a graphics processing unit.
 type GpuSpec struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

@@ -27,6 +27,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents the amount resources that a Kubernete object is allowed to use.
 type ResourceBoundary int32
 
 const (
@@ -79,6 +81,8 @@ func (ResourceBoundary) EnumDescriptor() ([]byte, []int) {
 	return file_alameda_api_v1alpha1_datahub_common_types_proto_rawDescGZIP(), []int{0}
 }
 
+//*
+// Represents the constraints that limit aggretage resource consumption per Kubernete object.
 type ResourceQuota int32
 
 const (
@@ -134,6 +138,8 @@ func (ResourceQuota) EnumDescriptor() ([]byte, []int) {
 	return file_alameda_api_v1alpha1_datahub_common_types_proto_rawDescGZIP(), []int{1}
 }
 
+//*
+// Represents the datahub specified data type.
 type DataType int32
 
 const (
@@ -219,6 +225,8 @@ func (DataType) EnumDescriptor() ([]byte, []int) {
 	return file_alameda_api_v1alpha1_datahub_common_types_proto_rawDescGZIP(), []int{2}
 }
 
+//*
+// Represents the field type of a record which queried from datahub.
 type ColumnType int32
 
 const (
@@ -268,18 +276,20 @@ func (ColumnType) EnumDescriptor() ([]byte, []int) {
 	return file_alameda_api_v1alpha1_datahub_common_types_proto_rawDescGZIP(), []int{3}
 }
 
+//*
+// Represents the functional query type of datahub.
 type FunctionType int32
 
 const (
 	FunctionType_FUNCTIONTYPE_UNDEFINED FunctionType = 0
 	// Aggregation function
-	FunctionType_FUNCTIONTYPE_COUNT    FunctionType = 1 // Returns the number of non-null field values
-	FunctionType_FUNCTIONTYPE_DISTINCT FunctionType = 2 // Returns the list of unique field values
-	FunctionType_FUNCTIONTYPE_INTEGRAL FunctionType = 3 // Returns the area under the curve for subsequent field values
+	FunctionType_FUNCTIONTYPE_COUNT    FunctionType = 1 // Returns the number of non-null field values.
+	FunctionType_FUNCTIONTYPE_DISTINCT FunctionType = 2 // Returns the list of unique field values.
+	FunctionType_FUNCTIONTYPE_INTEGRAL FunctionType = 3 // Returns the area under the curve for subsequent field values.
 	FunctionType_FUNCTIONTYPE_MEAN     FunctionType = 4 // Returns the arithmetic mean (average) of field values.
 	FunctionType_FUNCTIONTYPE_MEDIAN   FunctionType = 5 // Returns the middle value from a sorted list of field values.
-	FunctionType_FUNCTIONTYPE_MODE     FunctionType = 6 // Returns the most frequent value in a list of field values
-	FunctionType_FUNCTIONTYPE_SPREAD   FunctionType = 7 // Returns the difference between the minimum and maximum field values
+	FunctionType_FUNCTIONTYPE_MODE     FunctionType = 6 // Returns the most frequent value in a list of field values.
+	FunctionType_FUNCTIONTYPE_SPREAD   FunctionType = 7 // Returns the difference between the minimum and maximum field values.
 	FunctionType_FUNCTIONTYPE_STDDEV   FunctionType = 8 // Returns the standard deviation of field values.
 	FunctionType_FUNCTIONTYPE_SUM      FunctionType = 9 // Returns the sum of field values.
 	// Selector function
@@ -288,11 +298,11 @@ const (
 	FunctionType_FUNCTIONTYPE_LAST       FunctionType = 12 // Returns the field value with the most recent timestamp.
 	FunctionType_FUNCTIONTYPE_MAX        FunctionType = 13 // Returns the greatest field value.
 	FunctionType_FUNCTIONTYPE_MIN        FunctionType = 14 // Returns the lowest field value.
-	FunctionType_FUNCTIONTYPE_PERCENTILE FunctionType = 15 // Returns the Nth percentile field value
-	FunctionType_FUNCTIONTYPE_SAMPLE     FunctionType = 16 // Returns a random sample of N field values. SAMPLE() uses reservoir sampling to generate the random points
+	FunctionType_FUNCTIONTYPE_PERCENTILE FunctionType = 15 // Returns the Nth percentile field value.
+	FunctionType_FUNCTIONTYPE_SAMPLE     FunctionType = 16 // Returns a random sample of N field values. SAMPLE() uses reservoir sampling to generate the random points.
 	FunctionType_FUNCTIONTYPE_TOP        FunctionType = 17 // Returns the greatest N field values.
 	// Transformation function
-	FunctionType_FUNCTIONTYPE_DERIVATIVE FunctionType = 18 // Returns the rate of change between subsequent field values
+	FunctionType_FUNCTIONTYPE_DERIVATIVE FunctionType = 18 // Returns the rate of change between subsequent field values.
 )
 
 // Enum value maps for FunctionType.

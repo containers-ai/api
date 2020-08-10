@@ -562,8 +562,7 @@ class DatahubServiceServicer(object):
     """
 
     def CreateApps(self, request, context):
-        """Applications --------------------------------------------------
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -581,78 +580,84 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ReadData(self, request, context):
-        """Data --------------------------------------------------
+        """Used to read data based on alameda specific schemas
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def WriteData(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to write data based on alameda specific schemas
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteData(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to delete data based on alameda specific schemas
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def WriteMeta(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to write metadata based on alameda specific schemas
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateEvents(self, request, context):
-        """Events --------------------------------------------------
+        """Used to create alameda specific events
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListEvents(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list alameda specific events
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateGpuPredictions(self, request, context):
-        """GPU --------------------------------------------------
+        """Used to create GPU predictions
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListGpus(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list GPU need to be predicted
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListGpuMetrics(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list GPU metrics data
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListGpuPredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list GPU predictions
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetLicense(self, request, context):
-        """Licenses --------------------------------------------------
+        """Used to get datahub license information
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateMetrics(self, request, context):
-        """Metrics --------------------------------------------------
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -700,51 +705,56 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ListPodMetrics(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list pod metric data
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListControllerMetrics(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list controller metric data
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListApplicationMetrics(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list alameda scaler metric data
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListNamespaceMetrics(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list namespace metric data
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListNodeMetrics(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list node metric data
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListClusterMetrics(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list cluster metric data
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def Ping(self, request, context):
-        """Ping --------------------------------------------------
+        """Used to check if datahub is still alive
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreatePlannings(self, request, context):
-        """Plannings --------------------------------------------------
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -828,44 +838,49 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def CreatePredictions(self, request, context):
-        """Predictions --------------------------------------------------
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreatePodPredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create predictions of pods
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateControllerPredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create predictions of controllers
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateApplicationPredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create predictions of alameda scalers
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateNamespacePredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create predictions of namespaces
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateNodePredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create predictions of nodes
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateClusterPredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create predictions of clusters
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -877,44 +892,49 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ListPodPredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list pod predictions
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListControllerPredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list controller predictions
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListApplicationPredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list alameda scaler predictions
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListNamespacePredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list namespace predictions
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListNodePredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list node predictions
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListClusterPredictions(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list cluster predictions
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ReadRawdata(self, request, context):
-        """Rawdata --------------------------------------------------
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -926,44 +946,49 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def CreateRecommendations(self, request, context):
-        """Recommendations --------------------------------------------------
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreatePodRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create recommendations of pods
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateControllerRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create recommendations of controllers
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateApplicationRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create recommendations of alameda scalers
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateNamespaceRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create recommendations of namespaces
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateNodeRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create recommendations of nodes
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateClusterRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to create recommendations of clusters
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -975,69 +1000,78 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ListPodRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list pod recommenations
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListAvailablePodRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list available pod recommenations
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListControllerRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list controller recommenations
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListApplicationRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list alameda scaler recommenations
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListNamespaceRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list namespace recommenations
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListNodeRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list node recommenations
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListClusterRecommendations(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list cluster recommenations
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreatePods(self, request, context):
-        """Resources --------------------------------------------------
-        Used to add pods that need to be predicted
+        """Used to add pods that need to be predicted
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateControllers(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to add controllers that need to be predicted
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateApplications(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to add alameda scalers that need to be predicted
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateNamespaces(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to add namespaces that need to be predicted
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -1050,7 +1084,8 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def CreateClusters(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to add clusters that need to be predicted
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -1063,20 +1098,21 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ListControllers(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to list contollers need to be predicted
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListApplications(self, request, context):
-        """Application
+        """Used to list alameda scalers need to be predicted
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListNamespaces(self, request, context):
-        """Namespace
+        """Used to list namespaces need to be predicted
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -1090,33 +1126,36 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ListClusters(self, request, context):
-        """Cluster
+        """Used to list clusters' information
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeletePods(self, request, context):
-        """Used to delete info of pods
+        """Used to stop generating predictions for the pods
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteControllers(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to stop generating predictions for the controllers
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteApplications(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to stop generating predictions for the applications
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteNamespaces(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to stop generating predictions for the namespaces
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -1129,14 +1168,14 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def DeleteClusters(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Used to stop generating predictions for the clusters
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateSchemas(self, request, context):
-        """Schemas --------------------------------------------------
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -1154,8 +1193,7 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def CreateSimulatedSchedulingScores(self, request, context):
-        """Scores --------------------------------------------------
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -1168,8 +1206,7 @@ class DatahubServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ListWeaveScopeHosts(self, request, context):
-        """weave scope --------------------------------------------------
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')

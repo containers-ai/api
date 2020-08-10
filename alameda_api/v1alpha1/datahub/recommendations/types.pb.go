@@ -79,6 +79,8 @@ func (ControllerRecommendedType) EnumDescriptor() ([]byte, []int) {
 	return file_alameda_api_v1alpha1_datahub_recommendations_types_proto_rawDescGZIP(), []int{0}
 }
 
+//*
+// Represents a private spec of a controller recommendation.
 type ControllerRecommendedSpec struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -277,6 +279,8 @@ func (x *ControllerRecommendedSpecK8S) GetCreateTime() *timestamp.Timestamp {
 	return nil
 }
 
+//*
+// Represents a set of container resource configuration recommendations of a pod.
 type Recommendation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -332,6 +336,8 @@ func (x *Recommendation) GetRecommendationData() []*RecommendationData {
 	return nil
 }
 
+//*
+// Represents a piece of recommendation data.
 type RecommendationData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

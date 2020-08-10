@@ -29,6 +29,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents a dataset of rawdata which will be written to datahub.
 type Data struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -84,6 +86,8 @@ func (x *Data) GetRawdata() []*Rawdata {
 	return nil
 }
 
+//*
+// Represents a private alameda specified rawdata.
 type Rawdata struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

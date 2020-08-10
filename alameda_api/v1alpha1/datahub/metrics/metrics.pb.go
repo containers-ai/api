@@ -29,7 +29,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// Represents metric data of a container
+//*
+// Represents metric data of a container.
 type ContainerMetric struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -85,7 +86,8 @@ func (x *ContainerMetric) GetMetricData() []*common.MetricData {
 	return nil
 }
 
-// Represents metric data of a pod
+//*
+// Represents metric data of a pod.
 type PodMetric struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -141,6 +143,8 @@ func (x *PodMetric) GetContainerMetrics() []*ContainerMetric {
 	return nil
 }
 
+//*
+// Represents metric data of a controller.
 type ControllerMetric struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -204,6 +208,8 @@ func (x *ControllerMetric) GetMetricData() []*common.MetricData {
 	return nil
 }
 
+//*
+// Represents metric data of a alameda scaler.
 type ApplicationMetric struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -259,6 +265,8 @@ func (x *ApplicationMetric) GetMetricData() []*common.MetricData {
 	return nil
 }
 
+//*
+// Represents metric data of a namespace.
 type NamespaceMetric struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -314,7 +322,8 @@ func (x *NamespaceMetric) GetMetricData() []*common.MetricData {
 	return nil
 }
 
-// Represents metric data of a node
+//*
+// Represents metric data of a node.
 type NodeMetric struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -370,6 +379,8 @@ func (x *NodeMetric) GetMetricData() []*common.MetricData {
 	return nil
 }
 
+//*
+// Represents metric data of a cluster.
 type ClusterMetric struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

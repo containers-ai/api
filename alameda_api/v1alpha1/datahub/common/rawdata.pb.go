@@ -28,6 +28,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents a dataset which will be written to datahub.
 type WriteData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -83,6 +85,8 @@ func (x *WriteData) GetRows() []*Row {
 	return nil
 }
 
+//*
+// Represents a dataset whcih is read from datahub.
 type ReadData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -130,6 +134,8 @@ func (x *ReadData) GetGroups() []*Group {
 	return nil
 }
 
+//*
+// Represents a record of data.
 type Row struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -185,6 +191,8 @@ func (x *Row) GetValues() []string {
 	return nil
 }
 
+//*
+// Represents a dataset which are collected that have the same attributes.
 type Group struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

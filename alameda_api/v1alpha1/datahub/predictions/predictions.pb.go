@@ -29,7 +29,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// Represents a list of predicted metric data of a container
+//*
+// Represents a list of predicted metric data of a container.
 type ContainerPrediction struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -101,7 +102,8 @@ func (x *ContainerPrediction) GetPredictedLowerboundData() []*MetricData {
 	return nil
 }
 
-// Represents a list of predicted metrics data of a pod
+//*
+// Represents a list of predicted metrics data of a pod.
 type PodPrediction struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -157,6 +159,8 @@ func (x *PodPrediction) GetContainerPredictions() []*ContainerPrediction {
 	return nil
 }
 
+//*
+// Represents a list of predicted metrics data of a controller.
 type ControllerPrediction struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -236,6 +240,8 @@ func (x *ControllerPrediction) GetPredictedLowerboundData() []*MetricData {
 	return nil
 }
 
+//*
+// Represents a list of predicted metrics data of a alameda scaler.
 type ApplicationPrediction struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -307,6 +313,8 @@ func (x *ApplicationPrediction) GetPredictedLowerboundData() []*MetricData {
 	return nil
 }
 
+//*
+// Represents a list of predicted metrics data of a namespace.
 type NamespacePrediction struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -378,7 +386,8 @@ func (x *NamespacePrediction) GetPredictedLowerboundData() []*MetricData {
 	return nil
 }
 
-// Represents a list of predicted metric data of a node
+//*
+// Represents a list of predicted metric data of a node.
 type NodePrediction struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -458,6 +467,8 @@ func (x *NodePrediction) GetPredictedLowerboundData() []*MetricData {
 	return nil
 }
 
+//*
+// Represents a list of predicted metric data of a cluster.
 type ClusterPrediction struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

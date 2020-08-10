@@ -31,7 +31,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// Represents a request for creating predictions of containers' metric data belonging to a pod
+//*
+// Represents a request for creating predictions of containers' metric data belonging to a pod.
 type CreatePodPredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -79,6 +80,8 @@ func (x *CreatePodPredictionsRequest) GetPodPredictions() []*PodPrediction {
 	return nil
 }
 
+//*
+// Represents a request for creating predictions of controllers' metric data.
 type CreateControllerPredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -126,6 +129,8 @@ func (x *CreateControllerPredictionsRequest) GetControllerPredictions() []*Contr
 	return nil
 }
 
+//*
+// Represents a request for creating predictions of alameda scalers' metric data.
 type CreateApplicationPredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -173,6 +178,8 @@ func (x *CreateApplicationPredictionsRequest) GetApplicationPredictions() []*App
 	return nil
 }
 
+//*
+// Represents a request for creating predictions of namespaces' metric data.
 type CreateNamespacePredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -220,7 +227,8 @@ func (x *CreateNamespacePredictionsRequest) GetNamespacePredictions() []*Namespa
 	return nil
 }
 
-// Represents a request for creating predictions of a node metric data
+//*
+// Represents a request for creating predictions nodes' metric data.
 type CreateNodePredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -268,6 +276,8 @@ func (x *CreateNodePredictionsRequest) GetNodePredictions() []*NodePrediction {
 	return nil
 }
 
+//*
+// Represents a request for creating predictions clusters' metric data.
 type CreateClusterPredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -315,7 +325,8 @@ func (x *CreateClusterPredictionsRequest) GetClusterPredictions() []*ClusterPred
 	return nil
 }
 
-// Represents a request for listing predictions of pods
+//*
+// Represents a request for listing predictions of pods.
 type ListPodPredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -411,7 +422,8 @@ func (x *ListPodPredictionsRequest) GetPredictionId() string {
 	return ""
 }
 
-// Represents a response for a listing predictions of pods request
+//*
+// Represents a response for a listing predictions of pods request.
 type ListPodPredictionsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -467,6 +479,8 @@ func (x *ListPodPredictionsResponse) GetPodPredictions() []*PodPrediction {
 	return nil
 }
 
+//*
+// Represents a request for listing predictions of controllers.
 type ListControllerPredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -562,6 +576,8 @@ func (x *ListControllerPredictionsRequest) GetPredictionId() string {
 	return ""
 }
 
+//*
+// Represents a response for a listing predictions of controllers request.
 type ListControllerPredictionsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -617,6 +633,8 @@ func (x *ListControllerPredictionsResponse) GetControllerPredictions() []*Contro
 	return nil
 }
 
+//*
+// Represents a request for listing predictions of alameda scalers.
 type ListApplicationPredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -704,6 +722,8 @@ func (x *ListApplicationPredictionsRequest) GetPredictionId() string {
 	return ""
 }
 
+//*
+// Represents a response for a listing predictions of alameda scalers request.
 type ListApplicationPredictionsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -759,6 +779,8 @@ func (x *ListApplicationPredictionsResponse) GetApplicationPredictions() []*Appl
 	return nil
 }
 
+//*
+// Represents a request for listing predictions of namespaces.
 type ListNamespacePredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -846,6 +868,8 @@ func (x *ListNamespacePredictionsRequest) GetPredictionId() string {
 	return ""
 }
 
+//*
+// Represents a response for a listing predictions of namespaces request.
 type ListNamespacePredictionsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -901,7 +925,8 @@ func (x *ListNamespacePredictionsResponse) GetNamespacePredictions() []*Namespac
 	return nil
 }
 
-// Represents a request for listing predictions of nodes
+//*
+// Represents a request for listing predictions of nodes.
 type ListNodePredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -989,7 +1014,8 @@ func (x *ListNodePredictionsRequest) GetPredictionId() string {
 	return ""
 }
 
-// Represents a response for a listing predictions of nodes request
+//*
+// Represents a response for a listing predictions of nodes request.
 type ListNodePredictionsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1045,6 +1071,8 @@ func (x *ListNodePredictionsResponse) GetNodePredictions() []*NodePrediction {
 	return nil
 }
 
+//*
+// Represents a request for listing predictions of clusters.
 type ListClusterPredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1132,6 +1160,8 @@ func (x *ListClusterPredictionsRequest) GetPredictionId() string {
 	return ""
 }
 
+//*
+// Represents a response for a listing predictions of clusters request.
 type ListClusterPredictionsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

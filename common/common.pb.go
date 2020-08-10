@@ -27,6 +27,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents a specified database whcih is to query.
 type DatabaseType int32
 
 const (
@@ -174,7 +176,8 @@ func (QueryCondition_Order) EnumDescriptor() ([]byte, []int) {
 	return file_common_common_proto_rawDescGZIP(), []int{1, 0}
 }
 
-// Represents a time range definition
+//*
+// Represents a time range definition.
 type TimeRange struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -262,6 +265,8 @@ func (x *TimeRange) GetApplyTime() *timestamp.Timestamp {
 	return nil
 }
 
+//*
+// Represents a datahub query request.
 type QueryCondition struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -349,6 +354,8 @@ func (x *QueryCondition) GetLimit() uint64 {
 	return 0
 }
 
+//*
+// Represents a general datahub query request.
 type Query struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -420,6 +427,8 @@ func (x *Query) GetCondition() *QueryCondition {
 	return nil
 }
 
+//*
+// Represents a record of data.
 type Row struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -475,6 +484,8 @@ func (x *Row) GetValues() []string {
 	return nil
 }
 
+//*
+// Represents a dataset which are collected that have the same attributes.
 type Group struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -522,6 +533,8 @@ func (x *Group) GetRows() []*Row {
 	return nil
 }
 
+//*
+// Represents a rawdata whcih is read from datahub.
 type ReadRawdata struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -593,6 +606,8 @@ func (x *ReadRawdata) GetRawdata() string {
 	return ""
 }
 
+//*
+// Represents a rawdata which will be written to datahub.
 type WriteRawdata struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

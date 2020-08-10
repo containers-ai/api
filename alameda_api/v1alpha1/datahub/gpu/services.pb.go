@@ -29,6 +29,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents a request for listing graphics processing units that need to be predicted.
 type ListGpusRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -92,6 +94,8 @@ func (x *ListGpusRequest) GetMinorNumber() string {
 	return ""
 }
 
+//*
+// Represents a response for a listing graphics processing units request.
 type ListGpusResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -147,6 +151,8 @@ func (x *ListGpusResponse) GetGpus() []*Gpu {
 	return nil
 }
 
+//*
+// Represents a request for listing metric data of graphics processing units.
 type ListGpuMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -218,6 +224,8 @@ func (x *ListGpuMetricsRequest) GetMinorNumber() string {
 	return ""
 }
 
+//*
+// Represents a response for a listing graphics processing units metric data request.
 type ListGpuMetricsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -273,6 +281,8 @@ func (x *ListGpuMetricsResponse) GetGpuMetrics() []*GpuMetric {
 	return nil
 }
 
+//*
+// Represents a request for creating predictions of graphics processing units' metric data.
 type CreateGpuPredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -320,6 +330,8 @@ func (x *CreateGpuPredictionsRequest) GetGpuPredictions() []*GpuPrediction {
 	return nil
 }
 
+//*
+// Represents a list of predicted metric data of graphics processing units.
 type ListGpuPredictionsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -407,6 +419,8 @@ func (x *ListGpuPredictionsRequest) GetPredictionId() string {
 	return ""
 }
 
+//*
+// Represents a response for a listing predictions of graphics processing units request.
 type ListGpuPredictionsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

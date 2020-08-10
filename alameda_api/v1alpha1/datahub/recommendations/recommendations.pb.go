@@ -30,8 +30,11 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// Represents a resource configuration recommendation
-// It includes recommended limits and requests for the initial stage (a container which is just started) and after the initial stage
+//*
+// Represents a resource configuration recommendation made by the AI Engine.
+//
+// It includes recommended limits and requests for the initial stage (a container which is just started) and after the initial strage.
+//
 type ContainerRecommendation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -111,7 +114,8 @@ func (x *ContainerRecommendation) GetInitialRequestRecommendations() []*common.M
 	return nil
 }
 
-// Represents a set of container resource configuration recommendations of a pod
+//*
+// Represents a set of container resource configuration recommendations of a pod.
 type PodRecommendation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -223,6 +227,8 @@ func (x *PodRecommendation) GetTotalCost() float64 {
 	return 0
 }
 
+//*
+// Represents resource configuration recommendations of a controller.
 type ControllerRecommendation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -302,6 +308,8 @@ func (x *ControllerRecommendation) GetRecommendedSpecK8S() *ControllerRecommende
 	return nil
 }
 
+//*
+// Represents resource configuration recommendations of a alameda scaler.
 type ApplicationRecommendation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -381,6 +389,8 @@ func (x *ApplicationRecommendation) GetRecommendedSpecK8S() *ControllerRecommend
 	return nil
 }
 
+//*
+// Represents resource configuration recommendations of a namespace.
 type NamespaceRecommendation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -460,6 +470,8 @@ func (x *NamespaceRecommendation) GetRecommendedSpecK8S() *ControllerRecommended
 	return nil
 }
 
+//*
+// Represents resource configuration recommendations of a node.
 type NodeRecommendation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -539,6 +551,8 @@ func (x *NodeRecommendation) GetRecommendedSpecK8S() *ControllerRecommendedSpecK
 	return nil
 }
 
+//*
+// Represents resource configuration recommendations of a cluster.
 type ClusterRecommendation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

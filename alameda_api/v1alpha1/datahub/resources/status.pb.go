@@ -28,7 +28,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// The valid statuses of pods
+//*
+// The valid statuses of pods.
 type PodPhase int32
 
 const (
@@ -93,7 +94,8 @@ func (PodPhase) EnumDescriptor() ([]byte, []int) {
 	return file_alameda_api_v1alpha1_datahub_resources_status_proto_rawDescGZIP(), []int{0}
 }
 
-// ContainerStateWaiting is a waiting state of a container
+//*
+// ContainerStateWaiting is a waiting state of a container.
 type ContainerStateWaiting struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -149,7 +151,8 @@ func (x *ContainerStateWaiting) GetMessage() string {
 	return ""
 }
 
-// ContainerStateRunning is a running state of a container
+//*
+// ContainerStateRunning is a running state of a container.
 type ContainerStateRunning struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -197,7 +200,8 @@ func (x *ContainerStateRunning) GetStartedAt() *timestamp.Timestamp {
 	return nil
 }
 
-// ContainerStateTerminated is a terminated state of a container
+//*
+// ContainerStateTerminated is a terminated state of a container.
 type ContainerStateTerminated struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -277,7 +281,8 @@ func (x *ContainerStateTerminated) GetFinishedAt() *timestamp.Timestamp {
 	return nil
 }
 
-// ContainerState holds a possible state of container
+//*
+// ContainerState holds a possible state of container.
 type ContainerState struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -341,7 +346,8 @@ func (x *ContainerState) GetTerminated() *ContainerStateTerminated {
 	return nil
 }
 
-// ContainerStatus contains details for the current status of this container
+//*
+// ContainerStatus contains details for the current status of this container.
 type ContainerStatus struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -405,7 +411,8 @@ func (x *ContainerStatus) GetRestartCount() int32 {
 	return 0
 }
 
-// PodStatus represents information about the status of a pod
+//*
+// PodStatus represents information about the status of a pod.
 type PodStatus struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

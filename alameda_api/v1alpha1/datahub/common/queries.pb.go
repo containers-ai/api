@@ -128,8 +128,7 @@ func (QueryCondition_Order) EnumDescriptor() ([]byte, []int) {
 }
 
 //*
-// Represents a time range definition
-//
+// Represents a time range definition.
 type TimeRange struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -209,6 +208,8 @@ func (x *TimeRange) GetApplyTime() *timestamp.Timestamp {
 	return nil
 }
 
+//*
+// Represents a query condition.
 type Condition struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -280,6 +281,8 @@ func (x *Condition) GetTypes() []DataType {
 	return nil
 }
 
+//*
+// Represents a datahub functional query, includes aggregation, selector and transformation.
 type Function struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -375,6 +378,8 @@ func (x *Function) GetNumber() int64 {
 	return 0
 }
 
+//*
+// Represents a query to a user-specified measurement.
 type Into struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -454,6 +459,8 @@ func (x *Into) GetIsAllMeasurements() bool {
 	return false
 }
 
+//*
+// Represents a datahub query request.
 type QueryCondition struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

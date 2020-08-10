@@ -29,7 +29,7 @@ const (
 const _ = proto.ProtoPackageIsVersion4
 
 //*
-//  Recommendation policy. A policy may be either stable or compact.
+// Recommendation policy. A policy may be either stable or compact.
 type RecommendationPolicy int32
 
 const (
@@ -80,7 +80,7 @@ func (RecommendationPolicy) EnumDescriptor() ([]byte, []int) {
 }
 
 //*
-// Represents the priority of a node
+// Represents the priority of a node.
 type NodePriority struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -128,6 +128,8 @@ func (x *NodePriority) GetNodes() []string {
 	return nil
 }
 
+//*
+// Represents a Kubernetes label selector.
 type Selector struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -176,8 +178,7 @@ func (x *Selector) GetSelector() map[string]string {
 }
 
 //*
-// Represents a recommended pod-to-node assignment (i.e. pod placement)
-//
+// Represents a recommended pod-to-node assignment. (i.e. pod placement)
 type AssignPodPolicy struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

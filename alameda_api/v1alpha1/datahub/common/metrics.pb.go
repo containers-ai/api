@@ -29,7 +29,7 @@ const (
 const _ = proto.ProtoPackageIsVersion4
 
 //*
-// Metric type. A metric may be either CPU or memory.
+// Metric type. A metric may be CPU, memory and etc.
 type MetricType int32
 
 const (
@@ -166,6 +166,8 @@ func (MetricType) EnumDescriptor() ([]byte, []int) {
 	return file_alameda_api_v1alpha1_datahub_common_metrics_proto_rawDescGZIP(), []int{0}
 }
 
+//*
+// Represents Kubernetes resources which will be allocated to pods.
 type ResourceName int32
 
 const (
@@ -216,7 +218,7 @@ func (ResourceName) EnumDescriptor() ([]byte, []int) {
 }
 
 //*
-// Represents a data point of time-series metric data
+// Represents a data point of time-series metric data.
 type Sample struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -281,14 +283,14 @@ func (x *Sample) GetNumValue() string {
 }
 
 //*
-// Represents a piece of metreic data
+// Represents a piece of metreic data.
 type MetricData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	MetricType  MetricType `protobuf:"varint,1,opt,name=metric_type,json=metricType,proto3,enum=containersai.alameda.v1alpha1.datahub.common.MetricType" json:"metric_type,omitempty"`
-	Data        []*Sample  `protobuf:"bytes,2,rep,name=data,proto3" json:"data,omitempty"` // data can be time series or non-time series
+	Data        []*Sample  `protobuf:"bytes,2,rep,name=data,proto3" json:"data,omitempty"` // Data can be time series or non-time series.
 	Granularity int64      `protobuf:"varint,3,opt,name=granularity,proto3" json:"granularity,omitempty"`
 }
 

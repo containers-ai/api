@@ -28,6 +28,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents a response for reading a license information request.
 type GetLicenseResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

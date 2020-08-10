@@ -22,12 +22,18 @@ enum Scope {
     SCOPE_TARGET         = 9;
 }
 
+/**
+ * Represents the private metadata of datahub schema.
+ */
 message SchemaMeta {
     Scope  scope    = 1;
     string category = 2;
     string type     = 3;
 }
 
+/**
+ * Represents the information of measurment which datahub will write data in InfluxDB.
+ */
 message Measurement {
     string                  name              = 1;
     common.MetricType       metric_type       = 2;
@@ -37,6 +43,9 @@ message Measurement {
     repeated Column         columns           = 6;
 }
 
+/**
+ * Represents a data record.
+ */
 message Column {
     string            name        = 1;
     bool              required    = 2;

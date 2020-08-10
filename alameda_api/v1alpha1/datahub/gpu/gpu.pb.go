@@ -29,6 +29,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents a graphics processing unit.
 type Gpu struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -100,6 +102,8 @@ func (x *Gpu) GetSpec() *GpuSpec {
 	return nil
 }
 
+//*
+// Represents metric data of a graphics processing unit.
 type GpuMetric struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -171,6 +175,8 @@ func (x *GpuMetric) GetMetricData() []*common.MetricData {
 	return nil
 }
 
+//*
+// Represents a list of predicted metrics data of a graphics processing unit.
 type GpuPrediction struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

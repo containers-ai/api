@@ -29,7 +29,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// Represents a request for creating pods
+//*
+// Represents a request for creating pods to be predicted.
 type CreatePodsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -77,6 +78,8 @@ func (x *CreatePodsRequest) GetPods() []*Pod {
 	return nil
 }
 
+//*
+// Represents a request for creating controllers to be predicted.
 type CreateControllersRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -124,6 +127,8 @@ func (x *CreateControllersRequest) GetControllers() []*Controller {
 	return nil
 }
 
+//*
+// Represents a request for creating alameda scalers.
 type CreateApplicationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -171,6 +176,8 @@ func (x *CreateApplicationsRequest) GetApplications() []*Application {
 	return nil
 }
 
+//*
+// Represents a request for creating namespaces to be predicted.
 type CreateNamespacesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -218,7 +225,8 @@ func (x *CreateNamespacesRequest) GetNamespaces() []*Namespace {
 	return nil
 }
 
-// Represents a request for adding nodes that need to be predicted
+//*
+// Represents a request for adding nodes that need to be predicted.
 type CreateNodesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -266,6 +274,8 @@ func (x *CreateNodesRequest) GetNodes() []*Node {
 	return nil
 }
 
+//*
+// Represents a request for adding clusters that need to be predicted.
 type CreateClustersRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -313,7 +323,8 @@ func (x *CreateClustersRequest) GetClusters() []*Cluster {
 	return nil
 }
 
-// Represents a request for listing pods that need to be predicted
+//*
+// Represents a request for listing pods that need to be predicted.
 type ListPodsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -385,7 +396,8 @@ func (x *ListPodsRequest) GetScalingTool() ScalingTool {
 	return ScalingTool_SCALING_TOOL_UNDEFINED
 }
 
-// Represents a response for a listing pods request
+//*
+// Represents a response for a listing pods request.
 type ListPodsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -441,6 +453,8 @@ func (x *ListPodsResponse) GetPods() []*Pod {
 	return nil
 }
 
+//*
+// Represents a request for listing controllers that need to be predicted.
 type ListControllersRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -504,6 +518,8 @@ func (x *ListControllersRequest) GetKind() Kind {
 	return Kind_KIND_UNDEFINED
 }
 
+//*
+// Represents a response for a listing controllers request.
 type ListControllersResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -559,6 +575,8 @@ func (x *ListControllersResponse) GetControllers() []*Controller {
 	return nil
 }
 
+//*
+// Represents a request for listing alameda scalers.
 type ListApplicationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -606,6 +624,8 @@ func (x *ListApplicationsRequest) GetObjectMeta() []*ObjectMeta {
 	return nil
 }
 
+//*
+// Represents a response for a listing alameda scalers request.
 type ListApplicationsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -661,6 +681,8 @@ func (x *ListApplicationsResponse) GetApplications() []*Application {
 	return nil
 }
 
+//*
+// Represents a request for listing namespaces that need to be predicted.
 type ListNamespacesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -708,6 +730,8 @@ func (x *ListNamespacesRequest) GetObjectMeta() []*ObjectMeta {
 	return nil
 }
 
+//*
+// Represents a response for a listing namespaces request.
 type ListNamespacesResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -763,7 +787,8 @@ func (x *ListNamespacesResponse) GetNamespaces() []*Namespace {
 	return nil
 }
 
-// Represents a request for listing nodes that need to be predicted
+//*
+// Represents a request for listing nodes that need to be predicted.
 type ListNodesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -819,7 +844,8 @@ func (x *ListNodesRequest) GetObjectMeta() []*ObjectMeta {
 	return nil
 }
 
-// Represents a response for a listing nodes request
+//*
+// Represents a response for a listing nodes request.
 type ListNodesResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -875,6 +901,8 @@ func (x *ListNodesResponse) GetNodes() []*Node {
 	return nil
 }
 
+//*
+// Represents a request for listing clusters that need to be predicted.
 type ListClustersRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -922,6 +950,8 @@ func (x *ListClustersRequest) GetObjectMeta() []*ObjectMeta {
 	return nil
 }
 
+//*
+// Represents a response for a listing clusters request.
 type ListClustersResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -977,7 +1007,8 @@ func (x *ListClustersResponse) GetClusters() []*Cluster {
 	return nil
 }
 
-// Represents a request for deleting pods data
+//*
+// Represents a request for stopping predicting pods.
 type DeletePodsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1025,6 +1056,8 @@ func (x *DeletePodsRequest) GetObjectMeta() []*ObjectMeta {
 	return nil
 }
 
+//*
+// Represents a request for stopping predicting controllers.
 type DeleteControllersRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1080,6 +1113,8 @@ func (x *DeleteControllersRequest) GetKind() Kind {
 	return Kind_KIND_UNDEFINED
 }
 
+//*
+// Represents a request for deleting alameda scalers data.
 type DeleteApplicationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1127,6 +1162,8 @@ func (x *DeleteApplicationsRequest) GetObjectMeta() []*ObjectMeta {
 	return nil
 }
 
+//*
+// Represents a request for stopping predicting namespaces.
 type DeleteNamespacesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1174,7 +1211,8 @@ func (x *DeleteNamespacesRequest) GetObjectMeta() []*ObjectMeta {
 	return nil
 }
 
-// Represents a request for stopping predicting nodes
+//*
+// Represents a request for stopping predicting nodes.
 type DeleteNodesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1222,6 +1260,8 @@ func (x *DeleteNodesRequest) GetObjectMeta() []*ObjectMeta {
 	return nil
 }
 
+//*
+// Represents a request for stopping predicting clusters.
 type DeleteClustersRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

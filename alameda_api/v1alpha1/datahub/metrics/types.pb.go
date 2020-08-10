@@ -84,6 +84,8 @@ func (x *Metric) GetMetricData() []*MetricData {
 	return nil
 }
 
+//*
+// Represents a piece of metreic data.
 type MetricData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

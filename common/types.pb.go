@@ -25,6 +25,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents the datahub specified data type.
 type DataType int32
 
 const (
@@ -110,6 +112,8 @@ func (DataType) EnumDescriptor() ([]byte, []int) {
 	return file_common_types_proto_rawDescGZIP(), []int{0}
 }
 
+//*
+// Represents the field type of a record which queried from datahub.
 type ColumnType int32
 
 const (

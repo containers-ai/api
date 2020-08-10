@@ -27,6 +27,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents the private alameda pod specification.
 type AlamedaPodSpec struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -106,6 +108,8 @@ func (x *AlamedaPodSpec) GetAlamedaScalerResources() *ResourceRequirements {
 	return nil
 }
 
+//*
+// Represents the private alameda controller specification.
 type AlamedaControllerSpec struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -193,6 +197,8 @@ func (x *AlamedaControllerSpec) GetEnableRecommendationExecution() bool {
 	return false
 }
 
+//*
+// Represents the private alameda applcation specification.
 type AlamedaApplicationSpec struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -231,6 +237,8 @@ func (*AlamedaApplicationSpec) Descriptor() ([]byte, []int) {
 	return file_alameda_api_v1alpha1_datahub_resources_types_proto_rawDescGZIP(), []int{2}
 }
 
+//*
+// Represents the private alameda node specification.
 type AlamedaNodeSpec struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -318,7 +326,8 @@ func (x *AlamedaNodeSpec) GetRoleInfra() bool {
 	return false
 }
 
-// Represents the capacity of a Kubernetes node
+//*
+// Represents the capacity of a Kubernetes node.
 type Capacity struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -382,6 +391,8 @@ func (x *Capacity) GetNetworkMegabitsPerSecond() int64 {
 	return 0
 }
 
+//*
+// The information of cloud service provider.
 type Provider struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

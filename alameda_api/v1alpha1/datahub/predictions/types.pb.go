@@ -30,6 +30,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents a data point of time-series metric data.
 type Sample struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -109,6 +111,8 @@ func (x *Sample) GetNumValue() string {
 	return ""
 }
 
+//*
+// Represents a piece of metreic data.
 type MetricData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

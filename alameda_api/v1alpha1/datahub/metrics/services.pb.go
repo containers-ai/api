@@ -31,7 +31,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// Represents a request for creating metrics data of pods
+//*
+// Represents a request for creating metrics data of pods.
 type CreatePodMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -87,6 +88,8 @@ func (x *CreatePodMetricsRequest) GetRateRange() uint64 {
 	return 0
 }
 
+//*
+// Represents a request for creating metrics data of controllers.
 type CreateControllerMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -134,6 +137,8 @@ func (x *CreateControllerMetricsRequest) GetControllerMetrics() []*ControllerMet
 	return nil
 }
 
+//*
+// Represents a request for creating metrics data of alameda scalers.
 type CreateApplicationMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -181,6 +186,8 @@ func (x *CreateApplicationMetricsRequest) GetApplicationMetrics() []*Application
 	return nil
 }
 
+//*
+// Represents a request for creating metrics data of namespaces.
 type CreateNamespaceMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -228,7 +235,8 @@ func (x *CreateNamespaceMetricsRequest) GetNamespaceMetrics() []*NamespaceMetric
 	return nil
 }
 
-// Represents a request for creating metrics data of nodes
+//*
+// Represents a request for creating metrics data of nodes.
 type CreateNodeMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -276,6 +284,8 @@ func (x *CreateNodeMetricsRequest) GetNodeMetrics() []*NodeMetric {
 	return nil
 }
 
+//*
+// Represents a request for creating metrics data of clusters.
 type CreateClusterMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -323,7 +333,8 @@ func (x *CreateClusterMetricsRequest) GetClusterMetrics() []*ClusterMetric {
 	return nil
 }
 
-// Represents a request for listing metric data of a pod
+//*
+// Represents a request for listing metric data of pods.
 type ListPodMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -395,7 +406,8 @@ func (x *ListPodMetricsRequest) GetRateRange() uint64 {
 	return 0
 }
 
-// Represents a response for a listing pod metric data request
+//*
+// Represents a response for a listing pods metric data request.
 type ListPodMetricsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -451,6 +463,8 @@ func (x *ListPodMetricsResponse) GetPodMetrics() []*PodMetric {
 	return nil
 }
 
+//*
+// Represents a request for listing metric data of controllers.
 type ListControllerMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -522,6 +536,8 @@ func (x *ListControllerMetricsRequest) GetKind() resources.Kind {
 	return resources.Kind_KIND_UNDEFINED
 }
 
+//*
+// Represents a response for a listing controllers metric data request.
 type ListControllerMetricsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -577,6 +593,8 @@ func (x *ListControllerMetricsResponse) GetControllerMetrics() []*ControllerMetr
 	return nil
 }
 
+//*
+// Represents a request for listing metric data of alameda scalers.
 type ListApplicationMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -640,6 +658,8 @@ func (x *ListApplicationMetricsRequest) GetMetricTypes() []common.MetricType {
 	return nil
 }
 
+//*
+// Represents a response for a listing alameda scalers metric data request.
 type ListApplicationMetricsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -695,6 +715,8 @@ func (x *ListApplicationMetricsResponse) GetApplicationMetrics() []*ApplicationM
 	return nil
 }
 
+//*
+// Represents a request for listing metric data of namespaces.
 type ListNamespaceMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -758,6 +780,8 @@ func (x *ListNamespaceMetricsRequest) GetMetricTypes() []common.MetricType {
 	return nil
 }
 
+//*
+// Represents a response for a listing namespaces metric data request.
 type ListNamespaceMetricsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -813,7 +837,8 @@ func (x *ListNamespaceMetricsResponse) GetNamespaceMetrics() []*NamespaceMetric 
 	return nil
 }
 
-// Represents a request for listing metric data of a node
+//*
+// Represents a request for listing metric data of nodes.
 type ListNodeMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -877,7 +902,8 @@ func (x *ListNodeMetricsRequest) GetMetricTypes() []common.MetricType {
 	return nil
 }
 
-// Represents a response for a listing node metrics request
+//*
+// Represents a response for a listing nodes metrics request.
 type ListNodeMetricsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -933,6 +959,8 @@ func (x *ListNodeMetricsResponse) GetNodeMetrics() []*NodeMetric {
 	return nil
 }
 
+//*
+// Represents a request for listing metric data of clusters.
 type ListClusterMetricsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -996,6 +1024,8 @@ func (x *ListClusterMetricsRequest) GetMetricTypes() []common.MetricType {
 	return nil
 }
 
+//*
+// Represents a response for a listing clusters metrics request.
 type ListClusterMetricsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

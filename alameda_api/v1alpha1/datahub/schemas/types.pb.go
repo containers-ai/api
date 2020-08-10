@@ -98,6 +98,8 @@ func (Scope) EnumDescriptor() ([]byte, []int) {
 	return file_alameda_api_v1alpha1_datahub_schemas_types_proto_rawDescGZIP(), []int{0}
 }
 
+//*
+// Represents the private metadata of datahub schema.
 type SchemaMeta struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -161,6 +163,8 @@ func (x *SchemaMeta) GetType() string {
 	return ""
 }
 
+//*
+// Represents the information of measurment which datahub will write data in InfluxDB.
 type Measurement struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -248,6 +252,8 @@ func (x *Measurement) GetColumns() []*Column {
 	return nil
 }
 
+//*
+// Represents a data record.
 type Column struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

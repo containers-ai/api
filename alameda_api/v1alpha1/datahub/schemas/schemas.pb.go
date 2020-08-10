@@ -27,6 +27,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents the private datahub specific schema of data.
 type Schema struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

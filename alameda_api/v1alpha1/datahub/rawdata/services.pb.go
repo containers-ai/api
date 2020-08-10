@@ -29,7 +29,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// Represents a request for reading rawdata from database
+//*
+// Represents a request for reading rawdata from database.
 type ReadRawdataRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -85,7 +86,8 @@ func (x *ReadRawdataRequest) GetQueries() []*common.Query {
 	return nil
 }
 
-// Represents a response for listing rawdata from database
+//*
+// Represents a response for listing rawdata from database.
 type ReadRawdataResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -141,7 +143,8 @@ func (x *ReadRawdataResponse) GetRawdata() []*common.ReadRawdata {
 	return nil
 }
 
-// Represents a request for writing rawdata to database
+//*
+// Represents a request for writing rawdata to database.
 type WriteRawdataRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

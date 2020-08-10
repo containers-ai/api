@@ -31,7 +31,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// Represents a request for creating a pod's recommendation
+//*
+// Represents a request for creating pods' recommendation.
 type CreatePodRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -87,7 +88,8 @@ func (x *CreatePodRecommendationsRequest) GetGranularity() int64 {
 	return 0
 }
 
-// Represents a request for creating a controller's recommendation
+//*
+// Represents a request for creating controllers' recommendation.
 type CreateControllerRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -135,6 +137,8 @@ func (x *CreateControllerRecommendationsRequest) GetControllerRecommendations() 
 	return nil
 }
 
+//*
+// Represents a request for creating alameda scalers' recommendation.
 type CreateApplicationRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -182,6 +186,8 @@ func (x *CreateApplicationRecommendationsRequest) GetApplicationRecommendations(
 	return nil
 }
 
+//*
+// Represents a request for creating namespaces' recommendation.
 type CreateNamespaceRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -229,6 +235,8 @@ func (x *CreateNamespaceRecommendationsRequest) GetNamespaceRecommendations() []
 	return nil
 }
 
+//*
+// Represents a request for creating nodes' recommendation.
 type CreateNodeRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -276,6 +284,8 @@ func (x *CreateNodeRecommendationsRequest) GetNodeRecommendations() []*NodeRecom
 	return nil
 }
 
+//*
+// Represents a request for creating clusters' recommendation.
 type CreateClusterRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -323,7 +333,8 @@ func (x *CreateClusterRecommendationsRequest) GetClusterRecommendations() []*Clu
 	return nil
 }
 
-// Represents a request for listing recommendations of pods
+//*
+// Represents a request for listing recommendations of pods.
 type ListPodRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -395,7 +406,8 @@ func (x *ListPodRecommendationsRequest) GetGranularity() int64 {
 	return 0
 }
 
-// Represents a response for listing pod recommendations request
+//*
+// Represents a response for listing pods recommendations request.
 type ListPodRecommendationsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -451,7 +463,8 @@ func (x *ListPodRecommendationsResponse) GetPodRecommendations() []*PodRecommend
 	return nil
 }
 
-// Represents a request for listing recommendations of controllers
+//*
+// Represents a request for listing recommendations of controllers.
 type ListControllerRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -523,7 +536,8 @@ func (x *ListControllerRecommendationsRequest) GetRecommendedType() ControllerRe
 	return ControllerRecommendedType_CRT_UNDEFINED
 }
 
-// Represents a response for listing controller recommendations request
+//*
+// Represents a response for listing controllers recommendations request.
 type ListControllerRecommendationsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -579,6 +593,8 @@ func (x *ListControllerRecommendationsResponse) GetControllerRecommendations() [
 	return nil
 }
 
+//*
+// Represents a request for listing recommendations of alameda scalers.
 type ListApplicationRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -650,6 +666,8 @@ func (x *ListApplicationRecommendationsRequest) GetRecommendedType() ControllerR
 	return ControllerRecommendedType_CRT_UNDEFINED
 }
 
+//*
+// Represents a response for listing alameda scalers recommendations request.
 type ListApplicationRecommendationsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -705,6 +723,8 @@ func (x *ListApplicationRecommendationsResponse) GetApplicationRecommendations()
 	return nil
 }
 
+//*
+// Represents a request for listing recommendations of namespaces.
 type ListNamespaceRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -776,6 +796,8 @@ func (x *ListNamespaceRecommendationsRequest) GetRecommendedType() ControllerRec
 	return ControllerRecommendedType_CRT_UNDEFINED
 }
 
+//*
+// Represents a response for listing namespaces recommendations request.
 type ListNamespaceRecommendationsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -831,6 +853,8 @@ func (x *ListNamespaceRecommendationsResponse) GetNamespaceRecommendations() []*
 	return nil
 }
 
+//*
+// Represents a request for listing recommendations of nodes.
 type ListNodeRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -902,6 +926,8 @@ func (x *ListNodeRecommendationsRequest) GetRecommendedType() ControllerRecommen
 	return ControllerRecommendedType_CRT_UNDEFINED
 }
 
+//*
+// Represents a response for listing nodes recommendations request.
 type ListNodeRecommendationsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -957,6 +983,8 @@ func (x *ListNodeRecommendationsResponse) GetNodeRecommendations() []*NodeRecomm
 	return nil
 }
 
+//*
+// Represents a request for listing recommendations of clusters.
 type ListClusterRecommendationsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1028,6 +1056,8 @@ func (x *ListClusterRecommendationsRequest) GetRecommendedType() ControllerRecom
 	return ControllerRecommendedType_CRT_UNDEFINED
 }
 
+//*
+// Represents a response for listing clusters recommendations request.
 type ListClusterRecommendationsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

@@ -29,6 +29,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+//*
+// Represents a request for writing data to datahub.
 type WriteDataRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -84,6 +86,8 @@ func (x *WriteDataRequest) GetWriteData() []*WriteData {
 	return nil
 }
 
+//*
+// Represents a request for reading data from datahub.
 type ReadDataRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -139,6 +143,8 @@ func (x *ReadDataRequest) GetReadData() []*ReadData {
 	return nil
 }
 
+//*
+// Represents a response for a reading data request.
 type ReadDataResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -194,6 +200,8 @@ func (x *ReadDataResponse) GetData() *Data {
 	return nil
 }
 
+//*
+// Represents a request for deleting data in datahub.
 type DeleteDataRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -249,6 +257,8 @@ func (x *DeleteDataRequest) GetDeleteData() []*DeleteData {
 	return nil
 }
 
+//*
+// Represents a request for writing data(none time-series) to datahub.
 type WriteMetaRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

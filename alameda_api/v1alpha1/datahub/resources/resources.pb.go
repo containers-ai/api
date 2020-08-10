@@ -28,7 +28,8 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// Represents a container and its containing limit and requeset configurations
+//*
+// Represents a container and its containing limit and requeset configurations.
 type Container struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -92,7 +93,8 @@ func (x *Container) GetStatus() *ContainerStatus {
 	return nil
 }
 
-// Represents a Kubernetes pod
+//*
+// Represents a Kubernetes pod.
 type Pod struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -204,6 +206,8 @@ func (x *Pod) GetContainers() []*Container {
 	return nil
 }
 
+//*
+// Represents a Kubernetes namespace.
 type Controller struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -283,6 +287,8 @@ func (x *Controller) GetAlamedaControllerSpec() *AlamedaControllerSpec {
 	return nil
 }
 
+//*
+// Represents a alameda scaler.
 type Application struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -346,6 +352,8 @@ func (x *Application) GetControllers() []*Controller {
 	return nil
 }
 
+//*
+// Represents a Kubernetes namespace.
 type Namespace struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -393,7 +401,8 @@ func (x *Namespace) GetObjectMeta() *ObjectMeta {
 	return nil
 }
 
-// Represents a Kubernetes node
+//*
+// Represents a Kubernetes node.
 type Node struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -473,6 +482,8 @@ func (x *Node) GetAlamedaNodeSpec() *AlamedaNodeSpec {
 	return nil
 }
 
+//*
+// Represents a Kubernetes cluster.
 type Cluster struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

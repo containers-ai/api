@@ -1609,8 +1609,7 @@ function deserialize_google_rpc_Status(buffer_arg) {
 
 // Service for providing data stored in the backend
 var DatahubServiceService = exports.DatahubServiceService = {
-  // Applications --------------------------------------------------
-createApps: {
+  createApps: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateApps',
     requestStream: false,
     responseStream: false,
@@ -1643,7 +1642,7 @@ createApps: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  // Data --------------------------------------------------
+  // Used to read data based on alameda specific schemas
 readData: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ReadData',
     requestStream: false,
@@ -1655,7 +1654,8 @@ readData: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_data_ReadDataResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_data_ReadDataResponse,
   },
-  writeData: {
+  // Used to write data based on alameda specific schemas
+writeData: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/WriteData',
     requestStream: false,
     responseStream: false,
@@ -1666,7 +1666,8 @@ readData: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  deleteData: {
+  // Used to delete data based on alameda specific schemas
+deleteData: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/DeleteData',
     requestStream: false,
     responseStream: false,
@@ -1677,7 +1678,8 @@ readData: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  writeMeta: {
+  // Used to write metadata based on alameda specific schemas
+writeMeta: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/WriteMeta',
     requestStream: false,
     responseStream: false,
@@ -1688,7 +1690,7 @@ readData: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  // Events --------------------------------------------------
+  // Used to create alameda specific events
 createEvents: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateEvents',
     requestStream: false,
@@ -1700,7 +1702,8 @@ createEvents: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  listEvents: {
+  // Used to list alameda specific events
+listEvents: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListEvents',
     requestStream: false,
     responseStream: false,
@@ -1711,7 +1714,7 @@ createEvents: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_events_ListEventsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_events_ListEventsResponse,
   },
-  // GPU --------------------------------------------------
+  // Used to create GPU predictions
 createGpuPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateGpuPredictions',
     requestStream: false,
@@ -1723,7 +1726,8 @@ createGpuPredictions: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  listGpus: {
+  // Used to list GPU need to be predicted
+listGpus: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListGpus',
     requestStream: false,
     responseStream: false,
@@ -1734,7 +1738,8 @@ createGpuPredictions: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_gpu_ListGpusResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_gpu_ListGpusResponse,
   },
-  listGpuMetrics: {
+  // Used to list GPU metrics data
+listGpuMetrics: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListGpuMetrics',
     requestStream: false,
     responseStream: false,
@@ -1745,7 +1750,8 @@ createGpuPredictions: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_gpu_ListGpuMetricsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_gpu_ListGpuMetricsResponse,
   },
-  listGpuPredictions: {
+  // Used to list GPU predictions
+listGpuPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListGpuPredictions',
     requestStream: false,
     responseStream: false,
@@ -1756,7 +1762,7 @@ createGpuPredictions: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_gpu_ListGpuPredictionsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_gpu_ListGpuPredictionsResponse,
   },
-  // Licenses --------------------------------------------------
+  // Used to get datahub license information
 getLicense: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/GetLicense',
     requestStream: false,
@@ -1768,8 +1774,7 @@ getLicense: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_licenses_GetLicenseResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_licenses_GetLicenseResponse,
   },
-  // Metrics --------------------------------------------------
-createMetrics: {
+  createMetrics: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateMetrics',
     requestStream: false,
     responseStream: false,
@@ -1857,7 +1862,8 @@ createMetrics: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_metrics_ListMetricsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_metrics_ListMetricsResponse,
   },
-  listPodMetrics: {
+  // Used to list pod metric data
+listPodMetrics: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListPodMetrics',
     requestStream: false,
     responseStream: false,
@@ -1868,7 +1874,8 @@ createMetrics: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_metrics_ListPodMetricsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_metrics_ListPodMetricsResponse,
   },
-  listControllerMetrics: {
+  // Used to list controller metric data
+listControllerMetrics: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListControllerMetrics',
     requestStream: false,
     responseStream: false,
@@ -1879,7 +1886,8 @@ createMetrics: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_metrics_ListControllerMetricsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_metrics_ListControllerMetricsResponse,
   },
-  listApplicationMetrics: {
+  // Used to list alameda scaler metric data
+listApplicationMetrics: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListApplicationMetrics',
     requestStream: false,
     responseStream: false,
@@ -1890,7 +1898,8 @@ createMetrics: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_metrics_ListApplicationMetricsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_metrics_ListApplicationMetricsResponse,
   },
-  listNamespaceMetrics: {
+  // Used to list namespace metric data
+listNamespaceMetrics: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListNamespaceMetrics',
     requestStream: false,
     responseStream: false,
@@ -1901,7 +1910,8 @@ createMetrics: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_metrics_ListNamespaceMetricsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_metrics_ListNamespaceMetricsResponse,
   },
-  listNodeMetrics: {
+  // Used to list node metric data
+listNodeMetrics: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListNodeMetrics',
     requestStream: false,
     responseStream: false,
@@ -1912,7 +1922,8 @@ createMetrics: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_metrics_ListNodeMetricsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_metrics_ListNodeMetricsResponse,
   },
-  listClusterMetrics: {
+  // Used to list cluster metric data
+listClusterMetrics: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListClusterMetrics',
     requestStream: false,
     responseStream: false,
@@ -1923,7 +1934,7 @@ createMetrics: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_metrics_ListClusterMetricsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_metrics_ListClusterMetricsResponse,
   },
-  // Ping --------------------------------------------------
+  // Used to check if datahub is still alive
 ping: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/Ping',
     requestStream: false,
@@ -1935,8 +1946,7 @@ ping: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  // Plannings --------------------------------------------------
-createPlannings: {
+  createPlannings: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreatePlannings',
     requestStream: false,
     responseStream: false,
@@ -2090,8 +2100,7 @@ createPlannings: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_plannings_ListClusterPlanningsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_plannings_ListClusterPlanningsResponse,
   },
-  // Predictions --------------------------------------------------
-createPredictions: {
+  createPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreatePredictions',
     requestStream: false,
     responseStream: false,
@@ -2102,7 +2111,8 @@ createPredictions: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createPodPredictions: {
+  // Used to create predictions of pods
+createPodPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreatePodPredictions',
     requestStream: false,
     responseStream: false,
@@ -2113,7 +2123,8 @@ createPredictions: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createControllerPredictions: {
+  // Used to create predictions of controllers
+createControllerPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateControllerPredictions',
     requestStream: false,
     responseStream: false,
@@ -2124,7 +2135,8 @@ createPredictions: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createApplicationPredictions: {
+  // Used to create predictions of alameda scalers
+createApplicationPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateApplicationPredictions',
     requestStream: false,
     responseStream: false,
@@ -2135,7 +2147,8 @@ createPredictions: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createNamespacePredictions: {
+  // Used to create predictions of namespaces
+createNamespacePredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateNamespacePredictions',
     requestStream: false,
     responseStream: false,
@@ -2146,7 +2159,8 @@ createPredictions: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createNodePredictions: {
+  // Used to create predictions of nodes
+createNodePredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateNodePredictions',
     requestStream: false,
     responseStream: false,
@@ -2157,7 +2171,8 @@ createPredictions: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createClusterPredictions: {
+  // Used to create predictions of clusters
+createClusterPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateClusterPredictions',
     requestStream: false,
     responseStream: false,
@@ -2179,7 +2194,8 @@ createPredictions: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_predictions_ListPredictionsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_predictions_ListPredictionsResponse,
   },
-  listPodPredictions: {
+  // Used to list pod predictions
+listPodPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListPodPredictions',
     requestStream: false,
     responseStream: false,
@@ -2190,7 +2206,8 @@ createPredictions: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_predictions_ListPodPredictionsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_predictions_ListPodPredictionsResponse,
   },
-  listControllerPredictions: {
+  // Used to list controller predictions
+listControllerPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListControllerPredictions',
     requestStream: false,
     responseStream: false,
@@ -2201,7 +2218,8 @@ createPredictions: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_predictions_ListControllerPredictionsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_predictions_ListControllerPredictionsResponse,
   },
-  listApplicationPredictions: {
+  // Used to list alameda scaler predictions
+listApplicationPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListApplicationPredictions',
     requestStream: false,
     responseStream: false,
@@ -2212,7 +2230,8 @@ createPredictions: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_predictions_ListApplicationPredictionsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_predictions_ListApplicationPredictionsResponse,
   },
-  listNamespacePredictions: {
+  // Used to list namespace predictions
+listNamespacePredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListNamespacePredictions',
     requestStream: false,
     responseStream: false,
@@ -2223,7 +2242,8 @@ createPredictions: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_predictions_ListNamespacePredictionsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_predictions_ListNamespacePredictionsResponse,
   },
-  listNodePredictions: {
+  // Used to list node predictions
+listNodePredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListNodePredictions',
     requestStream: false,
     responseStream: false,
@@ -2234,7 +2254,8 @@ createPredictions: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_predictions_ListNodePredictionsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_predictions_ListNodePredictionsResponse,
   },
-  listClusterPredictions: {
+  // Used to list cluster predictions
+listClusterPredictions: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListClusterPredictions',
     requestStream: false,
     responseStream: false,
@@ -2245,8 +2266,7 @@ createPredictions: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_predictions_ListClusterPredictionsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_predictions_ListClusterPredictionsResponse,
   },
-  // Rawdata --------------------------------------------------
-readRawdata: {
+  readRawdata: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ReadRawdata',
     requestStream: false,
     responseStream: false,
@@ -2268,8 +2288,7 @@ readRawdata: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  // Recommendations --------------------------------------------------
-createRecommendations: {
+  createRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2280,7 +2299,8 @@ createRecommendations: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createPodRecommendations: {
+  // Used to create recommendations of pods
+createPodRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreatePodRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2291,7 +2311,8 @@ createRecommendations: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createControllerRecommendations: {
+  // Used to create recommendations of controllers
+createControllerRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateControllerRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2302,7 +2323,8 @@ createRecommendations: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createApplicationRecommendations: {
+  // Used to create recommendations of alameda scalers
+createApplicationRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateApplicationRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2313,7 +2335,8 @@ createRecommendations: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createNamespaceRecommendations: {
+  // Used to create recommendations of namespaces
+createNamespaceRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateNamespaceRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2324,7 +2347,8 @@ createRecommendations: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createNodeRecommendations: {
+  // Used to create recommendations of nodes
+createNodeRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateNodeRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2335,7 +2359,8 @@ createRecommendations: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createClusterRecommendations: {
+  // Used to create recommendations of clusters
+createClusterRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateClusterRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2357,7 +2382,8 @@ createRecommendations: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_recommendations_ListRecommendationsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_recommendations_ListRecommendationsResponse,
   },
-  listPodRecommendations: {
+  // Used to list pod recommenations
+listPodRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListPodRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2368,7 +2394,8 @@ createRecommendations: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_recommendations_ListPodRecommendationsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_recommendations_ListPodRecommendationsResponse,
   },
-  listAvailablePodRecommendations: {
+  // Used to list available pod recommenations
+listAvailablePodRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListAvailablePodRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2379,7 +2406,8 @@ createRecommendations: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_recommendations_ListPodRecommendationsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_recommendations_ListPodRecommendationsResponse,
   },
-  listControllerRecommendations: {
+  // Used to list controller recommenations
+listControllerRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListControllerRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2390,7 +2418,8 @@ createRecommendations: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_recommendations_ListControllerRecommendationsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_recommendations_ListControllerRecommendationsResponse,
   },
-  listApplicationRecommendations: {
+  // Used to list alameda scaler recommenations
+listApplicationRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListApplicationRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2401,7 +2430,8 @@ createRecommendations: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_recommendations_ListApplicationRecommendationsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_recommendations_ListApplicationRecommendationsResponse,
   },
-  listNamespaceRecommendations: {
+  // Used to list namespace recommenations
+listNamespaceRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListNamespaceRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2412,7 +2442,8 @@ createRecommendations: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_recommendations_ListNamespaceRecommendationsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_recommendations_ListNamespaceRecommendationsResponse,
   },
-  listNodeRecommendations: {
+  // Used to list node recommenations
+listNodeRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListNodeRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2423,7 +2454,8 @@ createRecommendations: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_recommendations_ListNodeRecommendationsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_recommendations_ListNodeRecommendationsResponse,
   },
-  listClusterRecommendations: {
+  // Used to list cluster recommenations
+listClusterRecommendations: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListClusterRecommendations',
     requestStream: false,
     responseStream: false,
@@ -2434,8 +2466,7 @@ createRecommendations: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_recommendations_ListClusterRecommendationsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_recommendations_ListClusterRecommendationsResponse,
   },
-  // Resources --------------------------------------------------
-// Used to add pods that need to be predicted
+  // Used to add pods that need to be predicted
 createPods: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreatePods',
     requestStream: false,
@@ -2447,7 +2478,8 @@ createPods: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createControllers: {
+  // Used to add controllers that need to be predicted
+createControllers: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateControllers',
     requestStream: false,
     responseStream: false,
@@ -2458,7 +2490,8 @@ createPods: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createApplications: {
+  // Used to add alameda scalers that need to be predicted
+createApplications: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateApplications',
     requestStream: false,
     responseStream: false,
@@ -2469,7 +2502,8 @@ createPods: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createNamespaces: {
+  // Used to add namespaces that need to be predicted
+createNamespaces: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateNamespaces',
     requestStream: false,
     responseStream: false,
@@ -2492,7 +2526,8 @@ createNodes: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  createClusters: {
+  // Used to add clusters that need to be predicted
+createClusters: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateClusters',
     requestStream: false,
     responseStream: false,
@@ -2515,7 +2550,8 @@ listPods: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_resources_ListPodsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_resources_ListPodsResponse,
   },
-  listControllers: {
+  // Used to list contollers need to be predicted
+listControllers: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListControllers',
     requestStream: false,
     responseStream: false,
@@ -2526,7 +2562,7 @@ listPods: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_resources_ListControllersResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_resources_ListControllersResponse,
   },
-  // Application
+  // Used to list alameda scalers need to be predicted
 listApplications: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListApplications',
     requestStream: false,
@@ -2538,7 +2574,7 @@ listApplications: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_resources_ListApplicationsResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_resources_ListApplicationsResponse,
   },
-  // Namespace
+  // Used to list namespaces need to be predicted
 listNamespaces: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListNamespaces',
     requestStream: false,
@@ -2562,7 +2598,7 @@ listNodes: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_resources_ListNodesResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_resources_ListNodesResponse,
   },
-  // Cluster
+  // Used to list clusters' information
 listClusters: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListClusters',
     requestStream: false,
@@ -2574,7 +2610,7 @@ listClusters: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_resources_ListClustersResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_resources_ListClustersResponse,
   },
-  // Used to delete info of pods
+  // Used to stop generating predictions for the pods
 deletePods: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/DeletePods',
     requestStream: false,
@@ -2586,7 +2622,8 @@ deletePods: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  deleteControllers: {
+  // Used to stop generating predictions for the controllers
+deleteControllers: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/DeleteControllers',
     requestStream: false,
     responseStream: false,
@@ -2597,7 +2634,8 @@ deletePods: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  deleteApplications: {
+  // Used to stop generating predictions for the applications
+deleteApplications: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/DeleteApplications',
     requestStream: false,
     responseStream: false,
@@ -2608,7 +2646,8 @@ deletePods: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  deleteNamespaces: {
+  // Used to stop generating predictions for the namespaces
+deleteNamespaces: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/DeleteNamespaces',
     requestStream: false,
     responseStream: false,
@@ -2631,7 +2670,8 @@ deleteNodes: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  deleteClusters: {
+  // Used to stop generating predictions for the clusters
+deleteClusters: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/DeleteClusters',
     requestStream: false,
     responseStream: false,
@@ -2642,8 +2682,7 @@ deleteNodes: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  // Schemas --------------------------------------------------
-createSchemas: {
+  createSchemas: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateSchemas',
     requestStream: false,
     responseStream: false,
@@ -2676,8 +2715,7 @@ createSchemas: {
     responseSerialize: serialize_google_rpc_Status,
     responseDeserialize: deserialize_google_rpc_Status,
   },
-  // Scores --------------------------------------------------
-createSimulatedSchedulingScores: {
+  createSimulatedSchedulingScores: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/CreateSimulatedSchedulingScores',
     requestStream: false,
     responseStream: false,
@@ -2700,8 +2738,7 @@ listSimulatedSchedulingScores: {
     responseSerialize: serialize_containersai_alameda_v1alpha1_datahub_scores_ListSimulatedSchedulingScoresResponse,
     responseDeserialize: deserialize_containersai_alameda_v1alpha1_datahub_scores_ListSimulatedSchedulingScoresResponse,
   },
-  // weave scope --------------------------------------------------
-listWeaveScopeHosts: {
+  listWeaveScopeHosts: {
     path: '/containersai.alameda.v1alpha1.datahub.DatahubService/ListWeaveScopeHosts',
     requestStream: false,
     responseStream: false,
