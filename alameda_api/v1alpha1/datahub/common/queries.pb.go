@@ -79,8 +79,7 @@ func (QueryCondition_Order) EnumDescriptor() ([]byte, []int) {
 }
 
 //*
-// Represents a time range definition
-//
+// Represents a time range definition.
 type TimeRange struct {
 	StartTime            *timestamp.Timestamp        `protobuf:"bytes,1,opt,name=start_time,json=startTime,proto3" json:"start_time,omitempty"`
 	EndTime              *timestamp.Timestamp        `protobuf:"bytes,2,opt,name=end_time,json=endTime,proto3" json:"end_time,omitempty"`
@@ -152,6 +151,8 @@ func (m *TimeRange) GetApplyTime() *timestamp.Timestamp {
 	return nil
 }
 
+//*
+// Represents a query condition.
 type Condition struct {
 	Keys                 []string   `protobuf:"bytes,1,rep,name=keys,proto3" json:"keys,omitempty"`
 	Values               []string   `protobuf:"bytes,2,rep,name=values,proto3" json:"values,omitempty"`
@@ -215,6 +216,8 @@ func (m *Condition) GetTypes() []DataType {
 	return nil
 }
 
+//*
+// Represents a datahub functional query, includes aggregation, selector and transformation.
 type Function struct {
 	Type                 FunctionType `protobuf:"varint,1,opt,name=type,proto3,enum=containersai.alameda.v1alpha1.datahub.common.FunctionType" json:"type,omitempty"`
 	Fields               []string     `protobuf:"bytes,2,rep,name=fields,proto3" json:"fields,omitempty"`
@@ -302,6 +305,8 @@ func (m *Function) GetNumber() int64 {
 	return 0
 }
 
+//*
+// Represents a query to a user-specified measurement.
 type Into struct {
 	Database                 string   `protobuf:"bytes,1,opt,name=database,proto3" json:"database,omitempty"`
 	RetentionPolicy          string   `protobuf:"bytes,2,opt,name=retention_policy,json=retentionPolicy,proto3" json:"retention_policy,omitempty"`
@@ -373,6 +378,8 @@ func (m *Into) GetIsAllMeasurements() bool {
 	return false
 }
 
+//*
+// Represents a datahub query request.
 type QueryCondition struct {
 	TimeRange            *TimeRange           `protobuf:"bytes,1,opt,name=time_range,json=timeRange,proto3" json:"time_range,omitempty"`
 	Order                QueryCondition_Order `protobuf:"varint,2,opt,name=order,proto3,enum=containersai.alameda.v1alpha1.datahub.common.QueryCondition_Order" json:"order,omitempty"`

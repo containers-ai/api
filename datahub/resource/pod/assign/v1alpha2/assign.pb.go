@@ -21,7 +21,7 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 //*
-// Represents the priority of a node
+// Represents the priority of a node.
 type NodePriority struct {
 	Nodes                []string `protobuf:"bytes,1,rep,name=nodes,proto3" json:"nodes,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -61,6 +61,8 @@ func (m *NodePriority) GetNodes() []string {
 	return nil
 }
 
+//*
+// Represents a Kubernetes label selector.
 type Selector struct {
 	Selector             map[string]string `protobuf:"bytes,1,rep,name=selector,proto3" json:"selector,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	XXX_NoUnkeyedLiteral struct{}          `json:"-"`

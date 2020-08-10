@@ -6,12 +6,15 @@ package containersai.datahub.resource.pod.assign.v1alpha2;
 option go_package = "github.com/containers-ai/api/datahub/resource/pod/assign/v1alpha2";
 
 /**
- * Represents the priority of a node
+ * Represents the priority of a node.
  */
 message NodePriority {
     repeated string nodes = 1;
 }
 
+/**
+ * Represents a Kubernetes label selector.
+ */
 message Selector {
     map<string, string> selector = 1;
 }
