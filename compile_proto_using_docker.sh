@@ -9,11 +9,13 @@ generate_dockerfiles(){
     cat > $ALAMEA_GRPC_GO_IMAGE_DOCKERFILE - <<EOF
 FROM golang:stretch
 ARG DOCKERFILE_MD5
-ENV DOCKERFILE_MD5=\$DOCKERFILE_MD5 PROTOC_VER=4.0.0 OS_ARC=linux-x86_64 PROTOC_GEN_GO_VER=v1.4.2 PROTOC_GEN_DOC_VER=v1.3.2 API_COMMON_PROTOS_VER=1.50.0
+ENV DOCKERFILE_MD5=\$DOCKERFILE_MD5 PROTOC_VER=4.0.0 OS_ARC=linux-x86_64 PROTOC_GEN_GO_VER=v1.4.2 PROTOC_GEN_DOC_VER=v1.3.2 API_COMMON_PROTOS_VER=1.50.0 PROTOC_GEN_WEB_VER=1.2.1
 COPY setup.py .
 RUN apt-get update && apt-get install unzip python3 python3-pip -y && \\
 curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v\$PROTOC_VER-rc2/protoc-\$PROTOC_VER-rc-2-\$OS_ARC.zip && \\
 unzip protoc-\$PROTOC_VER-rc-2-\$OS_ARC.zip -d /usr/local && rm protoc-\$PROTOC_VER-rc-2-\$OS_ARC.zip && \\
+curl -LO https://github.com/grpc/grpc-web/releases/download/\$PROTOC_GEN_WEB_VER/protoc-gen-grpc-web-\$PROTOC_GEN_WEB_VER-linux-x86_64 && \\
+mv protoc-gen-grpc-web-\$PROTOC_GEN_WEB_VER-linux-x86_64 /usr/local/bin/protoc-gen-grpc-web && chmod +x /usr/local/bin/protoc-gen-grpc-web && \\
 go get -d -u github.com/golang/protobuf/protoc-gen-go && \\
 git -C "\$(go env GOPATH)"/src/github.com/golang/protobuf checkout \$PROTOC_GEN_GO_VER && \\
 go install github.com/golang/protobuf/protoc-gen-go && \\
@@ -50,7 +52,7 @@ compile_grpc(){
     echo "Remove generated files."
     rm -f `find .| grep -E '\.go$|\.py$|\.js$|\.html$' | grep -v setup.py`
     echo "Start compiling proto files."
-    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "for pt in \$(find . | grep \\\.proto\$);do protoc -I . -I /usr/local/include \$pt --go_out=paths=source_relative,plugins=grpc:. --js_out=import_style=commonjs,binary:.; python3 -m grpc_tools.protoc -I . -I /usr/local/include --python_out=./ --grpc_python_out=./ \$pt; done"
+    docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "for pt in \$(find . | grep \\\.proto\$);do protoc -I . -I /usr/local/include \$pt --go_out=paths=source_relative,plugins=grpc:. --js_out=import_style=commonjs,binary:. --grpc-web_out=import_style=commonjs,mode=grpcwebtext:.; python3 -m grpc_tools.protoc -I . -I /usr/local/include --python_out=./ --grpc_python_out=./ \$pt; done"
     docker run --rm -v $(pwd):$(pwd) -w $(pwd) $ALAMEA_GRPC_GO_IMAGE bash -c "protoc -I . -I /usr/local/include --doc_out=./alameda_api/v1alpha1/doc/ --doc_opt=html,federatorai-api.html $(find . | grep \\\.proto\$ | tr '\n' ' ');"
     echo "Finish compiling proto files."
 }
