@@ -4,7 +4,7 @@ This repository defines interfaces for Alameda to access data sources and store 
 
 ## How to compile
 
-We provide two ways to compile proto files: [within docker environment](#compile-within-docker-environment) and [without docker environment](#compile-without-docker-environment).
+We provide one method to compile proto files: [within docker environment](#compile-within-docker-environment).
 
 ### Compile within docker environment
 
