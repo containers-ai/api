@@ -3283,6 +3283,7 @@ Represents a datahub query request.
 | selects | [string](#string) | repeated |  |
 | groups | [string](#string) | repeated |  |
 | limit | [uint64](#uint64) |  |  |
+| sub_query | [QueryCondition](#containersai.alameda.v1alpha1.datahub.common.QueryCondition) |  |  |
 
 
 
