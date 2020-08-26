@@ -5599,6 +5599,7 @@ Represents a response for listing pod plannings request
 | object_meta | [containersai.alameda.v1alpha1.datahub.resources.ObjectMeta](#containersai.alameda.v1alpha1.datahub.resources.ObjectMeta) |  |  |
 | planning_type | [PlanningType](#containersai.alameda.v1alpha1.datahub.plannings.PlanningType) |  |  |
 | planning_id | [string](#string) |  |  |
+| prediction_id | [string](#string) |  |  |
 | total_cost | [double](#double) |  |  |
 | apply_planning_now | [bool](#bool) |  |  |
 | start_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
@@ -5621,6 +5622,7 @@ Represents a response for listing pod plannings request
 | object_meta | [containersai.alameda.v1alpha1.datahub.resources.ObjectMeta](#containersai.alameda.v1alpha1.datahub.resources.ObjectMeta) |  |  |
 | planning_type | [PlanningType](#containersai.alameda.v1alpha1.datahub.plannings.PlanningType) |  |  |
 | planning_id | [string](#string) |  |  |
+| prediction_id | [string](#string) |  |  |
 | total_cost | [double](#double) |  |  |
 | apply_planning_now | [bool](#bool) |  |  |
 | start_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
@@ -5663,6 +5665,7 @@ Represents a response for listing pod plannings request
 | kind | [containersai.alameda.v1alpha1.datahub.resources.Kind](#containersai.alameda.v1alpha1.datahub.resources.Kind) |  |  |
 | planning_type | [PlanningType](#containersai.alameda.v1alpha1.datahub.plannings.PlanningType) |  |  |
 | planning_id | [string](#string) |  |  |
+| prediction_id | [string](#string) |  |  |
 | total_cost | [double](#double) |  |  |
 | apply_planning_now | [bool](#bool) |  |  |
 | start_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
@@ -5685,6 +5688,7 @@ Represents a response for listing pod plannings request
 | object_meta | [containersai.alameda.v1alpha1.datahub.resources.ObjectMeta](#containersai.alameda.v1alpha1.datahub.resources.ObjectMeta) |  |  |
 | planning_type | [PlanningType](#containersai.alameda.v1alpha1.datahub.plannings.PlanningType) |  |  |
 | planning_id | [string](#string) |  |  |
+| prediction_id | [string](#string) |  |  |
 | total_cost | [double](#double) |  |  |
 | apply_planning_now | [bool](#bool) |  |  |
 | start_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
@@ -5707,6 +5711,7 @@ Represents a response for listing pod plannings request
 | object_meta | [containersai.alameda.v1alpha1.datahub.resources.ObjectMeta](#containersai.alameda.v1alpha1.datahub.resources.ObjectMeta) |  |  |
 | planning_type | [PlanningType](#containersai.alameda.v1alpha1.datahub.plannings.PlanningType) |  |  |
 | planning_id | [string](#string) |  |  |
+| prediction_id | [string](#string) |  |  |
 | total_cost | [double](#double) |  |  |
 | apply_planning_now | [bool](#bool) |  |  |
 | start_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
@@ -5747,6 +5752,7 @@ Represents a response for listing pod plannings request
 | object_meta | [containersai.alameda.v1alpha1.datahub.resources.ObjectMeta](#containersai.alameda.v1alpha1.datahub.resources.ObjectMeta) |  |  |
 | planning_type | [PlanningType](#containersai.alameda.v1alpha1.datahub.plannings.PlanningType) |  |  |
 | planning_id | [string](#string) |  |  |
+| prediction_id | [string](#string) |  |  |
 | total_cost | [double](#double) |  |  |
 | apply_planning_now | [bool](#bool) |  |  |
 | start_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
