@@ -314,6 +314,24 @@
     - [Node](#containersai.alameda.v1alpha1.datahub.resources.Node)
     - [Pod](#containersai.alameda.v1alpha1.datahub.resources.Pod)
   
+- [alameda_api/v1alpha1/datahub/keycodes/services.proto](#alameda_api/v1alpha1/datahub/keycodes/services.proto)
+    - [ActivateRegistrationDataRequest](#containersai.alameda.v1alpha1.datahub.keycodes.ActivateRegistrationDataRequest)
+    - [AddKeycodeRequest](#containersai.alameda.v1alpha1.datahub.keycodes.AddKeycodeRequest)
+    - [AddKeycodeResponse](#containersai.alameda.v1alpha1.datahub.keycodes.AddKeycodeResponse)
+    - [DeleteKeycodeRequest](#containersai.alameda.v1alpha1.datahub.keycodes.DeleteKeycodeRequest)
+    - [GenerateRegistrationDataResponse](#containersai.alameda.v1alpha1.datahub.keycodes.GenerateRegistrationDataResponse)
+    - [ListKeycodesRequest](#containersai.alameda.v1alpha1.datahub.keycodes.ListKeycodesRequest)
+    - [ListKeycodesResponse](#containersai.alameda.v1alpha1.datahub.keycodes.ListKeycodesResponse)
+  
+- [alameda_api/v1alpha1/datahub/keycodes/keycodes.proto](#alameda_api/v1alpha1/datahub/keycodes/keycodes.proto)
+    - [Keycode](#containersai.alameda.v1alpha1.datahub.keycodes.Keycode)
+  
+- [alameda_api/v1alpha1/datahub/keycodes/types.proto](#alameda_api/v1alpha1/datahub/keycodes/types.proto)
+    - [Capacity](#containersai.alameda.v1alpha1.datahub.keycodes.Capacity)
+    - [Functionality](#containersai.alameda.v1alpha1.datahub.keycodes.Functionality)
+    - [Retention](#containersai.alameda.v1alpha1.datahub.keycodes.Retention)
+    - [ServiceAgreement](#containersai.alameda.v1alpha1.datahub.keycodes.ServiceAgreement)
+  
 - [alameda_api/v1alpha1/datahub/server.proto](#alameda_api/v1alpha1/datahub/server.proto)
     - [DatahubService](#containersai.alameda.v1alpha1.datahub.DatahubService)
   
@@ -478,24 +496,6 @@
     - [NodePrediction](#containersai.datahub.prediction.v1alpha2.NodePrediction)
     - [NodePrediction.PredictedRawDataEntry](#containersai.datahub.prediction.v1alpha2.NodePrediction.PredictedRawDataEntry)
     - [PodPrediction](#containersai.datahub.prediction.v1alpha2.PodPrediction)
-  
-- [datahub/keycodes/services.proto](#datahub/keycodes/services.proto)
-    - [ActivateRegistrationDataRequest](#containersai.datahub.keycodes.ActivateRegistrationDataRequest)
-    - [AddKeycodeRequest](#containersai.datahub.keycodes.AddKeycodeRequest)
-    - [AddKeycodeResponse](#containersai.datahub.keycodes.AddKeycodeResponse)
-    - [DeleteKeycodeRequest](#containersai.datahub.keycodes.DeleteKeycodeRequest)
-    - [GenerateRegistrationDataResponse](#containersai.datahub.keycodes.GenerateRegistrationDataResponse)
-    - [ListKeycodesRequest](#containersai.datahub.keycodes.ListKeycodesRequest)
-    - [ListKeycodesResponse](#containersai.datahub.keycodes.ListKeycodesResponse)
-  
-    - [KeycodesService](#containersai.datahub.keycodes.KeycodesService)
-  
-- [datahub/keycodes/keycodes.proto](#datahub/keycodes/keycodes.proto)
-    - [Capacity](#containersai.datahub.keycodes.Capacity)
-    - [Functionality](#containersai.datahub.keycodes.Functionality)
-    - [Keycode](#containersai.datahub.keycodes.Keycode)
-    - [Retention](#containersai.datahub.keycodes.Retention)
-    - [ServiceAgreement](#containersai.datahub.keycodes.ServiceAgreement)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -4975,6 +4975,247 @@ Represents a Kubernetes pod.
 
 
 
+<a name="alameda_api/v1alpha1/datahub/keycodes/services.proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## alameda_api/v1alpha1/datahub/keycodes/services.proto
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.ActivateRegistrationDataRequest"></a>
+
+### ActivateRegistrationDataRequest
+Represents a request for activating license signature data
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| data | [string](#string) |  | example: &#34;FaS3fivdY7d1xEYxmSa&#43;mg==&#34; |
+
+
+
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.AddKeycodeRequest"></a>
+
+### AddKeycodeRequest
+Represents a request for adding a keycode
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| keycode | [string](#string) |  | example: &#34;A5IMH-KBAFI-XTEDK-G4OQM-QMM67-4TEST&#34; |
+
+
+
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.AddKeycodeResponse"></a>
+
+### AddKeycodeResponse
+Represents a response for adding a keycode
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| status | [google.rpc.Status](#google.rpc.Status) |  |  |
+| keycode | [Keycode](#containersai.alameda.v1alpha1.datahub.keycodes.Keycode) |  |  |
+
+
+
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.DeleteKeycodeRequest"></a>
+
+### DeleteKeycodeRequest
+Represents a request for deleting a keycode
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| keycode | [string](#string) |  | example: &#34;A5IMH-KBAFI-XTEDK-G4OQM-QMM67-4TEST&#34; |
+
+
+
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.GenerateRegistrationDataResponse"></a>
+
+### GenerateRegistrationDataResponse
+Represents a request for generating license registration data
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| status | [google.rpc.Status](#google.rpc.Status) |  |  |
+| data | [string](#string) |  | example: &#34;FaS3fivdY7d1xEYxmSa&#43;mg==&#34; |
+
+
+
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.ListKeycodesRequest"></a>
+
+### ListKeycodesRequest
+Represents a request for retrieving keycodes detailed information
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| keycodes | [string](#string) | repeated |  |
+
+
+
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.ListKeycodesResponse"></a>
+
+### ListKeycodesResponse
+Represents a response for a retrieving keycodes detailed information request
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| status | [google.rpc.Status](#google.rpc.Status) |  |  |
+| keycodes | [Keycode](#containersai.alameda.v1alpha1.datahub.keycodes.Keycode) | repeated |  |
+| summary | [Keycode](#containersai.alameda.v1alpha1.datahub.keycodes.Keycode) |  |  |
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+<a name="alameda_api/v1alpha1/datahub/keycodes/keycodes.proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## alameda_api/v1alpha1/datahub/keycodes/keycodes.proto
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.Keycode"></a>
+
+### Keycode
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| keycode | [string](#string) |  | example: &#34;A5IMH-KBAFI-XTEDK-G4OQM-QMM67-4TEST&#34;` |
+| keycode_type | [string](#string) |  | example: &#34;Regular/Trial&#34;` |
+| keycode_version | [int32](#int32) |  | example: &#34;2&#34;` |
+| apply_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | example: &#34;2018-01-01T00:00:00Z&#34;` |
+| expire_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | example: &#34;2018-12-31T11:59:59Z&#34;` |
+| license_state | [string](#string) |  | example: &#34;Valid/Invalid/Expired&#34;` |
+| registered | [bool](#bool) |  | example: &#34;false&#34;` |
+| capacity | [Capacity](#containersai.alameda.v1alpha1.datahub.keycodes.Capacity) |  |  |
+| functionality | [Functionality](#containersai.alameda.v1alpha1.datahub.keycodes.Functionality) |  |  |
+| retention | [Retention](#containersai.alameda.v1alpha1.datahub.keycodes.Retention) |  |  |
+| service_agreement | [ServiceAgreement](#containersai.alameda.v1alpha1.datahub.keycodes.ServiceAgreement) |  |  |
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+<a name="alameda_api/v1alpha1/datahub/keycodes/types.proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## alameda_api/v1alpha1/datahub/keycodes/types.proto
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.Capacity"></a>
+
+### Capacity
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| users | [int32](#int32) |  | example: &#34;-1&#34;` |
+| hosts | [int32](#int32) |  | example: &#34;20&#34;` |
+| disks | [int32](#int32) |  | example: &#34;200&#34;` |
+
+
+
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.Functionality"></a>
+
+### Functionality
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| disk_prophet | [bool](#bool) |  | example: &#34;true&#34;` |
+| workload | [bool](#bool) |  | example: &#34;true&#34;` |
+
+
+
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.Retention"></a>
+
+### Retention
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| valid_month | [int32](#int32) |  | example: &#34;0&#34;` |
+| years | [int32](#int32) |  | example: &#34;1&#34;` |
+
+
+
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.keycodes.ServiceAgreement"></a>
+
+### ServiceAgreement
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
 <a name="alameda_api/v1alpha1/datahub/server.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
@@ -5008,6 +5249,11 @@ Service for providing data stored in the backend
 | ListGpus | [gpu.ListGpusRequest](#containersai.alameda.v1alpha1.datahub.gpu.ListGpusRequest) | [gpu.ListGpusResponse](#containersai.alameda.v1alpha1.datahub.gpu.ListGpusResponse) | Used to list GPU need to be predicted |
 | ListGpuMetrics | [gpu.ListGpuMetricsRequest](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuMetricsRequest) | [gpu.ListGpuMetricsResponse](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuMetricsResponse) | Used to list GPU metrics data |
 | ListGpuPredictions | [gpu.ListGpuPredictionsRequest](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuPredictionsRequest) | [gpu.ListGpuPredictionsResponse](#containersai.alameda.v1alpha1.datahub.gpu.ListGpuPredictionsResponse) | Used to list GPU predictions |
+| AddKeycode | [keycodes.AddKeycodeRequest](#containersai.alameda.v1alpha1.datahub.keycodes.AddKeycodeRequest) | [keycodes.AddKeycodeResponse](#containersai.alameda.v1alpha1.datahub.keycodes.AddKeycodeResponse) | Used to add a keycode |
+| ListKeycodes | [keycodes.ListKeycodesRequest](#containersai.alameda.v1alpha1.datahub.keycodes.ListKeycodesRequest) | [keycodes.ListKeycodesResponse](#containersai.alameda.v1alpha1.datahub.keycodes.ListKeycodesResponse) | Used to retrieve keycodes detailed information |
+| DeleteKeycode | [keycodes.DeleteKeycodeRequest](#containersai.alameda.v1alpha1.datahub.keycodes.DeleteKeycodeRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to delete a keycode |
+| GenerateRegistrationData | [.google.protobuf.Empty](#google.protobuf.Empty) | [keycodes.GenerateRegistrationDataResponse](#containersai.alameda.v1alpha1.datahub.keycodes.GenerateRegistrationDataResponse) | Used to generate license registration data |
+| ActivateRegistrationData | [keycodes.ActivateRegistrationDataRequest](#containersai.alameda.v1alpha1.datahub.keycodes.ActivateRegistrationDataRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to activate license signature data |
 | GetLicense | [.google.protobuf.Empty](#google.protobuf.Empty) | [licenses.GetLicenseResponse](#containersai.alameda.v1alpha1.datahub.licenses.GetLicenseResponse) | Used to get datahub license information |
 | CreateMetrics | [metrics.CreateMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.CreateMetricsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
 | CreatePodMetrics | [metrics.CreatePodMetricsRequest](#containersai.alameda.v1alpha1.datahub.metrics.CreatePodMetricsRequest) | [.google.rpc.Status](#google.rpc.Status) |  |
@@ -7411,245 +7657,6 @@ Represents a list of predicted metrics data of a pod
 | ----- | ---- | ----- | ----------- |
 | namespaced_name | [containersai.datahub.resource.metadata.v1alpha2.NamespacedName](#containersai.datahub.resource.metadata.v1alpha2.NamespacedName) |  |  |
 | container_predictions | [ContainerPrediction](#containersai.datahub.prediction.v1alpha2.ContainerPrediction) | repeated |  |
-
-
-
-
-
- 
-
- 
-
- 
-
- 
-
-
-
-<a name="datahub/keycodes/services.proto"></a>
-<p align="right"><a href="#top">Top</a></p>
-
-## datahub/keycodes/services.proto
-
-
-
-<a name="containersai.datahub.keycodes.ActivateRegistrationDataRequest"></a>
-
-### ActivateRegistrationDataRequest
-Represents a request for activating license signature data
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| data | [string](#string) |  | example: &#34;FaS3fivdY7d1xEYxmSa&#43;mg==&#34; |
-
-
-
-
-
-
-<a name="containersai.datahub.keycodes.AddKeycodeRequest"></a>
-
-### AddKeycodeRequest
-Represents a request for adding a keycode
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| keycode | [string](#string) |  | example:&#34;A5IMH-KBAFI-XTEDK-G4OQM-QMM67-4TEST&#34; |
-
-
-
-
-
-
-<a name="containersai.datahub.keycodes.AddKeycodeResponse"></a>
-
-### AddKeycodeResponse
-Represents a response for adding a keycode
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| status | [google.rpc.Status](#google.rpc.Status) |  |  |
-| keycode | [Keycode](#containersai.datahub.keycodes.Keycode) |  |  |
-
-
-
-
-
-
-<a name="containersai.datahub.keycodes.DeleteKeycodeRequest"></a>
-
-### DeleteKeycodeRequest
-Represents a request for deleting a keycode
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| keycode | [string](#string) |  | example: &#34;A5IMH-KBAFI-XTEDK-G4OQM-QMM67-4TEST&#34; |
-
-
-
-
-
-
-<a name="containersai.datahub.keycodes.GenerateRegistrationDataResponse"></a>
-
-### GenerateRegistrationDataResponse
-Represents a request for generating license registration data
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| status | [google.rpc.Status](#google.rpc.Status) |  |  |
-| data | [string](#string) |  | example: &#34;FaS3fivdY7d1xEYxmSa&#43;mg==&#34; |
-
-
-
-
-
-
-<a name="containersai.datahub.keycodes.ListKeycodesRequest"></a>
-
-### ListKeycodesRequest
-Represents a request for retrieving keycodes detailed information
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| keycodes | [string](#string) | repeated |  |
-
-
-
-
-
-
-<a name="containersai.datahub.keycodes.ListKeycodesResponse"></a>
-
-### ListKeycodesResponse
-Represents a response for a retrieving keycodes detailed information request
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| status | [google.rpc.Status](#google.rpc.Status) |  |  |
-| keycodes | [Keycode](#containersai.datahub.keycodes.Keycode) | repeated |  |
-| summary | [Keycode](#containersai.datahub.keycodes.Keycode) |  |  |
-
-
-
-
-
- 
-
- 
-
- 
-
-
-<a name="containersai.datahub.keycodes.KeycodesService"></a>
-
-### KeycodesService
-Service for providing operation of keycodes
-
-| Method Name | Request Type | Response Type | Description |
-| ----------- | ------------ | ------------- | ------------|
-| AddKeycode | [AddKeycodeRequest](#containersai.datahub.keycodes.AddKeycodeRequest) | [AddKeycodeResponse](#containersai.datahub.keycodes.AddKeycodeResponse) | Used to add a keycode |
-| ListKeycodes | [ListKeycodesRequest](#containersai.datahub.keycodes.ListKeycodesRequest) | [ListKeycodesResponse](#containersai.datahub.keycodes.ListKeycodesResponse) | Used to retrieve keycodes detailed information |
-| DeleteKeycode | [DeleteKeycodeRequest](#containersai.datahub.keycodes.DeleteKeycodeRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to delete a keycode |
-| GenerateRegistrationData | [.google.protobuf.Empty](#google.protobuf.Empty) | [GenerateRegistrationDataResponse](#containersai.datahub.keycodes.GenerateRegistrationDataResponse) | Used to generate license registration data |
-| ActivateRegistrationData | [ActivateRegistrationDataRequest](#containersai.datahub.keycodes.ActivateRegistrationDataRequest) | [.google.rpc.Status](#google.rpc.Status) | Used to activate license signature data |
-
- 
-
-
-
-<a name="datahub/keycodes/keycodes.proto"></a>
-<p align="right"><a href="#top">Top</a></p>
-
-## datahub/keycodes/keycodes.proto
-
-
-
-<a name="containersai.datahub.keycodes.Capacity"></a>
-
-### Capacity
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| users | [int32](#int32) |  | example:&#34;-1&#34;` |
-| hosts | [int32](#int32) |  | example:&#34;20&#34;` |
-| disks | [int32](#int32) |  | example:&#34;200&#34;` |
-
-
-
-
-
-
-<a name="containersai.datahub.keycodes.Functionality"></a>
-
-### Functionality
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| disk_prophet | [bool](#bool) |  | example:&#34;true&#34;` |
-| workload | [bool](#bool) |  | example:&#34;true&#34;` |
-
-
-
-
-
-
-<a name="containersai.datahub.keycodes.Keycode"></a>
-
-### Keycode
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| keycode | [string](#string) |  | example: &#34;A5IMH-KBAFI-XTEDK-G4OQM-QMM67-4TEST&#34;` |
-| keycode_type | [string](#string) |  | example: &#34;Regular/Trial&#34;` |
-| keycode_version | [int32](#int32) |  | example:&#34;2&#34;` |
-| apply_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | example:&#34;2018-01-01T00:00:00Z&#34;` |
-| expire_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | example:&#34;2018-12-31T11:59:59Z&#34;` |
-| license_state | [string](#string) |  | example:&#34;Valid/Invalid/Expired&#34;` |
-| registered | [bool](#bool) |  | example:&#34;false&#34;` |
-| capacity | [Capacity](#containersai.datahub.keycodes.Capacity) |  |  |
-| functionality | [Functionality](#containersai.datahub.keycodes.Functionality) |  |  |
-| retention | [Retention](#containersai.datahub.keycodes.Retention) |  |  |
-| service_agreement | [ServiceAgreement](#containersai.datahub.keycodes.ServiceAgreement) |  |  |
-
-
-
-
-
-
-<a name="containersai.datahub.keycodes.Retention"></a>
-
-### Retention
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| valid_month | [int32](#int32) |  | example:&#34;0&#34;` |
-| years | [int32](#int32) |  | example:&#34;1&#34;` |
-
-
-
-
-
-
-<a name="containersai.datahub.keycodes.ServiceAgreement"></a>
-
-### ServiceAgreement
-
 
 
 
