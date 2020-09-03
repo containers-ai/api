@@ -902,6 +902,10 @@
                 </li>
               
                 <li>
+                  <a href="#containersai.alameda.v1alpha1.datahub.common.DatabaseType"><span class="badge">E</span>DatabaseType</a>
+                </li>
+              
+                <li>
                   <a href="#containersai.alameda.v1alpha1.datahub.common.FunctionType"><span class="badge">E</span>FunctionType</a>
                 </li>
               
@@ -1053,6 +1057,40 @@
               
                 <li>
                   <a href="#containersai.alameda.v1alpha1.datahub.rawdata.WriteRawdataRequest"><span class="badge">M</span>WriteRawdataRequest</a>
+                </li>
+              
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#alameda_api%2fv1alpha1%2fdatahub%2frawdata%2ftypes.proto">alameda_api/v1alpha1/datahub/rawdata/types.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#containersai.alameda.v1alpha1.datahub.rawdata.Query"><span class="badge">M</span>Query</a>
+                </li>
+              
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#alameda_api%2fv1alpha1%2fdatahub%2frawdata%2frawdata.proto">alameda_api/v1alpha1/datahub/rawdata/rawdata.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdata"><span class="badge">M</span>ReadRawdata</a>
+                </li>
+              
+                <li>
+                  <a href="#containersai.alameda.v1alpha1.datahub.rawdata.WriteRawdata"><span class="badge">M</span>WriteRawdata</a>
                 </li>
               
               
@@ -7679,6 +7717,35 @@
           </tbody>
         </table>
       
+        <h3 id="containersai.alameda.v1alpha1.datahub.common.DatabaseType">DatabaseType</h3>
+        <p>Represents a specified database whcih is to query.</p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>UNDEFINED</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>INFLUXDB</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>PROMETHEUS</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
         <h3 id="containersai.alameda.v1alpha1.datahub.common.FunctionType">FunctionType</h3>
         <p>Represents the functional query type of datahub.</p>
         <table class="enum-table">
@@ -8495,6 +8562,13 @@ Returns the rate of change between subsequent field values.</p></td>
                 </tr>
               
                 <tr>
+                  <td>timeout</td>
+                  <td><a href="#google.protobuf.Timestamp">google.protobuf.Timestamp</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
                   <td>step</td>
                   <td><a href="#google.protobuf.Duration">google.protobuf.Duration</a></td>
                   <td></td>
@@ -8854,14 +8928,14 @@ Returns the rate of change between subsequent field values.</p></td>
               
                 <tr>
                   <td>database_type</td>
-                  <td><a href="#containersai.common.DatabaseType">containersai.common.DatabaseType</a></td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.DatabaseType">containersai.alameda.v1alpha1.datahub.common.DatabaseType</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>queries</td>
-                  <td><a href="#containersai.common.Query">containersai.common.Query</a></td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.rawdata.Query">Query</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -8892,7 +8966,7 @@ Returns the rate of change between subsequent field values.</p></td>
               
                 <tr>
                   <td>rawdata</td>
-                  <td><a href="#containersai.common.ReadRawdata">containersai.common.ReadRawdata</a></td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdata">ReadRawdata</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -8916,14 +8990,191 @@ Returns the rate of change between subsequent field values.</p></td>
               
                 <tr>
                   <td>database_type</td>
-                  <td><a href="#containersai.common.DatabaseType">containersai.common.DatabaseType</a></td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.DatabaseType">containersai.alameda.v1alpha1.datahub.common.DatabaseType</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>rawdata</td>
-                  <td><a href="#containersai.common.WriteRawdata">containersai.common.WriteRawdata</a></td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.rawdata.WriteRawdata">WriteRawdata</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="alameda_api/v1alpha1/datahub/rawdata/types.proto">alameda_api/v1alpha1/datahub/rawdata/types.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="containersai.alameda.v1alpha1.datahub.rawdata.Query">Query</h3>
+        <p>Represents a general datahub query request.</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>database</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>table</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>expression</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>condition</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.QueryCondition">containersai.alameda.v1alpha1.datahub.common.QueryCondition</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="alameda_api/v1alpha1/datahub/rawdata/rawdata.proto">alameda_api/v1alpha1/datahub/rawdata/rawdata.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdata">ReadRawdata</h3>
+        <p>Represents a rawdata whcih is read from datahub.</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>query</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.rawdata.Query">Query</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>columns</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>groups</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.Group">containersai.alameda.v1alpha1.datahub.common.Group</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rawdata</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="containersai.alameda.v1alpha1.datahub.rawdata.WriteRawdata">WriteRawdata</h3>
+        <p>Represents a rawdata which will be written to datahub.</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>database</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>table</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>columns</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rows</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.Row">containersai.alameda.v1alpha1.datahub.common.Row</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>column_types</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.ColumnType">containersai.alameda.v1alpha1.datahub.common.ColumnType</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>data_types</td>
+                  <td><a href="#containersai.alameda.v1alpha1.datahub.common.DataType">containersai.alameda.v1alpha1.datahub.common.DataType</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>

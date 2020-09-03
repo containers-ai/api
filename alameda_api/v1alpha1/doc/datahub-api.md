@@ -174,6 +174,7 @@
 - [alameda_api/v1alpha1/datahub/common/types.proto](#alameda_api/v1alpha1/datahub/common/types.proto)
     - [ColumnType](#containersai.alameda.v1alpha1.datahub.common.ColumnType)
     - [DataType](#containersai.alameda.v1alpha1.datahub.common.DataType)
+    - [DatabaseType](#containersai.alameda.v1alpha1.datahub.common.DatabaseType)
     - [FunctionType](#containersai.alameda.v1alpha1.datahub.common.FunctionType)
     - [ResourceBoundary](#containersai.alameda.v1alpha1.datahub.common.ResourceBoundary)
     - [ResourceQuota](#containersai.alameda.v1alpha1.datahub.common.ResourceQuota)
@@ -211,6 +212,13 @@
     - [ReadRawdataRequest](#containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdataRequest)
     - [ReadRawdataResponse](#containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdataResponse)
     - [WriteRawdataRequest](#containersai.alameda.v1alpha1.datahub.rawdata.WriteRawdataRequest)
+  
+- [alameda_api/v1alpha1/datahub/rawdata/types.proto](#alameda_api/v1alpha1/datahub/rawdata/types.proto)
+    - [Query](#containersai.alameda.v1alpha1.datahub.rawdata.Query)
+  
+- [alameda_api/v1alpha1/datahub/rawdata/rawdata.proto](#alameda_api/v1alpha1/datahub/rawdata/rawdata.proto)
+    - [ReadRawdata](#containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdata)
+    - [WriteRawdata](#containersai.alameda.v1alpha1.datahub.rawdata.WriteRawdata)
   
 - [alameda_api/v1alpha1/datahub/licenses/services.proto](#alameda_api/v1alpha1/datahub/licenses/services.proto)
     - [GetLicenseResponse](#containersai.alameda.v1alpha1.datahub.licenses.GetLicenseResponse)
@@ -3025,6 +3033,19 @@ Represents the datahub specified data type.
 
 
 
+<a name="containersai.alameda.v1alpha1.datahub.common.DatabaseType"></a>
+
+### DatabaseType
+Represents a specified database whcih is to query.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNDEFINED | 0 |  |
+| INFLUXDB | 1 |  |
+| PROMETHEUS | 2 |  |
+
+
+
 <a name="containersai.alameda.v1alpha1.datahub.common.FunctionType"></a>
 
 ### FunctionType
@@ -3300,6 +3321,7 @@ Represents a time range definition.
 | ----- | ---- | ----- | ----------- |
 | start_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
 | end_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
+| timeout | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
 | step | [google.protobuf.Duration](#google.protobuf.Duration) |  |  |
 | aggregateFunction | [TimeRange.AggregateFunction](#containersai.alameda.v1alpha1.datahub.common.TimeRange.AggregateFunction) |  |  |
 | apply_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
@@ -3515,8 +3537,8 @@ Represents a request for reading rawdata from database.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| database_type | [containersai.common.DatabaseType](#containersai.common.DatabaseType) |  |  |
-| queries | [containersai.common.Query](#containersai.common.Query) | repeated |  |
+| database_type | [containersai.alameda.v1alpha1.datahub.common.DatabaseType](#containersai.alameda.v1alpha1.datahub.common.DatabaseType) |  |  |
+| queries | [Query](#containersai.alameda.v1alpha1.datahub.rawdata.Query) | repeated |  |
 
 
 
@@ -3532,7 +3554,7 @@ Represents a response for listing rawdata from database.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | status | [google.rpc.Status](#google.rpc.Status) |  |  |
-| rawdata | [containersai.common.ReadRawdata](#containersai.common.ReadRawdata) | repeated |  |
+| rawdata | [ReadRawdata](#containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdata) | repeated |  |
 
 
 
@@ -3547,8 +3569,96 @@ Represents a request for writing rawdata to database.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| database_type | [containersai.common.DatabaseType](#containersai.common.DatabaseType) |  |  |
-| rawdata | [containersai.common.WriteRawdata](#containersai.common.WriteRawdata) | repeated |  |
+| database_type | [containersai.alameda.v1alpha1.datahub.common.DatabaseType](#containersai.alameda.v1alpha1.datahub.common.DatabaseType) |  |  |
+| rawdata | [WriteRawdata](#containersai.alameda.v1alpha1.datahub.rawdata.WriteRawdata) | repeated |  |
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+<a name="alameda_api/v1alpha1/datahub/rawdata/types.proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## alameda_api/v1alpha1/datahub/rawdata/types.proto
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.rawdata.Query"></a>
+
+### Query
+Represents a general datahub query request.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| database | [string](#string) |  |  |
+| table | [string](#string) |  |  |
+| expression | [string](#string) |  |  |
+| condition | [containersai.alameda.v1alpha1.datahub.common.QueryCondition](#containersai.alameda.v1alpha1.datahub.common.QueryCondition) |  |  |
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+<a name="alameda_api/v1alpha1/datahub/rawdata/rawdata.proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## alameda_api/v1alpha1/datahub/rawdata/rawdata.proto
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.rawdata.ReadRawdata"></a>
+
+### ReadRawdata
+Represents a rawdata whcih is read from datahub.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| query | [Query](#containersai.alameda.v1alpha1.datahub.rawdata.Query) |  |  |
+| columns | [string](#string) | repeated |  |
+| groups | [containersai.alameda.v1alpha1.datahub.common.Group](#containersai.alameda.v1alpha1.datahub.common.Group) | repeated |  |
+| rawdata | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="containersai.alameda.v1alpha1.datahub.rawdata.WriteRawdata"></a>
+
+### WriteRawdata
+Represents a rawdata which will be written to datahub.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| database | [string](#string) |  |  |
+| table | [string](#string) |  |  |
+| columns | [string](#string) | repeated |  |
+| rows | [containersai.alameda.v1alpha1.datahub.common.Row](#containersai.alameda.v1alpha1.datahub.common.Row) | repeated |  |
+| column_types | [containersai.alameda.v1alpha1.datahub.common.ColumnType](#containersai.alameda.v1alpha1.datahub.common.ColumnType) | repeated |  |
+| data_types | [containersai.alameda.v1alpha1.datahub.common.DataType](#containersai.alameda.v1alpha1.datahub.common.DataType) | repeated |  |
 
 
 
