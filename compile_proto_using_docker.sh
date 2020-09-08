@@ -1,20 +1,21 @@
 #!/bin/bash
 
-ALAMEA_GRPC_GO_IMAGE_REPO="alameda/grpc_go_$(docker run --rm -v $(pwd):$(pwd) -w $(pwd) golang:stretch git rev-parse --abbrev-ref HEAD)"
+ALAMEA_GRPC_GO_IMAGE_REPO="alameda/grpc_go_$(docker run --rm -v $(pwd):$(pwd) -w $(pwd) golang:buster git rev-parse --abbrev-ref HEAD)"
 ALAMEA_GRPC_GO_IMAGE_TAG="latest"
 ALAMEA_GRPC_GO_IMAGE="$ALAMEA_GRPC_GO_IMAGE_REPO:$ALAMEA_GRPC_GO_IMAGE_TAG"
 ALAMEA_GRPC_GO_IMAGE_DOCKERFILE=Dockerfile_gRPC_go
 
 generate_dockerfiles(){
     cat > $ALAMEA_GRPC_GO_IMAGE_DOCKERFILE - <<EOF
-FROM golang:stretch
+FROM golang:buster
 ARG DOCKERFILE_MD5
 ENV DOCKERFILE_MD5=\$DOCKERFILE_MD5 PATH="/usr/local/node/bin:/go/bin:${PATH}"
-ENV PROTOC_VER=4.0.0 OS_ARC=linux-x86_64 PROTOC_GEN_GO_VER=v1.4.2 PROTOC_GEN_DOC_VER=v1.3.2 API_COMMON_PROTOS_VER=1.50.0 PROTOC_GEN_WEB_VER=1.2.1 NODE_VER=v14.8.0
+ENV OS_ARC=linux-x86_64 PROTOC_GEN_GO_VER=v1.4.2 PROTOC_GEN_DOC_VER=v1.3.2 API_COMMON_PROTOS_VER=1.50.0 PROTOC_GEN_WEB_VER=1.2.1 NODE_VER=v14.9.0
 COPY setup.py .
-RUN apt-get update && apt-get install unzip xz-utils python3 python3-pip -y && \\
-curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v\$PROTOC_VER-rc2/protoc-\$PROTOC_VER-rc-2-\$OS_ARC.zip && \\
-unzip protoc-\$PROTOC_VER-rc-2-\$OS_ARC.zip -d /usr/local && rm protoc-\$PROTOC_VER-rc-2-\$OS_ARC.zip && \\
+RUN PROTOC_VER=`perl -ne 'print $1  if /protobuf==(.*)\047/' setup.py` && \\
+apt-get update && apt-get install unzip xz-utils python3 python3-pip -y && \\
+curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v\$PROTOC_VER/protoc-\$PROTOC_VER-\$OS_ARC.zip && \\
+unzip protoc-\$PROTOC_VER-\$OS_ARC.zip -d /usr/local && rm protoc-\$PROTOC_VER-\$OS_ARC.zip && \\
 #curl -LO https://github.com/grpc/grpc-web/releases/download/\$PROTOC_GEN_WEB_VER/protoc-gen-grpc-web-\$PROTOC_GEN_WEB_VER-linux-x86_64 && \\
 #mv protoc-gen-grpc-web-\$PROTOC_GEN_WEB_VER-linux-x86_64 /usr/local/bin/protoc-gen-grpc-web && chmod +x /usr/local/bin/protoc-gen-grpc-web && \\
 curl -LO https://nodejs.org/dist/\$NODE_VER/node-\$NODE_VER-linux-x64.tar.xz && tar Jxvf node-\$NODE_VER-linux-x64.tar.xz && \\
@@ -26,7 +27,7 @@ GO111MODULE=on go get -u github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc
 git clone --depth 1 --branch \$API_COMMON_PROTOS_VER https://github.com/googleapis/api-common-protos.git && \\
 mv api-common-protos/google/rpc /usr/local/include/google/ && rm -rf api-common-protos && \\
 perl -lne 'print if /INSTALL_REQUIRES =/ .. /\)/' setup.py | grep -v \( | grep -v \) |  awk -F  "'" '{print \$2}' > requirements.txt && \\
-pip3 install -r requirements.txt && rm requirements.txt && rm setup.py && npm i -g --unsafe-perm grpc-tools protoc-gen-grpc && \\
+python3 -m pip install --upgrade pip && pip3 install -r requirements.txt && rm requirements.txt && rm setup.py && npm i -g --unsafe-perm grpc-tools protoc-gen-grpc && \\
 rm -rf /var/lib/apt/lists/*
 EOF
 }

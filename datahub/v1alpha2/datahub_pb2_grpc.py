@@ -351,6 +351,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -359,7 +360,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.ListPodMetricsRequest.SerializeToString,
             datahub_dot_v1alpha2_dot_datahub__pb2.ListPodMetricsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListNodeMetrics(request,
@@ -367,6 +368,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -375,7 +377,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.ListNodeMetricsRequest.SerializeToString,
             datahub_dot_v1alpha2_dot_datahub__pb2.ListNodeMetricsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListPods(request,
@@ -383,6 +385,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -391,7 +394,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.ListPodsRequest.SerializeToString,
             datahub_dot_v1alpha2_dot_datahub__pb2.ListPodsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListNodes(request,
@@ -399,6 +402,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -407,7 +411,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.ListNodesRequest.SerializeToString,
             datahub_dot_v1alpha2_dot_datahub__pb2.ListNodesResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListPodPredictions(request,
@@ -415,6 +419,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -423,7 +428,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.ListPodPredictionsRequest.SerializeToString,
             datahub_dot_v1alpha2_dot_datahub__pb2.ListPodPredictionsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListNodePredictions(request,
@@ -431,6 +436,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -439,7 +445,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.ListNodePredictionsRequest.SerializeToString,
             datahub_dot_v1alpha2_dot_datahub__pb2.ListNodePredictionsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListPodRecommendations(request,
@@ -447,6 +453,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -455,7 +462,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.ListPodRecommendationsRequest.SerializeToString,
             datahub_dot_v1alpha2_dot_datahub__pb2.ListPodRecommendationsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListSimulatedSchedulingScores(request,
@@ -463,6 +470,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -471,7 +479,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.ListSimulatedSchedulingScoresRequest.SerializeToString,
             datahub_dot_v1alpha2_dot_datahub__pb2.ListSimulatedSchedulingScoresResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CreatePods(request,
@@ -479,6 +487,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -487,7 +496,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.CreatePodsRequest.SerializeToString,
             google_dot_rpc_dot_status__pb2.Status.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CreateNodes(request,
@@ -495,6 +504,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -503,7 +513,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.CreateNodesRequest.SerializeToString,
             google_dot_rpc_dot_status__pb2.Status.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CreatePodPredictions(request,
@@ -511,6 +521,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -519,7 +530,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.CreatePodPredictionsRequest.SerializeToString,
             google_dot_rpc_dot_status__pb2.Status.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CreateNodePredictions(request,
@@ -527,6 +538,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -535,7 +547,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.CreateNodePredictionsRequest.SerializeToString,
             google_dot_rpc_dot_status__pb2.Status.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CreatePodRecommendations(request,
@@ -543,6 +555,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -551,7 +564,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.CreatePodRecommendationsRequest.SerializeToString,
             google_dot_rpc_dot_status__pb2.Status.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CreateSimulatedSchedulingScores(request,
@@ -559,6 +572,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -567,7 +581,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.CreateSimulatedSchedulingScoresRequest.SerializeToString,
             google_dot_rpc_dot_status__pb2.Status.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def UpdatePods(request,
@@ -575,6 +589,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -583,7 +598,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.UpdatePodsRequest.SerializeToString,
             google_dot_rpc_dot_status__pb2.Status.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def UpdateNodes(request,
@@ -591,6 +606,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -599,7 +615,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.UpdateNodesRequest.SerializeToString,
             google_dot_rpc_dot_status__pb2.Status.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def DeletePods(request,
@@ -607,6 +623,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -615,7 +632,7 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.DeletePodsRequest.SerializeToString,
             google_dot_rpc_dot_status__pb2.Status.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def DeleteNodes(request,
@@ -623,6 +640,7 @@ class DatahubService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -631,4 +649,4 @@ class DatahubService(object):
             datahub_dot_v1alpha2_dot_datahub__pb2.DeleteNodesRequest.SerializeToString,
             google_dot_rpc_dot_status__pb2.Status.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
