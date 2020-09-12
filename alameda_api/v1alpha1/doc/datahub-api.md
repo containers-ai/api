@@ -7576,6 +7576,7 @@ Service for providing operation of keycodes
 | users | [int32](#int32) |  | example:&#34;-1&#34;` |
 | hosts | [int32](#int32) |  | example:&#34;20&#34;` |
 | disks | [int32](#int32) |  | example:&#34;200&#34;` |
+| cpus | [int32](#int32) |  | example:&#34;64&#34; |
 
 
 
