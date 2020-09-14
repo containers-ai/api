@@ -6564,12 +6564,13 @@ Represents the private metadata of datahub schema.
 | SCOPE_CONFIG | 2 |  |
 | SCOPE_EXECUTION | 3 |  |
 | SCOPE_FEDEMETER | 4 |  |
-| SCOPE_METRIC | 5 |  |
-| SCOPE_PLANNING | 6 |  |
-| SCOPE_PREDICTION | 7 |  |
-| SCOPE_RECOMMENDATION | 8 |  |
-| SCOPE_RESOURCE | 9 |  |
-| SCOPE_TARGET | 10 |  |
+| SCOPE_METERING | 5 |  |
+| SCOPE_METRIC | 6 |  |
+| SCOPE_PLANNING | 7 |  |
+| SCOPE_PREDICTION | 8 |  |
+| SCOPE_RECOMMENDATION | 9 |  |
+| SCOPE_RESOURCE | 10 |  |
+| SCOPE_TARGET | 11 |  |
 
 
  
