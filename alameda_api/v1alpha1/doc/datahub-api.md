@@ -5266,9 +5266,10 @@ Represents a response for a retrieving keycodes detailed information request
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| users | [int32](#int32) |  | example: &#34;-1&#34;` |
-| hosts | [int32](#int32) |  | example: &#34;20&#34;` |
-| disks | [int32](#int32) |  | example: &#34;200&#34;` |
+| users | [int32](#int32) |  | example: &#34;-1&#34; |
+| hosts | [int32](#int32) |  | example: &#34;20&#34; |
+| disks | [int32](#int32) |  | example: &#34;200&#34; |
+| cpus | [int32](#int32) |  | example: &#34;64&#34; |
 
 
 
@@ -5283,8 +5284,8 @@ Represents a response for a retrieving keycodes detailed information request
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| disk_prophet | [bool](#bool) |  | example: &#34;true&#34;` |
-| workload | [bool](#bool) |  | example: &#34;true&#34;` |
+| disk_prophet | [bool](#bool) |  | example: &#34;true&#34; |
+| workload | [bool](#bool) |  | example: &#34;true&#34; |
 
 
 
@@ -5299,8 +5300,8 @@ Represents a response for a retrieving keycodes detailed information request
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| valid_month | [int32](#int32) |  | example: &#34;0&#34;` |
-| years | [int32](#int32) |  | example: &#34;1&#34;` |
+| valid_month | [int32](#int32) |  | example: &#34;0&#34; |
+| years | [int32](#int32) |  | example: &#34;1&#34; |
 
 
 
