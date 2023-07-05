@@ -14,7 +14,7 @@ with open('LICENSE', 'r') as f:
 
 INSTALL_REQUIRES = (
     'protobuf==3.11.3',
-    'grpcio==1.27.1',
+    'grpcio==1.53.0',
     'grpcio-tools==1.27.1',
     'googleapis-common-protos==1.51.0',
 )
